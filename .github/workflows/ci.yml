@@ -1,0 +1,16 @@
+# Метаболизм клетки на хостинге: verify (fail-closed) + приёмки на каждый push/PR.
+# Cross-тесты с живым домом включаются сами, если рядом клон commons — их отсутствие
+# честно помечается skip'ом (AGENTS.md, правило 5: офлайн-first, сеть не обязательна).
+name: metabolism
+on:
+  push:
+  pull_request:
+jobs:
+  cell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: verify — геном/ДНК/голос/согласия fail-closed
+        run: make verify
+      - name: tests — приёмки грамматик и прививки
+        run: make test

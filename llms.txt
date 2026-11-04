@@ -21,6 +21,9 @@
 - [scripts/to_organ_registry.py](scripts/to_organ_registry.py): экспорт клеток в формат organs/registry.yaml дома (для будущего ритуала ADR-0005).
 - [bootstrap.sh](bootstrap.sh): семя — поднять клетки по пинам (clone/pull + checkout, офлайн-режим).
 - [tests/test_swarm.py](tests/test_swarm.py): приёмки грамматик; cross-тест против живого клона дома.
+- [tests/test_memory_vaccine.py](tests/test_memory_vaccine.py): приёмки прививки памяти (ADR-0007).
+- [CHANGELOG.md](CHANGELOG.md): журнал изменений роя; версии — за Человеком.
+- [.github/workflows/ci.yml](.github/workflows/ci.yml): метаболизм на хостинге — verify + приёмки.
 - [templates/](templates/): шаблоны новой клетки (MANIFEST.json, AGENTS.md).
 - [Makefile](Makefile): метаболизм — verify / pins / handshake / cross-handshake / blood-demo / bootstrap.
 - [DEPLOY.md](DEPLOY.md): команды создания репозитория и первого DCO-коммита.
