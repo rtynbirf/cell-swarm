@@ -48,7 +48,7 @@
       "pin": "af3732f79301cec7f3cea37e6ceb907b3632dab6",
       "role": "держатель имени РУМУ — клетка-указатель: тело живёт веткой rumu в singulyar (пин 30bcf37b, проверен живым ls-remote и клоном 2026-11-05); мембрана AGENTS+MANIFEST+llms.txt готова (ветка membrane-2026-11-05)",
       "system_pre": "senses",
-      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); лицензия источника данных bldub требует проверки",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); данные каталога bldub: открытой лицензии НЕТ (проверено живым вебом 2026-11-05, ADR-0008) — зеркало каталога в ядро роя не вливать, решение за Человеком",
       "interface": "плеер поверх P2P"
     },
     {
@@ -85,7 +85,10 @@
     "house": "commons",
     "consent_protocol": "ADR-0017 дома: PeerManifest (голос роя) + ConsentGrant (воля Человека, PID 1) + поимённый вердикт до факта",
     "blood_protocol": "SPEC-0003 дома: конверт с ценой; каноническая форма json.dumps(sort_keys=True, ensure_ascii=False, separators=(',',':')) — совместима с canonical_sha256 дома",
-    "transports_allowed": ["stdio", "http-localhost"],
+    "transports_allowed": [
+      "stdio",
+      "http-localhost"
+    ],
     "outside_gate": "нет: наружный шлюз запрещён домом (ADR-0016), обмен живёт на хосте Человека"
   }
 }
