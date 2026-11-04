@@ -36,6 +36,28 @@ make test            # cross-тесты включатся сами, если к
 после этого `make cross-handshake` показывает вердикты обеих сторон на живой
 грамматике `synapse/consent.py`.
 
+## 3-бис. Разблокировка клетки и живой grant — как это делается
+
+Оба действия исполнены роем 2026-11-05 (воля PID 1: «делай сам»); здесь —
+команды повтора и отката.
+
+Разблокировать репо клетки (пример rumu) и запушить мембрану:
+
+```bash
+# разблокировать (откат — та же команда с {"archived": true}):
+curl -X PATCH -H "Authorization: Bearer $GH_TOKEN" \
+  -H "Accept: application/vnd.github+json" \
+  https://api.github.com/repos/rtynbirf/rumu -d '{"archived": false}'
+
+# мембрана: клонировать, ветка, три файла (AGENTS.md, MANIFEST.json, llms.txt),
+# коммит -s, затем:
+git push origin membrane-2026-11-05    # PR открывается в вебе или API
+```
+
+Живой grant дома: `commons/consent/grants.json` (волна №34, PR#6) — воля
+PID 1; отзыв — удалением записи или файла; отозванный `consent_id` не оживает,
+новый обмен требует нового согласия (ADR-0017 п.4 дома).
+
 ## 4. Дисциплина дальше
 
 - пины: `make pins W=1` (сухой прогон — просто `make pins`)

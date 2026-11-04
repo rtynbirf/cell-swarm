@@ -1,7 +1,7 @@
 {
-  "genome_version": "0.1.1",
+  "genome_version": "0.1.3",
   "fetched_at": "2026-11-05",
-  "fetch_method": "git ls-remote HEAD — живые SHA на дату fetched_at; свЕРка пинов повторена 2026-11-05: все 8 равны живым HEAD",
+  "fetch_method": "git ls-remote HEAD — живые SHA; свЕРка такта 2026-11-05 (UTC 21:45Z): 5 пинов ушли вперёд — polymath-os (tofu-фикс + PR#11), singulyar (облегчение каталога), cell65-host (PR#5/6), rumu (мембрана PR#1 + правка пина тела), commons (волна №33)",
   "licenses_verified_at": "2026-11-05",
   "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
   "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
@@ -9,7 +9,7 @@
     {
       "name": "polymath-os",
       "repo": "https://github.com/rtynbirf/polymath-os.git",
-      "pin": "0767fe16066f7f542824406a14cb85bf587ef4a2",
+      "pin": "ad9f9b457d514c7429cc0ca6278fb20e44362fb3",
       "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
@@ -27,8 +27,8 @@
     {
       "name": "singulyar",
       "repo": "https://github.com/rtynbirf/singulyar.git",
-      "pin": "30bcf37b956eacbc59c39555b071bd92a1b6b536",
-      "role": "корпус 64 песни × 200 языков офлайн; кандидат в память роя",
+      "pin": "b389ac9169fdca89c391872819a185ce3b0cd718",
+      "role": "корпус 64 песни × 200 языков офлайн; кандидат в память роя; здесь же тело РУМУ (ветка rumu, catalog.js облегчен до фактов 2026-11-05 — вариант (б), ADR-0008/0009)",
       "system_pre": "memory",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
       "interface": "файлы + манифест данных"
@@ -36,7 +36,7 @@
     {
       "name": "cell65-host",
       "repo": "https://github.com/rtynbirf/cell65-host.git",
-      "pin": "1cd485e1fd68b7552ac6ebc507b9a3568781ad28",
+      "pin": "a9163e6089a5600f032e1f8c9a61a237bb191fc5",
       "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
@@ -45,10 +45,10 @@
     {
       "name": "rumu",
       "repo": "https://github.com/rtynbirf/rumu.git",
-      "pin": "af3732f79301cec7f3cea37e6ceb907b3632dab6",
-      "role": "держатель имени РУМУ — клетка-указатель: тело живёт веткой rumu в singulyar (пин 30bcf37b, проверен живым ls-remote и клоном 2026-11-05); мембрана AGENTS+MANIFEST+llms.txt готова (ветка membrane-2026-11-05)",
+      "pin": "0df975415573f71977d372fed8ac6e26432b4bf7",
+      "role": "держатель имени РУМУ — клетка-указатель: тело живёт веткой rumu в singulyar (пин b389ac91, живой ls-remote 2026-11-05); мембрана AGENTS+MANIFEST+llms.txt влита в main (PR#1, 2026-11-05); репо разблокирован 2026-11-05 (воля PID 1)",
       "system_pre": "senses",
-      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); данные каталога bldub: открытой лицензии НЕТ (проверено живым вебом 2026-11-05, ADR-0008) — зеркало каталога в ядро роя не вливать, решение за Человеком",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); данные каталога bldub: открытой лицензии НЕТ (ADR-0008, живой веб 2026-11-05) — зеркало облегчено до фактов, вариант (б) исполнен 2026-11-05 (ADR-0009); варианты (а) разрешение и (в) свой каталог — открыты за Человеком",
       "interface": "плеер поверх P2P"
     },
     {
@@ -72,7 +72,7 @@
     {
       "name": "commons",
       "repo": "https://github.com/rtynbirf/commons.git",
-      "pin": "5501dafd106e1fcbd0d11336713ceb5e83532867",
+      "pin": "cedfdbcb64633c33527b06b35d6d51086efe4fa1",
       "role": "дом: организм из лучших открытых проектов; якорь моста (ADR-0006 роя)",
       "system_pre": "external-house",
       "license_pre": "Apache-2.0 (LICENSE репозитория, прочитан клоном 2026-11-05)",
