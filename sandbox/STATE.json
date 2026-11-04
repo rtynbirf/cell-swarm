@@ -1,0 +1,27 @@
+{
+  "mirror_of": "песочница агента роя (эфемерна: среда обновляется, память стирается)",
+  "synced_at": "2026-11-05",
+  "session_id": "web-04b56e42-b16b-42da-8a25-5e496305fd60",
+  "author": "rtynbirf",
+  "coauthor": "агент роя (сингулярный мультиагент, экземпляр сеанса выше)",
+  "directive": {
+    "source": "Человек, PID 1",
+    "text": "связать рой с commons и усилить (разрешено); песочницу дублировать в репо как прививку от стирания памяти; инструменты — веб+песочница+пайтон; среды-учителя — актуальные рабочие практики; расспараллелиться",
+    "status": "исполняется"
+  },
+  "state_of_work": {
+    "done": [
+      "клетка cell-swarm собрана: геном (живые SHA 2026-11-05), пять законов, ADR-0001..0007",
+      "мост в дом commons по ADR-0017: голос пира, согласия, кровь SPEC-0003",
+      "пакет усиления commons-strengthen (ADR-0019 черновик, synapse/peers, приёмка)",
+      "прививка: sandbox/ зеркалит песочницу в клетку"
+    ],
+    "next": [
+      "создать пустой репо github.com/rtynbirf/cell-swarm и запушить (DEPLOY.md)",
+      "влить commons-strengthen в дом по ритуалу PACK-README (ветка wave33-peer-registry)",
+      "make pins W=1 и make licenses W=1 — освежить пины и лицензии клеток",
+      "мембраны AGENTS.md+MANIFEST.json в клетки rumu и polymath-os"
+    ]
+  },
+  "recovery": ["make verify", "make test", "читать sandbox/MEMORY.md, AGENTS.md, docs/adr/"]
+}

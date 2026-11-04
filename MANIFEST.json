@@ -1,0 +1,38 @@
+{
+  "manifest_version": "0.1.0",
+  "name": "cell-swarm",
+  "kind": "swarm-core",
+  "role": "геном и фермент роя клеток Человека; первый пир дома COMMONS",
+  "license": "Apache-2.0",
+  "membrane": {
+    "human": "README.md",
+    "agents": "AGENTS.md",
+    "machines": "llms.txt"
+  },
+  "metabolism": {
+    "verify": "make verify",
+    "bootstrap": "make bootstrap",
+    "pins": "make pins"
+  },
+  "body": {
+    "genome": "swarm.json",
+    "voice": "peers/peer-manifest.json",
+    "consents": "consent/grants.json",
+    "decisions": "docs/adr/",
+    "blood": "blood/journal.jsonl",
+    "vaccine": "sandbox/"
+  },
+  "bridge": {
+    "to": "https://github.com/rtynbirf/commons",
+    "protocol": "ADR-0017 (swarm-consent) + SPEC-0003 (кровь) + ADR-0016 (транспорты)",
+    "anchor_pin": "5501dafd106e1fcbd0d11336713ceb5e83532867",
+    "anchor_fetched_at": "2026-11-05"
+  },
+  "laws": [
+    "клетка: автономность clone→make→работает, офлайн",
+    "окно: граница репо = граница контекста; митоз по боли контекста",
+    "указатели: связь пинами, не импортами",
+    "храповик: тесты и ADR только добавляются",
+    "семя: всё собирается из одной точки bootstrap.sh"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "note": "Согласия роя — зеркало ConsentGrant дома (ADR-0017). Рой объявляет, на какие методы он согласен. «Согласие на всё подряд» — не согласие: список не пуст и не расширяется молча. granted_by роя — human: воля Человека, PID 1. not_after — окно свежести ISO-8601; продление = новый grant.",
+  "grants": [
+    {
+      "consent_id": "cell-swarm-2026-11-05-genome",
+      "peer": "commons",
+      "methods": ["genome.read", "genome.pins.read", "organ.proposal.draft"],
+      "granted_by": "human",
+      "not_after": "2027-11-05T00:00:00+00:00"
+    },
+    {
+      "consent_id": "cell-swarm-2026-11-05-blood",
+      "peer": "commons",
+      "methods": ["blood.envelope.emit", "blood.journal.append"],
+      "granted_by": "human",
+      "not_after": "2027-05-05T00:00:00+00:00"
+    }
+  ]
+}

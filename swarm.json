@@ -1,0 +1,89 @@
+{
+  "genome_version": "0.1.0",
+  "fetched_at": "2026-11-05",
+  "fetch_method": "git ls-remote HEAD — живые SHA на дату fetched_at; лицензии НЕ верифицированы (анонимный лимит живого GitHub API 2026-11-05) — помечены preliminary по духу инварианта 5 дома",
+  "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
+  "cells": [
+    {
+      "name": "polymath-os",
+      "repo": "https://github.com/rtynbirf/polymath-os.git",
+      "pin": "0767fe16066f7f542824406a14cb85bf587ef4a2",
+      "role": "семя: 5-слойный LFS-style самосбор; кандидат в substrate роя",
+      "system_pre": "substrate",
+      "license_pre": "не верифицировано (лимит API 2026-11-05)",
+      "interface": "слои + bootstrap-скрипты"
+    },
+    {
+      "name": "singulyar-llm",
+      "repo": "https://github.com/rtynbirf/singulyar-llm.git",
+      "pin": "a9200cdcc28662bca47e3cdb6d64f7f6e8e6e239",
+      "role": "локальный инференс в браузере (Qwen); кандидат в метаболизм роя",
+      "system_pre": "metabolism",
+      "license_pre": "не верифицировано (лимит API 2026-11-05)",
+      "interface": "браузерный API"
+    },
+    {
+      "name": "singulyar",
+      "repo": "https://github.com/rtynbirf/singulyar.git",
+      "pin": "30bcf37b956eacbc59c39555b071bd92a1b6b536",
+      "role": "корпус 64 песни × 200 языков офлайн; кандидат в память роя",
+      "system_pre": "memory",
+      "license_pre": "не верифицировано (лимит API 2026-11-05); статус мелодий определяет законность",
+      "interface": "файлы + манифест данных"
+    },
+    {
+      "name": "cell65-host",
+      "repo": "https://github.com/rtynbirf/cell65-host.git",
+      "pin": "1cd485e1fd68b7552ac6ebc507b9a3568781ad28",
+      "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
+      "system_pre": "substrate",
+      "license_pre": "не верифицировано (лимит API 2026-11-05)",
+      "interface": "конфиги ноды"
+    },
+    {
+      "name": "rumu",
+      "repo": "https://github.com/rtynbirf/rumu.git",
+      "pin": "af3732f79301cec7f3cea37e6ceb907b3632dab6",
+      "role": "суверенный P2P-стриминг; кандидат в сенсорику роя (view поверх swarm)",
+      "system_pre": "senses",
+      "license_pre": "не верифицировано (лимит API 2026-11-05); лицензия источника данных bldub требует проверки",
+      "interface": "плеер поверх P2P"
+    },
+    {
+      "name": "voice-atlas-llm",
+      "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
+      "pin": "e4ad80fc19d96f950bbe97b384be2be7a32265f1",
+      "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
+      "system_pre": "senses",
+      "license_pre": "не верифицировано (лимит API 2026-11-05); consent-мембрана обязательна",
+      "interface": "модели + consent-манифест"
+    },
+    {
+      "name": "global-video-platforms-registry",
+      "repo": "https://github.com/rtynbirf/global-video-platforms-registry.git",
+      "pin": "513247f39b62b0448c7e0edc4f2b71d24aa44713",
+      "role": "реестр-указатель платформ; прототип Закона 3 — хаб хранит магниты, не контент",
+      "system_pre": "genome",
+      "license_pre": "не верифицировано (лимит API 2026-11-05)",
+      "interface": "реестр указателей"
+    },
+    {
+      "name": "commons",
+      "repo": "https://github.com/rtynbirf/commons.git",
+      "pin": "5501dafd106e1fcbd0d11336713ceb5e83532867",
+      "role": "дом: организм из лучших открытых проектов; якорь моста (ADR-0006 роя)",
+      "system_pre": "external-house",
+      "license_pre": "Apache-2.0 (LICENSE репозитория, прочитан клоном 2026-11-05)",
+      "interface": "synapse/consent.py, blood/envelope.schema.json, ADR-0017",
+      "bridge": true
+    }
+  ],
+  "bridge": {
+    "peer": "cell-swarm",
+    "house": "commons",
+    "consent_protocol": "ADR-0017 дома: PeerManifest (голос роя) + ConsentGrant (воля Человека, PID 1) + поимённый вердикт до факта",
+    "blood_protocol": "SPEC-0003 дома: конверт с ценой; каноническая форма json.dumps(sort_keys=True, ensure_ascii=False, separators=(',',':')) — совместима с canonical_sha256 дома",
+    "transports_allowed": ["stdio", "http-localhost"],
+    "outside_gate": "нет: наружный шлюз запрещён домом (ADR-0016), обмен живёт на хосте Человека"
+  }
+}

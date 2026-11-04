@@ -1,0 +1,30 @@
+# CELL-SWARM
+
+> Рой клеток Человека: геном (пины), пять законов, связь с домом COMMONS по протоколу согласия ADR-0017. Связь указателями, кровь с ценой, офлайн-first.
+
+## Documents
+
+- [README.md](README.md): вход для человека — пять законов, быстрый старт, словарь.
+- [MANIFEST.json](MANIFEST.json): ДНК ядра роя (связка органов клетки).
+- [swarm.json](swarm.json): ГЕНОМ — клетки, живые пины (SHA, дата, метод), мост в дом.
+- [AGENTS.md](AGENTS.md): правила для агентов (порядок чтения, запреты, грамматики).
+- [peers/peer-manifest.json](peers/peer-manifest.json): голос роя для дома — PeerManifest по ADR-0017 (name, transport, consents, provenance).
+- [consent/grants.json](consent/grants.json): белый список методов роя («согласие на всё подряд» — не согласие).
+- [docs/architecture.md](docs/architecture.md): развёртка пяти законов и границы клеток.
+- [docs/adr/](docs/adr/): журнал решений (ADR-0001..0007 — законы роя, мост, прививка памяти).
+- [sandbox/MEMORY.md](sandbox/MEMORY.md): прививка от стирания памяти — нуль агента (ADR-0007); читать первым при восстановлении.
+- [sandbox/STATE.json](sandbox/STATE.json): машиночитаемая точка прерывания — сеанс, статус директивы, путь восстановления.
+- [scripts/pin.py](scripts/pin.py): обновление пинов живым ls-remote (с датой); --licenses добирает лицензии живым API.
+- [scripts/verify.py](scripts/verify.py): fail-closed проверка генома, манифеста, голоса пира и согласий.
+- [scripts/handshake.py](scripts/handshake.py): вердикт согласия до факта; --cross валидирует голос роя грамматикой ДОМА (импорт synapse/consent.py).
+- [scripts/emit.py](scripts/emit.py): конверт крови SPEC-0003: append-only журнал с хэш-цепочкой, каноническая форма дома.
+- [scripts/to_organ_registry.py](scripts/to_organ_registry.py): экспорт клеток в формат organs/registry.yaml дома (для будущего ритуала ADR-0005).
+- [bootstrap.sh](bootstrap.sh): семя — поднять клетки по пинам (clone/pull + checkout, офлайн-режим).
+- [tests/test_swarm.py](tests/test_swarm.py): приёмки грамматик; cross-тест против живого клона дома.
+- [templates/](templates/): шаблоны новой клетки (MANIFEST.json, AGENTS.md).
+- [Makefile](Makefile): метаболизм — verify / pins / handshake / cross-handshake / blood-demo / bootstrap.
+- [DEPLOY.md](DEPLOY.md): команды создания репозитория и первого DCO-коммита.
+
+## Optional
+
+- [commons-strengthen/](../commons-strengthen/PACK-README.md): аддитивный пакет усиления ДОМА (отдельная поставка).

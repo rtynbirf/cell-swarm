@@ -1,0 +1,6 @@
+{
+  "name": "cell-swarm",
+  "transport": "stdio",
+  "consents": true,
+  "provenance": "голос роя заявлен самим роем: репозиторий cell-swarm (github.com/rtynbirf/cell-swarm после пуша), прочитан владельцем 2026-11-05; обмен живёт на хосте Человека (PID 1), транспорт stdio/http-localhost по ADR-0016 дома"
+}
