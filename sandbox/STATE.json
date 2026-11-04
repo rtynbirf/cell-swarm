@@ -7,7 +7,7 @@
   "directive": {
     "source": "Человек, PID 1",
     "text": "связать рой с commons и усилить (разрешено); песочницу дублировать в репо как прививку от стирания памяти; инструменты — веб+песочница+пайтон; среды-учителя — актуальные рабочие практики; расспараллелиться",
-    "status": "исполняется"
+    "status": "исполнена по существу: рой в сети, дом усилен, мост жив"
   },
   "state_of_work": {
     "done": [
@@ -21,14 +21,23 @@
       "геном 0.1.1: все 8 пинов свЕРены с живыми HEAD; лицензии всех клеток верифицированы живым GitHub API (MIT×5, Apache-2.0×2, CC-BY-4.0×1) — прежнее «license=null» было лимитом API, не фактом",
       "мембранные ветки в живых клонах: polymath-os (+llms.txt), rumu (+AGENTS+MANIFEST+llms.txt, клетка-указатель на singulyar@rumu 30bcf37b)",
       "deploy.sh — все действия, требующие авторизации, одной командой",
-      "ADR-0008: лицензия источника bldub проверена живым вебом — открытой лицензии НЕТ, зеркало каталога в ядро не вливать (решение за Человеком)"
+      "ADR-0008: лицензия источника bldub проверена живым вебом — открытой лицензии НЕТ, зеркало каталога в ядро не вливать (решение за Человеком)",
+      "ДЕПЛОЙ токеном автора (сеанс 2026-11-05, вечер): ядро запушено → github.com/rtynbirf/cell-swarm, CI metabolism success",
+      "мембрана polymath-os влита (PR#12 merged); волна №33 влита в дом commons (PR#5 merged; ci + scoreboard success)",
+      "починен красный main дома polymath-os: Biome 2.x миграция + 20 правок (PR#13 merged; CI main success — до этого lint падал на конфиге v1)",
+      "tofu-ломка дома polymath-os задокументирована: обрывки HCL в environments/*/main.tf приехали сломанными в 0767fe1 — чинить по намерению владельца"
     ],
     "next": [
-      "./deploy.sh — пуш ядра + мембранных веток (+ PR при gh): единственный такт с рукой/токеном",
-      "влить commons-strengthen в дом по ритуалу PACK-README (ветка wave33-peer-registry)",
-      "если Человек откроет в браузере «Пользовательское соглашение» и «Правообладателям» bldub — пополнять ADR-0008 (храповик)",
-      "мембраны в клетки singulyar-llm, singulyar, cell65-host, voice-atlas-llm, global-video-platforms-registry — по мере роста боли контекста (Закон 2)"
+      "rumu архивен (read-only): мембранная ветка локально в cells/rumu — владелец решает: разархивировать или переносить",
+      "tofu в polymath-os: personal/main.tf:24 (висячая запятая), shared/main.tf:29,72-73 (обрывки aws-вырезки) — по намерению владельца",
+      "мембраны singulyar-llm, singulyar, cell65-host, voice-atlas-llm, global-video-platforms-registry — по боли контекста (Закон 2)",
+      "bldub (ADR-0008): вариант (а)-(в) выбирает Человек; тексты соглашений из браузера пополнят ADR"
     ]
   },
-  "recovery": ["make verify", "make test", "читать sandbox/MEMORY.md, AGENTS.md, docs/adr/"]
+  "recovery": [
+    "make verify",
+    "make test",
+    "читать sandbox/MEMORY.md, AGENTS.md, docs/adr/",
+    "деплой: ./deploy.sh (для будущего такта)"
+  ]
 }
