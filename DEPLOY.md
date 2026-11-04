@@ -16,6 +16,11 @@ git push -u origin main
 
 `-s` — DCO (Signed-off-by): тот же протокол, что у дома.
 
+Клетки в `cells/` — живые клоны с мембранными ветками; `./deploy.sh` запушит
+их сам. Клон `cells/singulyar-rumu/` — доказательство проверки тела (не пушится:
+он на дефолтной ветке); в zip-поставку он не входит и восстанавливается одной
+командой: `git clone -b rumu https://github.com/rtynbirf/singulyar cells/singulyar-rumu`.
+
 ## 2. Проверить мост против живого клона дома
 
 ```bash
