@@ -27,6 +27,7 @@
 - [templates/](templates/): шаблоны новой клетки (MANIFEST.json, AGENTS.md).
 - [Makefile](Makefile): метаболизм — verify / pins / handshake / cross-handshake / blood-demo / bootstrap.
 - [DEPLOY.md](DEPLOY.md): команды создания репозитория и первого DCO-коммита.
+- [deploy.sh](deploy.sh): все действия, требующие авторизации (пуш ядра, мембранные ветки, PR) — одной командой.
 
 ## Optional
 

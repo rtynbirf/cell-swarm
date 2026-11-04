@@ -17,13 +17,16 @@
       "прививка: sandbox/ зеркалит песочницу в клетку",
       "мост проверен ЖИВЫМ клоном дома: HEAD 5501dafd = anchor_pin; грамматики взаимны; 25/25 без скипов",
       "ритуал усиления дома проверен вживую: pytest дома 4/4, doctor дома 970 ok / 0 failed",
-      "CI-метаболизм (.github/workflows/ci.yml) + CHANGELOG 0.1.0"
+      "CI-метаболизм (.github/workflows/ci.yml) + CHANGELOG 0.1.0",
+      "геном 0.1.1: все 8 пинов свЕРены с живыми HEAD; лицензии всех клеток верифицированы живым GitHub API (MIT×5, Apache-2.0×2, CC-BY-4.0×1) — прежнее «license=null» было лимитом API, не фактом",
+      "мембранные ветки в живых клонах: polymath-os (+llms.txt), rumu (+AGENTS+MANIFEST+llms.txt, клетка-указатель на singulyar@rumu 30bcf37b)",
+      "deploy.sh — все действия, требующие авторизации, одной командой"
     ],
     "next": [
-      "создать пустой репо github.com/rtynbirf/cell-swarm и запушить (DEPLOY.md)",
+      "./deploy.sh — единственный такт, требующий руки/токена (пуш ядра + ветки + PR)",
       "влить commons-strengthen в дом по ритуалу PACK-README (ветка wave33-peer-registry)",
-      "make pins W=1 и make licenses W=1 — освежить пины и лицензии клеток",
-      "мембраны AGENTS.md+MANIFEST.json в клетки rumu и polymath-os"
+      "проверить лицензию источника данных bldub для rumu (юридический остаток)",
+      "мембраны в клетки singulyar-llm, singulyar, cell65-host, voice-atlas-llm, global-video-platforms-registry — по мере роста боли контекста (Закон 2)"
     ]
   },
   "recovery": ["make verify", "make test", "читать sandbox/MEMORY.md, AGENTS.md, docs/adr/"]

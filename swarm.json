@@ -1,16 +1,18 @@
 {
-  "genome_version": "0.1.0",
+  "genome_version": "0.1.1",
   "fetched_at": "2026-11-05",
-  "fetch_method": "git ls-remote HEAD — живые SHA на дату fetched_at; лицензии НЕ верифицированы (анонимный лимит живого GitHub API 2026-11-05) — помечены preliminary по духу инварианта 5 дома",
+  "fetch_method": "git ls-remote HEAD — живые SHA на дату fetched_at; свЕРка пинов повторена 2026-11-05: все 8 равны живым HEAD",
+  "licenses_verified_at": "2026-11-05",
+  "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
   "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
   "cells": [
     {
       "name": "polymath-os",
       "repo": "https://github.com/rtynbirf/polymath-os.git",
       "pin": "0767fe16066f7f542824406a14cb85bf587ef4a2",
-      "role": "семя: 5-слойный LFS-style самосбор; кандидат в substrate роя",
+      "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
       "system_pre": "substrate",
-      "license_pre": "не верифицировано (лимит API 2026-11-05)",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
       "interface": "слои + bootstrap-скрипты"
     },
     {
@@ -19,7 +21,7 @@
       "pin": "a9200cdcc28662bca47e3cdb6d64f7f6e8e6e239",
       "role": "локальный инференс в браузере (Qwen); кандидат в метаболизм роя",
       "system_pre": "metabolism",
-      "license_pre": "не верифицировано (лимит API 2026-11-05)",
+      "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-05)",
       "interface": "браузерный API"
     },
     {
@@ -28,7 +30,7 @@
       "pin": "30bcf37b956eacbc59c39555b071bd92a1b6b536",
       "role": "корпус 64 песни × 200 языков офлайн; кандидат в память роя",
       "system_pre": "memory",
-      "license_pre": "не верифицировано (лимит API 2026-11-05); статус мелодий определяет законность",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
       "interface": "файлы + манифест данных"
     },
     {
@@ -37,16 +39,16 @@
       "pin": "1cd485e1fd68b7552ac6ebc507b9a3568781ad28",
       "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
       "system_pre": "substrate",
-      "license_pre": "не верифицировано (лимит API 2026-11-05)",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
       "interface": "конфиги ноды"
     },
     {
       "name": "rumu",
       "repo": "https://github.com/rtynbirf/rumu.git",
       "pin": "af3732f79301cec7f3cea37e6ceb907b3632dab6",
-      "role": "суверенный P2P-стриминг; кандидат в сенсорику роя (view поверх swarm)",
+      "role": "держатель имени РУМУ — клетка-указатель: тело живёт веткой rumu в singulyar (пин 30bcf37b, проверен живым ls-remote и клоном 2026-11-05); мембрана AGENTS+MANIFEST+llms.txt готова (ветка membrane-2026-11-05)",
       "system_pre": "senses",
-      "license_pre": "не верифицировано (лимит API 2026-11-05); лицензия источника данных bldub требует проверки",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); лицензия источника данных bldub требует проверки",
       "interface": "плеер поверх P2P"
     },
     {
@@ -55,7 +57,7 @@
       "pin": "e4ad80fc19d96f950bbe97b384be2be7a32265f1",
       "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
       "system_pre": "senses",
-      "license_pre": "не верифицировано (лимит API 2026-11-05); consent-мембрана обязательна",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
       "interface": "модели + consent-манифест"
     },
     {
@@ -64,7 +66,7 @@
       "pin": "513247f39b62b0448c7e0edc4f2b71d24aa44713",
       "role": "реестр-указатель платформ; прототип Закона 3 — хаб хранит магниты, не контент",
       "system_pre": "genome",
-      "license_pre": "не верифицировано (лимит API 2026-11-05)",
+      "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-05)",
       "interface": "реестр указателей"
     },
     {
