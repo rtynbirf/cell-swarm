@@ -58,6 +58,24 @@ git push origin membrane-2026-11-05    # PR открывается в вебе �
 PID 1; отзыв — удалением записи или файла; отозванный `consent_id` не оживает,
 новый обмен требует нового согласия (ADR-0017 п.4 дома).
 
+## 3-тер. Такт 2026-11-05 (вечер, второй): пуш двух веток — единственный остаток
+
+Всё исполнено без руки; ждут токена (env одного вызова, как раньше):
+
+```bash
+# 1) ядро: ADR-0011 + ADR-0012 + геном 0.1.4 + карта + прививка (ветка готова)
+cd cell-swarm && git push origin rumu-own-catalog-structure   # PR → main
+
+# 2) каталог РУМУ: свой catalog.js + title.html (ветка готова)
+cd ../singulyar && git push origin rumu-own-catalog           # PR → ветку rumu
+
+# 3) после слияния обоих: сверить пины и поднять геном до 0.1.5
+cd ../cell-swarm && make pins W=1
+```
+
+Рабочий путь авторизации — `http.extraheader` (урок такта исполнения):
+`git -c http.extraheader="Authorization: Basic $(printf 'rtynbirf:ТОКЕН' | base64 -w0)" push origin ВЕТКА`.
+
 ## 4. Дисциплина дальше
 
 - пины: `make pins W=1` (сухой прогон — просто `make pins`)
