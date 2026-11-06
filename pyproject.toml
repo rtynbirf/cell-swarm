@@ -1,0 +1,10 @@
+[project]
+name = "cell-swarm"
+version = "0.1.0"
+description = "Рой клеток: геном swarm.json, метаболизм (verify/handshake/emit), пять законов роя"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
