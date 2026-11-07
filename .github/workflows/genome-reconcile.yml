@@ -19,16 +19,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-      - name: живые SHA — догнать пины за телами (по памяти пин не вносится)
-        run: python3 scripts/pin.py --write
-      - name: вписать факт, если дрейф был; дрейфа нет — коммита нет
+      - name: сверка-контур — перечитать территорию → пины живым ls-remote → вписать факт → повторить до схождения (гонка 2631bd6, урок TH-RTP-06)
         run: |
-          if git diff --quiet swarm.json; then
-            echo "дрейфа нет — геном свеж; событие сверилось и растворилось"
-          else
-            git config user.name "genome-reconcile"
-            git config user.email "agent@rtynbirf.local"
+          git config user.name "genome-reconcile"
+          git config user.email "agent@rtynbirf.local"
+          for attempt in 1 2 3; do
+            # актюатор перечитывает территорию НЕПОСРЕДСТВЕННО перед действием:
+            # карта на входе цикла может быть старше main (гонка с параллельным пушем)
+            git fetch origin main --quiet
+            git rebase --autostash origin/main --quiet || git rebase --abort
+            python3 scripts/pin.py --write
+            if git diff --quiet swarm.json; then
+              echo "дрейфа нет — геном свеж; событие сверилось и растворилось (попытка $attempt)"
+              exit 0
+            fi
             git add swarm.json
             git commit -m "genome: пин догнан за телом событием пуша клетки (автомат, TH-RTP-04)"
-            git push
-          fi
+            if git push; then
+              echo "факт вписан с попытки $attempt"
+              exit 0
+            fi
+            echo "гонка: территория ушла во время записи — перечитать и повторить (попытка $attempt)"
+          done
+          echo "территория не пустила за 3 попытки — следующий пуш клетки сам запустит сверку заново (level-triggered)"
+          exit 1
