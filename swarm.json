@@ -1,6 +1,6 @@
 {
   "genome_version": "0.1.9",
-  "fetched_at": "2026-11-07",
+  "fetched_at": "2026-11-08",
   "fetch_method": "git ls-remote HEAD + GitHub API (где взялось) — живые данные на 2026-11-07",
   "licenses_verified_at": "2026-11-05",
   "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
@@ -87,6 +87,15 @@
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
       "interface": "python3 runtime_protocol.py | make verify | make demo"
+    },
+    {
+      "name": "cell-rs",
+      "repo": "https://github.com/rtynbirf/cell-rs.git",
+      "pin": "1f1d5226d894cbf4db23433fb436825b427df6b0",
+      "role": "первая Rust-клетка: ядро контура сверки (Tolerance/reconcile/Phase, sha256 с нуля на векторах NIST, байт-цепь); семантика допуска = Python-ядру; компилятор клетки — CI",
+      "system_pre": "substrate",
+      "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
+      "interface": "cargo test / make verify; пин живым ls-remote"
     }
   ],
   "bridge": {

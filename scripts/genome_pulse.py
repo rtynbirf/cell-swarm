@@ -90,7 +90,9 @@ def main():
     chain_names = ["runtime-protocol", "polymath-os"]
     observed = {}
     for name in chain_names:
-        repo = cells[name]["repo"].removeprefix("https://").removesuffix(".git")
+        # "https://github.com/owner/name.git" → "owner/name" (без хоста и .git)
+        tail_path = cells[name]["repo"].rstrip("/").removesuffix(".git").split("/")
+        repo = "/".join(tail_path[-2:])
         observed[name] = live_head(token, repo)
         print(f"ФАКТ: живой HEAD {name} = {observed[name][:12]}")
 
