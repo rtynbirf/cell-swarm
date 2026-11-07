@@ -1,5 +1,8 @@
 # CELL-SWARM — рой клеток Человека
 
+
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](./LICENSE) [![Genome](https://img.shields.io/badge/genome-swarm.json-orange)](./swarm.json) [![Bootstrap](https://img.shields.io/badge/enzyme-bootstrap.sh-success)](./bootstrap.sh) [![Offline](https://img.shields.io/badge/clone%E2%86%92make-%E2%9C%94%20offline-brightgreen)](./README.md)
+
 > Сингулярная эмерджентная архитектура: пять законов, один геном, связь с организмом COMMONS по протоколу согласия (ADR-0017 дома).
 
 ## Что это
