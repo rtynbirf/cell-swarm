@@ -18,7 +18,7 @@ jobs:
         run: make verify
       - name: tests — приёмки грамматик и прививки
         run: make test
-      - name: memory — сверка памяти роя: цепь+свежесть+источники живым API
+      - name: "memory — сверка памяти роя: цепь+свежесть+источники живым API"
         env:
           GH_TOKEN: ${{ secrets.CELL_SWARM_DISPATCH_TOKEN }}
         run: make memory
