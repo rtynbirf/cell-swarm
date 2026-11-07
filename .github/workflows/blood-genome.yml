@@ -1,0 +1,21 @@
+# Кровь-геном: геном роя сам открывает удар крови. Запуск — СОБЫТИЕ
+# (workflow_dispatch руками владельца или цепи), никогда — расписание
+# (закон 1: угадчик — яд). Пульс: конверт → летопись → runtime-protocol
+# → polymath-os → летопись. См. blood/README.md.
+name: blood-genome
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: удар крови — конверт, летопись, dispatch первой клетке
+        env:
+          GH_TOKEN: ${{ secrets.CELL_SWARM_DISPATCH_TOKEN }}
+        run: python3 scripts/genome_pulse.py

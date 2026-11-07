@@ -1,0 +1,16 @@
+{
+  "id": "MEM-0002",
+  "statement": "Кровь роя = конверт с допуском (eps/deadband), хеш-цепью prev_hash и ttl; летопись cell-swarm/blood/LEDGER.jsonl tamper-evident (подмена середины ловится сверкой хешей).",
+  "tol": {
+    "ttl_days": 30
+  },
+  "source": {
+    "repo": "rtynbirf/runtime-protocol",
+    "ref": "2337fc2fa05345f0e488fc0862831bc19b2bea0c",
+    "path": "blood.py",
+    "source_sha256": "482db96b2935ac10b2ddfbdc03a56ad9eb662cc8471d6934d7e3035ffb986057"
+  },
+  "verified_at": "2026-11-07T17:32:45+00:00",
+  "prev": "6b11f7b04adf61c115c19b02aee16e5586ab275411bd18085e062a30e9b1e82f",
+  "hash": "be38e5377dcee685ceee66fdeef5fbcdfbe0a6fd2f01b83c205a39ebc84feae2"
+}

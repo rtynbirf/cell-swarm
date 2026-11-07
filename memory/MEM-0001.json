@@ -1,0 +1,16 @@
+{
+  "id": "MEM-0001",
+  "statement": "Пин клетки в геноме — живой SHA; геном догоняет пин СОБЫТИЕМ cell-pushed (notify-genome → genome-reconcile), никогда по таймеру.",
+  "tol": {
+    "ttl_days": 30
+  },
+  "source": {
+    "repo": "rtynbirf/runtime-protocol",
+    "ref": "2337fc2fa05345f0e488fc0862831bc19b2bea0c",
+    "path": ".github/workflows/ci.yml",
+    "source_sha256": "0309880dfbf48cc2d941957681c74fb0fdb3c5b893501579e0a9988160546f58"
+  },
+  "verified_at": "2026-11-07T17:32:44+00:00",
+  "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+  "hash": "6b11f7b04adf61c115c19b02aee16e5586ab275411bd18085e062a30e9b1e82f"
+}

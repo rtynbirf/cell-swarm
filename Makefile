@@ -3,13 +3,15 @@ PYTHON ?= python3
 COMMONS ?= ../commons
 METHOD ?= genome.read
 
-.PHONY: help verify handshake cross-handshake blood-demo pins licenses bootstrap to-organ-registry test
+.PHONY: help verify handshake cross-handshake blood-demo blood-genome memory pins licenses bootstrap to-organ-registry test
 
 help:
 	@echo "make verify            — геном/ДНК/голос/согласия fail-closed"
 	@echo "make handshake METHOD=genome.read — вердикт согласия до факта"
 	@echo "make cross-handshake COMMONS=../commons — грамматика дома читает голос роя"
 	@echo "make blood-demo        — конверты SPEC-0003 + цепочка в tmp"
+	@echo "make blood-genome      — удар крови: конверт+летопись+dispatch (нужен GH_TOKEN)"
+	@echo "make memory            — сверка памяти роя: цепь+свежесть+источники"
 	@echo "make pins              — живые SHA (dry-run; make pins W=1 — записать)"
 	@echo "make licenses          — лицензии живым API (нужен GITHUB_TOKEN)"
 	@echo "make bootstrap         — поднять клетки по пинам (./bootstrap.sh)"
@@ -32,6 +34,12 @@ blood-demo:
 	$(PYTHON) scripts/emit.py --type observe --source swarm --organ cell-swarm --trace demo --payload '{"note":"наблюдение записано"}' --seconds 0.2 --journal $$J && \
 	echo "--- цепочка:" && $(PYTHON) scripts/emit.py --verify --journal $$J && \
 	echo "--- журнальный файл: $$J"
+
+blood-genome:
+	$(PYTHON) scripts/genome_pulse.py
+
+memory:
+	$(PYTHON) tools/memory_check.py $(if $(NO_NET),--no-net,)
 
 pins:
 	$(PYTHON) scripts/pin.py $(if $(W),--write,)

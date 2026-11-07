@@ -1,0 +1,16 @@
+{
+  "id": "MEM-0003",
+  "statement": "Actions пинуются SHA-каноном; merge dependabot делается осознанно: SHA из диффа сверяется живым ls-remote с каноническим тегом.",
+  "tol": {
+    "ttl_days": 30
+  },
+  "source": {
+    "repo": "rtynbirf/nous",
+    "ref": "e64519b96f435314885e05f5d9219aff6b0a7bff",
+    "path": "manifests/pins.yaml",
+    "source_sha256": "53d4f879664322138e80c0a4d6ca6e1a5be78c8c8c7e5767b43503cc86944bd8"
+  },
+  "verified_at": "2026-11-07T17:32:45+00:00",
+  "prev": "be38e5377dcee685ceee66fdeef5fbcdfbe0a6fd2f01b83c205a39ebc84feae2",
+  "hash": "d6a206079f89ef72fbcb15dd2c4eeac48332e00b39a742115b15c5fe2ff012ff"
+}
