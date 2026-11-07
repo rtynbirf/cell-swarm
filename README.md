@@ -1,5 +1,8 @@
 # CELL-SWARM — рой клеток Человека
 
+<p align="center"><img src=".github/social-preview.png" alt="cell-swarm" width="100%"></p>
+
+
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](./LICENSE) [![Genome](https://img.shields.io/badge/genome-swarm.json-orange)](./swarm.json) [![Bootstrap](https://img.shields.io/badge/enzyme-bootstrap.sh-success)](./bootstrap.sh) [![Offline](https://img.shields.io/badge/clone%E2%86%92make-%E2%9C%94%20offline-brightgreen)](./README.md)
 
