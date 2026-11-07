@@ -3,6 +3,23 @@
 Формат — Keep a Changelog. Версии и релизы — за Человеком (PID 1);
 агент роя пополняет только раздел Unreleased. Даты — по факту, без задним числом.
 
+## [Unreleased]
+
+### Добавлено
+
+- межтельная кровь (ADR-0013): `blood/kernel/` + `scripts/genome_pulse.py` +
+  workflow `blood-genome`; летопись `blood/LEDGER.jsonl`; приёмник второй
+  живой клетки в polymath-os; статусы эха VERIFIED/OBSERVED; идемпотентный
+  повтор доставки.
+- память роя с допуском: `memory/MEM-0001..0003.json` (ttl_days, хеш-цепь,
+  провенанс CONFIRMED) + `tools/memory_check.py` (`make memory`, CI-хук).
+- Rust-тропа в клетке runtime-protocol (`rust_trail/`, ADR-0005 клетки):
+  канон + sha256 std-only, байт-в-байт с ядром по золотым пробам (CI `rust-trail`).
+
+### Изменено
+
+- геном 0.1.9: cell-rs вписана пином живым ls-remote (10 клеток).
+
 ## [0.1.0] — 2026-11-05
 
 ### Добавлено
