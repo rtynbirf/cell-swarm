@@ -1,0 +1,16 @@
+{
+ "id": "MEM-0004",
+ "statement": "Дорожная карта роя после полной ревизии аккаунта 08.11: счёт 15 точек (12 живы / 3 квотные до выветривания GB-часов ~18:10 МСК, эскалация 19:10 МСК); биллимое 426/500 МБ — релиз media-vault владельца (ruvson-lyrics), СВЯТОЕ, не трогать; порядок добивки: 15/15 -> отзыв отставных токенов web-UI -> 8 открытых ДПР (2 мажора universal-agent, 5 миноров voice-atlas-llm, геном-ДПР #5 cell-swarm) -> rulesets на 4 публичных до 26/26 -> retention-гигиена -> Единый Свод под 41 репо. Рой цел: летопись 10 конвертов VERIFIED, память MEM-0001..0003 CONFIRMED.",
+ "tol": {
+  "ttl_days": 7
+ },
+ "source": {
+  "repo": "rtynbirf/cell-swarm",
+  "ref": "9d58925f4ef6da76819db6e57a812f0b3a7491ec",
+  "path": "blood/LEDGER.jsonl",
+  "source_sha256": "d5a74bb355b06fbef4ff7cd7c26b3a0532d361093c4444de2d1f730c35bb38b5"
+ },
+ "verified_at": "2026-11-08T08:01:55+00:00",
+ "prev": "d6a206079f89ef72fbcb15dd2c4eeac48332e00b39a742115b15c5fe2ff012ff",
+ "hash": "8c0307dd466e85c32d5d2d2088fa16da1c49557c7bd8039f0ca9f51389d6f143"
+}
