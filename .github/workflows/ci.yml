@@ -21,5 +21,7 @@ jobs:
         run: make test
       - name: "memory — сверка памяти роя: цепь+свежесть+источники живым API"
         env:
-          GH_TOKEN: ${{ secrets.CELL_SWARM_DISPATCH_TOKEN }}
+          # волна ×6: публичные источники читаются штатным job-токеном — ротация
+          # PAT не слепит память; PAT остаётся только для cross-repo dispatch.
+          GH_TOKEN: ${{ secrets.CELL_SWARM_DISPATCH_TOKEN || github.token }}
         run: make memory

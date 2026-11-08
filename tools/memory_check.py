@@ -9,6 +9,11 @@
   verified_at — когда сверяли;
   prev/hash   — хеш-цепь памяти (GENESIS = 64 нуля).
 
+Токен чтения (волна ×6): каскад GH_TOKEN → GITHUB_TOKEN. Воркфлоу передаёт
+secrets.CELL_SWARM_DISPATCH_TOKEN || github.token — публичные источники
+читаются штатным job-токеном, ротация PAT больше не слепит память;
+fail-closed не ослаблен: несчитанный источник — по-прежнему рана.
+
 Проверки (fail-closed, exit 1 при любой ране):
   1. ЦЕПЬ: hash пересчитывается, prev = хеш предыдущего файла.
   2. СВЕЖЕСТЬ: verified_at + tol.ttl_days >= сегодня — иначе DRIFT.
@@ -50,7 +55,7 @@ def main():
         sys.exit("ФАКТ: память пуста — это не рана, но и не память")
     prev = GENESIS
     wounds = 0
-    token = os.environ.get("GH_TOKEN", "")
+    token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
     now = datetime.now(timezone.utc)
     for f in files:
         mem = json.loads(f.read_text("utf-8"))

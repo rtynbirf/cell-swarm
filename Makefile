@@ -3,7 +3,7 @@ PYTHON ?= python3
 COMMONS ?= ../commons
 METHOD ?= genome.read
 
-.PHONY: help verify handshake cross-handshake blood-demo blood-genome memory pins licenses bootstrap to-organ-registry test
+.PHONY: help verify handshake cross-handshake blood-demo blood-genome memory pins pins-seals licenses bootstrap to-organ-registry test
 
 help:
 	@echo "make verify            — геном/ДНК/голос/согласия fail-closed"
@@ -12,7 +12,8 @@ help:
 	@echo "make blood-demo        — конверты SPEC-0003 + цепочка в tmp"
 	@echo "make blood-genome      — удар крови: конверт+летопись+dispatch (нужен GH_TOKEN)"
 	@echo "make memory            — сверка памяти роя: цепь+свежесть+источники"
-	@echo "make pins              — живые SHA (dry-run; make pins W=1 — записать)"
+	@echo "make pins              — живые SHA + корень SEALS-цепи карточек (dry-run; make pins W=1 — записать)"
+	@echo "make pins-seals        — корень пломб-цепи карточек cards_seals в геноме (офлайн; W=1 — записать)"
 	@echo "make licenses          — лицензии живым API (нужен GITHUB_TOKEN)"
 	@echo "make bootstrap         — поднять клетки по пинам (./bootstrap.sh)"
 	@echo "make to-organ-registry — экспорт клеток в словарь реестра органов дома"
@@ -43,6 +44,9 @@ memory:
 
 pins:
 	$(PYTHON) scripts/pin.py $(if $(W),--write,)
+
+pins-seals:
+	$(PYTHON) scripts/pin.py --seals-root $(if $(W),--write,)
 
 licenses:
 	$(PYTHON) scripts/pin.py --licenses $(if $(W),--write,)

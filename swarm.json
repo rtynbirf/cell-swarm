@@ -117,5 +117,11 @@
       "http-localhost"
     ],
     "outside_gate": "нет: наружный шлюз запрещён домом (ADR-0016), обмен живёт на хосте Человека"
+  },
+  "cards_seals": {
+    "seals": "SEALS.jsonl",
+    "tip": "675d27a45d2b0817ae8366da99226f8d8485f1948421326575bb4d8d812c04eb",
+    "cards": 11,
+    "updated_at": "2026-11-08"
   }
 }
