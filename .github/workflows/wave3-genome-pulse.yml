@@ -52,6 +52,7 @@ jobs:
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add blood/LEDGER.jsonl
             git commit -m "pulse: конверт пульса генома дописан в летопись"
+            git pull --rebase origin main || true
             git push
           else
             echo "летопись не изменилась (повтор не рана)"

@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "blood-конверт cell-swarm (волна ×3, ПРЕДЛОЖЕНИЕ-21)",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "payload",
+    "source",
+    "ttl_days",
+    "prev_hash",
+    "hash"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{16}$"
+    },
+    "type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "payload": {
+      "type": "object"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "repo",
+        "path"
+      ],
+      "properties": {
+        "repo": {
+          "type": "string"
+        },
+        "ref": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string"
+        }
+      }
+    },
+    "ttl_days": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "tol": {
+      "type": "object",
+      "properties": {
+        "eps": {
+          "type": "number"
+        },
+        "deadband": {
+          "type": "number"
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+    },
+    "prev_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

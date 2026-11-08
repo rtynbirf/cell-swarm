@@ -132,16 +132,30 @@ def test_verify_negative():
     return [] if fails == 0 else ["подложные кейсы: %d прошли вместо отказа" % fails]
 
 
+LEDGER_SCHEMA = {
+    "type": "object",
+    "required": ["hash"],
+    "properties": {
+        "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "prev_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "status": {"type": "string"},
+        "created_at": {"type": "string"},
+    },
+}
+
+
 def test_schema():
     errs = mini_validate(build_envelope(type="probe", payload={}, source={"repo": "r", "path": "p"},
                                         ttl_days=7, created_at=FIXED_DATE),
                          SCHEMA)
     files = sorted(GOLDEN.glob("golden-*.json"))
     for f in files:
-        errs += mini_validate(json.loads(f.read_text(encoding="utf-8")), SCHEMA, f.name)
+        # золотые пробы — сырые строки живого LEDGER: валидируем по схеме строки LEDGER,
+        # а не по схеме конверта (у строки LEDGER нет id/type/source/ttl_days — и не должно).
+        errs += mini_validate(json.loads(f.read_text(encoding="utf-8")), LEDGER_SCHEMA, f.name)
     if errs:
         return ["schema.json: " + "; ".join(errs)]
-    print("schema.json: собранный конверт и все пробы (%d) валидны" % len(files))
+    print("schema.json: конверт валиден по SCHEMA, %d золотых проб — по LEDGER_SCHEMA (строки живого LEDGER)" % len(files))
     return []
 
 
