@@ -9,7 +9,7 @@
     {
       "name": "polymath-os",
       "repo": "https://github.com/rtynbirf/polymath-os.git",
-      "pin": "fef57b39f308294eba257a1c8972b48c82255554",
+      "pin": "7af922e7b0bd404696c008a30200a383df35dadf",
       "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
@@ -18,7 +18,7 @@
     {
       "name": "singulyar-llm",
       "repo": "https://github.com/rtynbirf/singulyar-llm.git",
-      "pin": "97e6a5e43a70252d7e5a27b40bb780f7d94639dd",
+      "pin": "c0e76cfb79f25932ca88209f062ea609dd71bcba",
       "role": "локальный инференс в браузере (Qwen); кандидат в метаболизм роя",
       "system_pre": "metabolism",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-05)",
@@ -36,7 +36,7 @@
     {
       "name": "cell65-host",
       "repo": "https://github.com/rtynbirf/cell65-host.git",
-      "pin": "b8e5ab9133f4ae28c3ad134e4b779356fcc018ae",
+      "pin": "3c1f7f3ab52415ea9c4a5e937b4273fc339758bf",
       "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
@@ -54,7 +54,7 @@
     {
       "name": "voice-atlas-llm",
       "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
-      "pin": "c2b03626f531d1862b6e5a5c36a68a4e9b009765",
+      "pin": "bf14fb063e68652bfba81bcb5381bb4b9eda59ac",
       "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
@@ -63,7 +63,7 @@
     {
       "name": "global-video-platforms-registry",
       "repo": "https://github.com/rtynbirf/global-video-platforms-registry.git",
-      "pin": "c7f24487843e7f0f30bd6373cdc3a916e418cbc9",
+      "pin": "f349aa60efa7aab39c4e75b588a64227192e7543",
       "role": "реестр-указатель платформ; прототип Закона 3 — хаб хранит магниты, не контент",
       "system_pre": "genome",
       "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-05)",
@@ -72,7 +72,7 @@
     {
       "name": "commons",
       "repo": "https://github.com/rtynbirf/commons.git",
-      "pin": "d57bb8b1bf03f1017882ef8f9654586ecd9c3076",
+      "pin": "8543f569481f311af8a6b235049bdbbe85033c2d",
       "role": "дом: организм из лучших открытых проектов; якорь моста (ADR-0006 роя)",
       "system_pre": "external-house",
       "license_pre": "Apache-2.0 (LICENSE репозитория, прочитан клоном 2026-11-05)",
@@ -82,7 +82,7 @@
     {
       "name": "runtime-protocol",
       "repo": "https://github.com/rtynbirf/runtime-protocol.git",
-      "pin": "6f5da019c48bcf803177d38f40ab062fa090a673",
+      "pin": "c25f8a5fa1852dc99545dc1988549b41c39372d7",
       "role": "исполнимая модель динамики узла: уравнение ρ̇ (генератор/долг/каратель), фазовая машина GENESIS_EXEC (SUBCRITICAL→FORAGING→COHERENCE→OVERCLOCK→TRANSITION→POST_GENESIS), VOLATILE_META, CANCER_FILTER; stdlib-only, метаболизм make verify/demo; 17 приёмок зелёные (7 ядра + 10 контура сверки); спецификация-источник — nous@agents/execution docs/genesis (TH-RTP-01); создана 2026-11-07 агентом по мандату Хозяина (TH-RTP-02); 2026-11-07 — контур сверки «живая карта» (reconciliation.py, ADR-0002), пин догнан за телом живым ls-remote (TH-RTP-03)",
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
@@ -91,7 +91,7 @@
     {
       "name": "cell-rs",
       "repo": "https://github.com/rtynbirf/cell-rs.git",
-      "pin": "7a6f6226e52b71cbf172ef04fafd21b739761301",
+      "pin": "a0370126c310cb2356145b0daa0d11a840f62f4a",
       "role": "первая Rust-клетка: ядро контура сверки (Tolerance/reconcile/Phase, sha256 с нуля на векторах NIST, байт-цепь); семантика допуска = Python-ядру; компилятор клетки — CI",
       "system_pre": "substrate",
       "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
@@ -104,7 +104,7 @@
       "system_pre": "overseer",
       "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
       "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
-      "pin": "80e73a92aaf6e7facc7affc248b1ed08ecf489c3"
+      "pin": "13a1f46f8be8cd61020f7260c806b0049c9177fe"
     }
   ],
   "bridge": {
