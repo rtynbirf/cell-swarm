@@ -96,6 +96,15 @@
       "system_pre": "substrate",
       "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
       "interface": "cargo test / make verify; пин живым ls-remote"
+    },
+    {
+      "name": "agryp",
+      "repo": "https://github.com/rtynbirf/agryp.git",
+      "role": "процесс-супервизор агентов роя (PID 1): один файл C (src/agryp.c), только libc, ноль зависимостей; агент роя = юнит .agent с бюджетом попытки в двух валютах (время + токены), рестарт-политикой always|on-failure|no, лестницей перезапуска с crash-loop-предохранителем и клеткой (cgroups v2 + pid/mount namespaces); PDEATHSIG + subreaper — сирот 0 после kill -9 PID 1 (находка витка 7.2: 20 сирот → 0, exec-страховка агента); NDJSON-журнал «который не лжёт», файл-договоры .agryp-status и .agryp-ctl/<unit>.down (сокеты в доме запрещены); смоук песочницы 2026-11-07: старт 20+1 юнитов до полного RUNNING 24 мс, RSS супервизора 1816 КБ, лестница 1000→2000→4000 мс, ~589 Б журнала/агент за 10 с; ниша топ-100 GitHub 2026: 40 агентских репо, 0 процессных (срез РАЗВЕДЧИКА) — уникальная связка «рой + PID 1»; клетка ядра cell-swarm по карте ПОЛИМАТ X2 (2026-11-07)",
+      "system_pre": "overseer",
+      "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
+      "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
+      "pin": "e3cf228e9992b4a46745cca6e33be291dddc9f6a"
     }
   ],
   "bridge": {
