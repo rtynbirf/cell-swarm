@@ -1,6 +1,6 @@
 {
   "genome_version": "0.1.10",
-  "fetched_at": "2026-11-09",
+  "fetched_at": "2026-11-08",
   "fetch_method": "git ls-remote HEAD + GitHub API (где взялось) — живые данные на 2026-11-08",
   "licenses_verified_at": "2026-11-05",
   "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
@@ -27,7 +27,7 @@
     {
       "name": "singulyar",
       "repo": "https://github.com/rtynbirf/singulyar.git",
-      "pin": "226a49990a8438eec0390d8222023bc568197968",
+      "pin": "d95ad5a42d0053fafa3fcf2202d885ded0500476",
       "role": "корпус 64 песни × 200 языков офлайн; кандидат в память роя; здесь же тело РУМУ (ветка rumu — пин следит за телом; 2026-11-05 влит свой каталог — вариант (в), ADR-0011 ядра: catalog.js CC0, своя нумерация i:1..249; вечер — такт «ФЛАГМАН»: страница СИНГУЛЯР_01 v3.0 переработана — сансара/очередь/звук/запись/bento/ленивые файлы, PR#47; утро — такты «НЕ РАБОТАЕТ»+«ЧИСТОВИКИ»: кэш v212 лечит мёртвые вьюхи player/catalog ·01, тексты пересажены на чистовики ruvson-lyrics (63 песни), hashchange-вьюхи, PR#48; догон — пины стражей и живых лиц выровнены цехом правды за v212, PR#49; утро — такт «ДОГОН за ·56»: Такт-гейт поймал 6 красных от чужого С154 — офлайн-закон, симметрия нитей, Малыш, средовые гарды фондов выровнены честно (PR#50/51/52), гейт зелёный)",
       "system_pre": "memory",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
@@ -54,7 +54,7 @@
     {
       "name": "voice-atlas-llm",
       "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
-      "pin": "17a44b44fdd0e414f2562edc4de3bccf339e2af4",
+      "pin": "c2b03626f531d1862b6e5a5c36a68a4e9b009765",
       "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
@@ -63,7 +63,7 @@
     {
       "name": "global-video-platforms-registry",
       "repo": "https://github.com/rtynbirf/global-video-platforms-registry.git",
-      "pin": "b1a633b1833df4e40096a43b344504b6b324201c",
+      "pin": "c7f24487843e7f0f30bd6373cdc3a916e418cbc9",
       "role": "реестр-указатель платформ; прототип Закона 3 — хаб хранит магниты, не контент",
       "system_pre": "genome",
       "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-05)",
@@ -72,7 +72,7 @@
     {
       "name": "commons",
       "repo": "https://github.com/rtynbirf/commons.git",
-      "pin": "df036f3abe54421f3a064b9de7d8adc043ef8063",
+      "pin": "d57bb8b1bf03f1017882ef8f9654586ecd9c3076",
       "role": "дом: организм из лучших открытых проектов; якорь моста (ADR-0006 роя)",
       "system_pre": "external-house",
       "license_pre": "Apache-2.0 (LICENSE репозитория, прочитан клоном 2026-11-05)",
@@ -82,7 +82,7 @@
     {
       "name": "runtime-protocol",
       "repo": "https://github.com/rtynbirf/runtime-protocol.git",
-      "pin": "f57ad2db78460f58b3471811acc6e452785c44b4",
+      "pin": "6f5da019c48bcf803177d38f40ab062fa090a673",
       "role": "исполнимая модель динамики узла: уравнение ρ̇ (генератор/долг/каратель), фазовая машина GENESIS_EXEC (SUBCRITICAL→FORAGING→COHERENCE→OVERCLOCK→TRANSITION→POST_GENESIS), VOLATILE_META, CANCER_FILTER; stdlib-only, метаболизм make verify/demo; 17 приёмок зелёные (7 ядра + 10 контура сверки); спецификация-источник — nous@agents/execution docs/genesis (TH-RTP-01); создана 2026-11-07 агентом по мандату Хозяина (TH-RTP-02); 2026-11-07 — контур сверки «живая карта» (reconciliation.py, ADR-0002), пин догнан за телом живым ls-remote (TH-RTP-03)",
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
@@ -104,7 +104,7 @@
       "system_pre": "overseer",
       "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
       "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
-      "pin": "ef982c1fed573ccec0e5dc89d46eb6424b67b3a1"
+      "pin": "80e73a92aaf6e7facc7affc248b1ed08ecf489c3"
     }
   ],
   "bridge": {
