@@ -42,7 +42,7 @@ jobs:
 
       - name: Сначала летопись, потом рассылка (blood_sdk, ttl 7)
         if: ${{ env.SKIP != 'true' }}
-        run: python3 tools/wave3/pulse_event.py run --genome swarm.json --ledger blood/LEDGER.jsonl --apply
+        run: python3 tools/wave3/pulse_event.py run --genome swarm.json --ledger blood/GENOME-PULSES.jsonl --apply
 
       - name: Закрепить строку летописи
         if: ${{ env.SKIP != 'true' }}
