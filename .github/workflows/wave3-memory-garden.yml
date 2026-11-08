@@ -1,0 +1,21 @@
+name: wave3-memory-garden
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  garden:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Чекер v2 (бивремя, fail-closed) на живой памяти роя
+        run: python3 memory/garden/mem_garden.py check
+
+      - name: Конфликт-детектор — искусственная пара, tension репортован, цепь цела
+        run: python3 memory/garden/mem_garden.py tension-selftest
+
+      - name: Самопрореживание (сухой прогон) и пульс-сводка — геном + активные/архивные
+        run: python3 memory/garden/mem_garden.py garden

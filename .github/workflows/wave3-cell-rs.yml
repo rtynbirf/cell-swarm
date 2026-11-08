@@ -1,0 +1,40 @@
+name: wave3-cell-rs
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  golden-exchange:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Сборка cell-rs (std-only, без крейтов)
+        run: |
+          rustc --version || (curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal && echo "$HOME/.cargo/bin" >> "$GITHUB_PATH")
+          rustc -O cell-rs/src/main.rs -o cell-rs/cell-rs
+
+      - name: Золотой обмен с Python-клеткой байт-в-байт (такты 1-2)
+        run: python3 cell-rs/golden_exchange.py ./cell-rs/cell-rs
+
+      - name: Статус пина cell-rs в геноме (такт 3 — отчёт, не правка)
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("swarm.json")
+          if not p.exists():
+              print("геном: swarm.json не найден — пин cell-rs не проверен (такт 3 — живой ход)")
+              raise SystemExit(0)
+          raw = p.read_text(encoding="utf-8")
+          try:
+              genome = json.loads(raw)
+          except Exception as e:
+              print("геном: swarm.json не читается (%s) — пин не проверен" % e)
+              raise SystemExit(0)
+          found = "cell-rs" in raw
+          print("геном: прочитан; пин cell-rs:", "НАЙДЕН" if found else "не найден (такт 3: вписать пин сверкой живых HEAD, пульс #2 — живой ход)")
+          print("ключей верхнего уровня:", len(genome) if isinstance(genome, dict) else "не словарь")
+          PY

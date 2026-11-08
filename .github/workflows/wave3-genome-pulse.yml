@@ -1,0 +1,58 @@
+name: wave3-genome-pulse
+on:
+  push:
+    paths:
+      - swarm.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Тег пульса pulse-#N (не v*) и release-заметка с sha256 генома
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          GENOME_SHA=$(sha256sum swarm.json | cut -d' ' -f1)
+          N=$(git tag -l 'pulse-*' | wc -l)
+          TAG="pulse-#$((N + 1))"
+          if git ls-remote --tags origin "refs/tags/${TAG}" | grep -q "refs/tags/${TAG}"; then
+            echo "повтор не рана: тег ${TAG} уже существует — 0 новых конвертов, 0 новых строк, тег не дублирован"
+            echo "SKIP=true" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          printf 'Пульс генома %s\nsha256(swarm.json): %s\nРелизы v* не тронуты: пульс нумеруется префиксом pulse-.\n' "$TAG" "$GENOME_SHA" > pulse-notes.md
+          git tag "$TAG"
+          git push origin "$TAG"
+          gh release create "$TAG" --title "Пульс генома ${TAG}" --notes-file pulse-notes.md --verify-tag
+          echo "GENOME_SHA=$GENOME_SHA" >> "$GITHUB_ENV"
+
+      - name: Линт подписок и самотест линта
+        if: ${{ env.SKIP != 'true' }}
+        run: |
+          python3 tools/wave3/pulse_event.py lint
+          python3 tools/wave3/pulse_event.py lint-selftest
+
+      - name: Сначала летопись, потом рассылка (blood_sdk, ttl 7)
+        if: ${{ env.SKIP != 'true' }}
+        run: python3 tools/wave3/pulse_event.py run --genome swarm.json --ledger blood/LEDGER.jsonl --apply
+
+      - name: Закрепить строку летописи
+        if: ${{ env.SKIP != 'true' }}
+        run: |
+          if [ -n "$(git status --porcelain blood/LEDGER.jsonl)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add blood/LEDGER.jsonl
+            git commit -m "pulse: конверт пульса генома дописан в летопись"
+            git push
+          else
+            echo "летопись не изменилась (повтор не рана)"
+          fi
