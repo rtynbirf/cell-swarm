@@ -1,7 +1,7 @@
 {
   "genome_version": "0.1.9",
-  "fetched_at": "2026-11-07",
-  "fetch_method": "git ls-remote HEAD + GitHub API (где взялось) — живые данные на 2026-11-07",
+  "fetched_at": "2026-11-08",
+  "fetch_method": "git ls-remote HEAD + GitHub API (где взялось) — живые данные на 2026-11-08",
   "licenses_verified_at": "2026-11-05",
   "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
   "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
@@ -9,7 +9,7 @@
     {
       "name": "polymath-os",
       "repo": "https://github.com/rtynbirf/polymath-os.git",
-      "pin": "f4b059a48163d4d8e5d1c4e45dc169bc2325ec70",
+      "pin": "ff8421897fbb8247e0354dedad9ea05122cc0c16",
       "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
@@ -18,7 +18,7 @@
     {
       "name": "singulyar-llm",
       "repo": "https://github.com/rtynbirf/singulyar-llm.git",
-      "pin": "45332aa01bf7ec139e7445f4447b97c01e2cf06b",
+      "pin": "562a0a43c67ad5bba9c074447fb377ca08acea1d",
       "role": "локальный инференс в браузере (Qwen); кандидат в метаболизм роя",
       "system_pre": "metabolism",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-05)",
@@ -27,7 +27,7 @@
     {
       "name": "singulyar",
       "repo": "https://github.com/rtynbirf/singulyar.git",
-      "pin": "5ecac138f5f0fdc3af278af03e107fe0aee5e46a",
+      "pin": "1200a83f3d34ad15cbbf44fd79ac6d6c05c17d9b",
       "role": "корпус 64 песни × 200 языков офлайн; кандидат в память роя; здесь же тело РУМУ (ветка rumu — пин следит за телом; 2026-11-05 влит свой каталог — вариант (в), ADR-0011 ядра: catalog.js CC0, своя нумерация i:1..249; вечер — такт «ФЛАГМАН»: страница СИНГУЛЯР_01 v3.0 переработана — сансара/очередь/звук/запись/bento/ленивые файлы, PR#47; утро — такты «НЕ РАБОТАЕТ»+«ЧИСТОВИКИ»: кэш v212 лечит мёртвые вьюхи player/catalog ·01, тексты пересажены на чистовики ruvson-lyrics (63 песни), hashchange-вьюхи, PR#48; догон — пины стражей и живых лиц выровнены цехом правды за v212, PR#49; утро — такт «ДОГОН за ·56»: Такт-гейт поймал 6 красных от чужого С154 — офлайн-закон, симметрия нитей, Малыш, средовые гарды фондов выровнены честно (PR#50/51/52), гейт зелёный)",
       "system_pre": "memory",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
@@ -36,7 +36,7 @@
     {
       "name": "cell65-host",
       "repo": "https://github.com/rtynbirf/cell65-host.git",
-      "pin": "e375522bae8e1693ef3f2f59ca50854aff734f49",
+      "pin": "5d1b0194da5a2cb487eb41857a5b1337d25856b0",
       "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
@@ -45,7 +45,7 @@
     {
       "name": "rumu",
       "repo": "https://github.com/rtynbirf/rumu.git",
-      "pin": "53e1fa116f0fe7c3210654838214e7eb77821a1c",
+      "pin": "ef463f1922ad0b062b7aade370688e498b94dc1c",
       "role": "держатель имени РУМУ — клетка-указатель: тело живёт веткой rumu в singulyar (пин следит за телом, живой ls-remote; 2026-11-05 тело ушло на 98cb9a66 — PR#48: кэш v212 + чистовики ruvson-lyrics; затем 876761c6 — PR#49; затем 626c7ad — PR#50/51/52: ДОГОН за ·56, гейт зелёный); мембрана AGENTS+MANIFEST+llms.txt влита в main (PR#1; срез пина тела догнан PR#2, 2026-11-05); репо разблокирован 2026-11-05 (воля PID 1); перенос тела в самостоятельный репо ЗАКРЫТ решением «не переносить» (ADR-0012)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); данные каталога: открытой лицензии у внешнего источника НЕТ (ADR-0008) — вариант (б) облегчен (ADR-0009), вариант (в) ИСПОЛНЕН 2026-11-05 (ADR-0011): catalog.js — свой каталог CC0, своя нумерация i:1..249, следы внешнего id и бейджи источника сняты; вариант (а) закрыт как не требующийся; каталог плеера (ЛАКОРНИЯ) — свой с 2026-10-20",
@@ -54,7 +54,7 @@
     {
       "name": "voice-atlas-llm",
       "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
-      "pin": "93a86067b8a8cb1e0132900d80d4b13612098f8b",
+      "pin": "4207162886c5eae5766f87fa397e53924404f9c0",
       "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
@@ -63,7 +63,7 @@
     {
       "name": "global-video-platforms-registry",
       "repo": "https://github.com/rtynbirf/global-video-platforms-registry.git",
-      "pin": "3fa095f7cb295d78ad66610d369bf07b51687d94",
+      "pin": "64d07420c9e5a995d0afdee9d32895054d58c0bd",
       "role": "реестр-указатель платформ; прототип Закона 3 — хаб хранит магниты, не контент",
       "system_pre": "genome",
       "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-05)",
@@ -72,7 +72,7 @@
     {
       "name": "commons",
       "repo": "https://github.com/rtynbirf/commons.git",
-      "pin": "e487a3ea7e00d02b38a77c88cebcb4b5f651b602",
+      "pin": "2665d22c2a3831198cec192ceb56c89bc008956c",
       "role": "дом: организм из лучших открытых проектов; якорь моста (ADR-0006 роя)",
       "system_pre": "external-house",
       "license_pre": "Apache-2.0 (LICENSE репозитория, прочитан клоном 2026-11-05)",
@@ -91,7 +91,7 @@
     {
       "name": "cell-rs",
       "repo": "https://github.com/rtynbirf/cell-rs.git",
-      "pin": "2d0c81db5241ddc5ddb9f01e3df991240082af0c",
+      "pin": "54721403a4dd8396409f664bd5112c6b93300a0c",
       "role": "первая Rust-клетка: ядро контура сверки (Tolerance/reconcile/Phase, sha256 с нуля на векторах NIST, байт-цепь); семантика допуска = Python-ядру; компилятор клетки — CI",
       "system_pre": "substrate",
       "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
@@ -104,7 +104,7 @@
       "system_pre": "overseer",
       "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
       "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
-      "pin": "e3cf228e9992b4a46745cca6e33be291dddc9f6a"
+      "pin": "d52abd3ab550433eb32ccb0333854bab1ebe1526"
     }
   ],
   "bridge": {
