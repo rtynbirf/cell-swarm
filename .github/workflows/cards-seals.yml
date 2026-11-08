@@ -1,0 +1,46 @@
+# SEALS-подписи A2A-карточек клеток (Э-2.2, волна ×5).
+# Еженедельно: selftest обоих скриптов + живой цикл «пломба в tempfile → верификация».
+# Постоянные карточки в репо НЕ создаются и swarm.json (геном) НЕ пишется:
+# пин карточек в геноме — отдельная аккуратная операция после живого диспатча.
+name: cards-seals
+
+on:
+  schedule:
+    - cron: "0 8 * * 0" # воскресенье 08:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wave5-cards-seals
+  cancel-in-progress: false
+
+jobs:
+  seals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout (пин v4)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Selftest генератора карточек (с негативом)
+        run: python3 tools/seal_agent_cards.py --selftest
+
+      - name: Selftest верификатора (с негативами)
+        run: python3 tools/verify_card_seals.py --selftest
+
+      - name: "Живой цикл: пломба в tempfile → верификация"
+        run: |
+          set -euo pipefail
+          TMP="$(mktemp -d)"
+          python3 tools/seal_agent_cards.py --genome swarm.json --out-dir "$TMP" --seals "$TMP/SEALS.jsonl"
+          python3 tools/verify_card_seals.py --seals "$TMP/SEALS.jsonl" --cards-dir "$TMP/cards"
+          N="$(find "$TMP/cards" -maxdepth 1 -name '*.json' -type f | wc -l)"
+          {
+            echo "## cards-seals · $(date -u +%Y-%m-%d)"
+            echo ''
+            echo "- клеток в геноме запломбировано карточками: $N"
+            echo "- цепь SEALS.jsonl пересчитана верификатором: 🟢 (exit 0)"
+            echo "- tempfile $TMP — репо не изменён, карточки в дереве не публикуются"
+          } >> "$GITHUB_STEP_SUMMARY"

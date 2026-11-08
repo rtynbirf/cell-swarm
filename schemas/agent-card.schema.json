@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A2A-карточка клетки роя cell-swarm",
+  "description": "Agent Card клетки роя: целостность доказывается пересчётом хеш-цепи SEALS.jsonl (корень доверия роя, без PKI). Схема аддитивна: дополнительные поля не запрещены — новые поля (например пин цепи) добавляются дополнением, не перезаписью.",
+  "type": "object",
+  "required": ["name", "identity", "skills", "endpoints"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Имя клетки — как в геноме swarm.json."
+    },
+    "identity": {
+      "type": "object",
+      "description": "Кто это: репо-носитель + клетка.",
+      "required": ["repo", "cell"],
+      "properties": {
+        "repo": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Репо-носитель клетки (например rtynbirf/cell-swarm — тело самого роя)."
+        },
+        "cell": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Имя клетки в геноме."
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "description": "Навыки клетки из данных генома; чего геном не сообщает — пустой массив (честный ноль вместо выдумки)."
+    },
+    "endpoints": {
+      "type": "array",
+      "description": "Файл-транспорт роя: реальные файлы репо (подписки на пульс, летопись конвертов). Никаких выдуманных URL.",
+      "items": {
+        "type": "object",
+        "required": ["transport", "path"],
+        "properties": {
+          "transport": {
+            "type": "string",
+            "description": "Способ транспорта; сейчас file."
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Путь файла в репо относительно корня."
+          }
+        }
+      }
+    }
+  }
+}
