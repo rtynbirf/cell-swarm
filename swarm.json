@@ -1,7 +1,7 @@
 {
-  "genome_version": "0.1.10",
+  "genome_version": "0.2.2",
   "fetched_at": "2026-11-09",
-  "fetch_method": "git ls-remote HEAD + GitHub API (где взялось) — живые данные на 2026-11-09",
+  "fetch_method": "GitHub API /repos/<owner>/<repo>/branches/<pin_ref> (fallback: git ls-remote refs/heads/<pin_ref>, SHA эквивалентны) — живая сверка genome_drift.py на 2026-11-09",
   "licenses_verified_at": "2026-11-05",
   "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
   "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
@@ -9,11 +9,20 @@
     {
       "name": "polymath-os",
       "repo": "https://github.com/rtynbirf/polymath-os.git",
-      "pin": "191f9a778276a177723df3530da568422818c874",
+      "pin": "71431de73d3cf8090c30d6932131d9f6316a741a",
       "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
-      "interface": "слои + bootstrap-скрипты"
+      "interface": "слои + bootstrap-скрипты",
+      "integrity": "sha256-c53131697722997141be169ff68516210126478bae35dac65923648d1718a2df",
+      "fetched_at": "2026-11-09",
+      "overseer": "ОС Человека",
+      "a2a": {
+        "name": "polymath-os",
+        "role": "ОС Человека",
+        "interface": "слои + bootstrap-скрипты",
+        "status": "active"
+      }
     },
     {
       "name": "singulyar-llm",
@@ -22,7 +31,16 @@
       "role": "локальный инференс в браузере (Qwen); кандидат в метаболизм роя",
       "system_pre": "metabolism",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-05)",
-      "interface": "браузерный API"
+      "interface": "браузерный API",
+      "integrity": "sha256-99495f8573404f16512445e26ce62151a00dcc18bf5a4b244b82491bd63fec67",
+      "fetched_at": "2026-11-09",
+      "overseer": "локальный инференс в",
+      "a2a": {
+        "name": "singulyar-llm",
+        "role": "локальный инференс в",
+        "interface": "браузерный API",
+        "status": "active"
+      }
     },
     {
       "name": "singulyar",
@@ -32,7 +50,16 @@
       "system_pre": "memory",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
       "interface": "файлы + манифест данных",
-      "pin_ref": "rumu"
+      "pin_ref": "rumu",
+      "integrity": "sha256-e816b24bfefa9c9bc6e3ea9cb482cd6ad67caa3be1d6de7f9e2be14d479a7327",
+      "fetched_at": "2026-11-09",
+      "overseer": "корпус 64 песни",
+      "a2a": {
+        "name": "singulyar",
+        "role": "корпус 64 песни",
+        "interface": "файлы + манифест данных",
+        "status": "active"
+      }
     },
     {
       "name": "cell65-host",
@@ -41,7 +68,16 @@
       "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
-      "interface": "конфиги ноды"
+      "interface": "конфиги ноды",
+      "integrity": "sha256-1cb0453121204552f901a147bc8657e0451e50ba586925decd979e37864fd849",
+      "fetched_at": "2026-11-09",
+      "overseer": "суверенный узел-хост «настроил",
+      "a2a": {
+        "name": "cell65-host",
+        "role": "суверенный узел-хост «настроил",
+        "interface": "конфиги ноды",
+        "status": "active"
+      }
     },
     {
       "name": "rumu",
@@ -50,7 +86,16 @@
       "role": "держатель имени РУМУ — клетка-указатель: тело живёт веткой rumu в singulyar (пин следит за телом, живой ls-remote; 2026-11-05 тело ушло на 98cb9a66 — PR#48: кэш v212 + чистовики ruvson-lyrics; затем 876761c6 — PR#49; затем 626c7ad — PR#50/51/52: ДОГОН за ·56, гейт зелёный); мембрана AGENTS+MANIFEST+llms.txt влита в main (PR#1; срез пина тела догнан PR#2, 2026-11-05); репо разблокирован 2026-11-05 (воля PID 1); перенос тела в самостоятельный репо ЗАКРЫТ решением «не переносить» (ADR-0012)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); данные каталога: открытой лицензии у внешнего источника НЕТ (ADR-0008) — вариант (б) облегчен (ADR-0009), вариант (в) ИСПОЛНЕН 2026-11-05 (ADR-0011): catalog.js — свой каталог CC0, своя нумерация i:1..249, следы внешнего id и бейджи источника сняты; вариант (а) закрыт как не требующийся; каталог плеера (ЛАКОРНИЯ) — свой с 2026-10-20",
-      "interface": "плеер поверх P2P"
+      "interface": "плеер поверх P2P",
+      "integrity": "sha256-5d97a6d22d2672923bba837a48b21aef3c4b0d9683a0115cf5a3be9b388d4c95",
+      "fetched_at": "2026-11-09",
+      "overseer": "держатель имени РУМУ",
+      "a2a": {
+        "name": "rumu",
+        "role": "держатель имени РУМУ",
+        "interface": "плеер поверх P2P",
+        "status": "active"
+      }
     },
     {
       "name": "voice-atlas-llm",
@@ -59,7 +104,16 @@
       "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
-      "interface": "модели + consent-манифест"
+      "interface": "модели + consent-манифест",
+      "integrity": "sha256-6e0c0e7977be7445fc7bd0f37ea77c5d82d2e4934b0d9a5b0503c78a88643003",
+      "fetched_at": "2026-11-09",
+      "overseer": "атлас голосов; свой",
+      "a2a": {
+        "name": "voice-atlas-llm",
+        "role": "атлас голосов; свой",
+        "interface": "модели + consent-манифест",
+        "status": "active"
+      }
     },
     {
       "name": "global-video-platforms-registry",
@@ -68,7 +122,16 @@
       "role": "реестр-указатель платформ; прототип Закона 3 — хаб хранит магниты, не контент",
       "system_pre": "genome",
       "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-05)",
-      "interface": "реестр указателей"
+      "interface": "реестр указателей",
+      "integrity": "sha256-2843d5c4a08ff0f18a09f82891a5d8d287d69ab49db30c74117b7ba0a71ac493",
+      "fetched_at": "2026-11-09",
+      "overseer": "реестр-указатель платформ; про",
+      "a2a": {
+        "name": "global-video-platforms-registry",
+        "role": "реестр-указатель платформ; про",
+        "interface": "реестр указателей",
+        "status": "active"
+      }
     },
     {
       "name": "commons",
@@ -78,7 +141,16 @@
       "system_pre": "external-house",
       "license_pre": "Apache-2.0 (LICENSE репозитория, прочитан клоном 2026-11-05)",
       "interface": "synapse/consent.py, blood/envelope.schema.json, ADR-0017",
-      "bridge": true
+      "bridge": true,
+      "integrity": "sha256-eb70af511d08acac1568422978cd329bc9dccd301bfeb1f1e859e041732ab4e6",
+      "fetched_at": "2026-11-09",
+      "overseer": "дом",
+      "a2a": {
+        "name": "commons",
+        "role": "дом",
+        "interface": "synapse/consent.py, blood/envelope.schema.json, ADR-0017",
+        "status": "active"
+      }
     },
     {
       "name": "runtime-protocol",
@@ -87,7 +159,16 @@
       "role": "исполнимая модель динамики узла: уравнение ρ̇ (генератор/долг/каратель), фазовая машина GENESIS_EXEC (SUBCRITICAL→FORAGING→COHERENCE→OVERCLOCK→TRANSITION→POST_GENESIS), VOLATILE_META, CANCER_FILTER; stdlib-only, метаболизм make verify/demo; 17 приёмок зелёные (7 ядра + 10 контура сверки); спецификация-источник — nous@agents/execution docs/genesis (TH-RTP-01); создана 2026-11-07 агентом по мандату Хозяина (TH-RTP-02); 2026-11-07 — контур сверки «живая карта» (reconciliation.py, ADR-0002), пин догнан за телом живым ls-remote (TH-RTP-03)",
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
-      "interface": "python3 runtime_protocol.py | make verify | make demo"
+      "interface": "python3 runtime_protocol.py | make verify | make demo",
+      "integrity": "sha256-58ff203107549ed39784978ee90ac827fd80c04fbe5b1ddd2050d200f014f40d",
+      "fetched_at": "2026-11-09",
+      "overseer": "исполнимая модель динамики",
+      "a2a": {
+        "name": "runtime-protocol",
+        "role": "исполнимая модель динамики",
+        "interface": "python3 runtime_protocol.py | make verify | make demo",
+        "status": "active"
+      }
     },
     {
       "name": "cell-rs",
@@ -96,7 +177,16 @@
       "role": "первая Rust-клетка: ядро контура сверки (Tolerance/reconcile/Phase, sha256 с нуля на векторах NIST, байт-цепь); семантика допуска = Python-ядру; компилятор клетки — CI",
       "system_pre": "substrate",
       "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
-      "interface": "cargo test / make verify; пин живым ls-remote"
+      "interface": "cargo test / make verify; пин живым ls-remote",
+      "integrity": "sha256-a9b0aa5462f5dc6bbe39df8db299e08662cd59ee0315e5c7ad0f52823c8ab7f1",
+      "fetched_at": "2026-11-09",
+      "overseer": "первая Rust-клетка",
+      "a2a": {
+        "name": "cell-rs",
+        "role": "первая Rust-клетка",
+        "interface": "cargo test / make verify; пин живым ls-remote",
+        "status": "active"
+      }
     },
     {
       "name": "agryp",
@@ -105,7 +195,16 @@
       "system_pre": "overseer",
       "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
       "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
-      "pin": "8a67329d1ca889e37a5f8e7d34eb1d82d6870939"
+      "pin": "8a67329d1ca889e37a5f8e7d34eb1d82d6870939",
+      "integrity": "sha256-3f434ce592137af52a4d1b1a8ad94286c3af890f6681464c46a077a501154f94",
+      "fetched_at": "2026-11-09",
+      "overseer": "процесс-супервизор агентов роя",
+      "a2a": {
+        "name": "agryp",
+        "role": "процесс-супервизор агентов роя",
+        "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
+        "status": "active"
+      }
     }
   ],
   "bridge": {
@@ -124,5 +223,6 @@
     "tip": "675d27a45d2b0817ae8366da99226f8d8485f1948421326575bb4d8d812c04eb",
     "cards": 11,
     "updated_at": "2026-11-08"
-  }
+  },
+  "integrity_method": "sha256(hex(utf8(commit_sha))) — свердываем содержимое через пин-сумму"
 }

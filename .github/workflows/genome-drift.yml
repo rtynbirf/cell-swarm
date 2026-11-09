@@ -1,0 +1,70 @@
+# genome-drift — детектор дрейфа пинов генома (П-05 «Геном как локфайл», polimat-hub #23).
+# Раз в неделю (вт 04:17 UTC — свободный слот; genome-reconcile занял чт 03:23) геном
+# сверяется с живыми HEAD отслеживаемых ref (поле track_ref клетки: singulyar → ветка
+# rumu — «пин следит за телом», остальные → main). mode=check (по умолчанию) — детектор:
+# дрейф = красный job (exit 2), карта обязана врать не тише территории. mode=fix —
+# догнать пины живым HEAD, пересчитать integrity, вписать факт коммитом на main.
+name: "genome-drift — сверка пинов с живыми HEAD"
+
+on:
+  schedule:
+    # вт 04:17 UTC — свободный слот расписания
+    - cron: "17 4 * * 2"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "check — детектор (дрейф = exit 2); fix — догнать пины и запушить"
+        required: true
+        default: check
+        type: choice
+        options:
+          - check
+          - fix
+
+permissions:
+  contents: write
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      # python 3.x — предустановленный python3 раннера (стиль репо: без setup-python)
+
+      - name: check — детектор дрейфа (красный job = геном отстал от территории)
+        if: ${{ inputs.mode != 'fix' }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 tools/genome_drift.py --check
+
+      - name: fix — догнать пины живым HEAD и вписать факт коммитом
+        if: ${{ inputs.mode == 'fix' }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          RC=0
+          python3 tools/genome_drift.py --check > "$RUNNER_TEMP/drift.json" || RC=$?
+          NAMES=$(python3 -c "import json;d=json.load(open('$RUNNER_TEMP/drift.json'));print(','.join(c['name'] for c in d['cells'] if c['status']=='drift'))" || true)
+          echo "дрейф на входе (rc=$RC): ${NAMES:-—}"
+          git config user.name "genome-drift[bot]"
+          git config user.email "genome-drift[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            # актюатор перечитывает территорию непосредственно перед действием
+            # (гонка с параллельным пушем — урок TH-RTP-06, как в genome-reconcile)
+            git fetch origin main --quiet
+            git rebase --autostash origin/main --quiet || git rebase --abort
+            python3 tools/genome_drift.py --fix
+            if git diff --quiet swarm.json; then
+              echo "геном свеж — коммита нет (попытка $attempt)"
+              break
+            fi
+            git add swarm.json
+            git commit -m "genome: догнать пины ${NAMES:-по живой сверке}"
+            if git push; then
+              echo "факт вписан с попытки $attempt"
+              break
+            fi
+            echo "гонка: территория ушла во время записи — перечитать и повторить (попытка $attempt)"
+          done
+          # финальные ворота: после fix карта обязана быть свежей — иначе честный красный
+          python3 tools/genome_drift.py --check
