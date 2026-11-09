@@ -82,7 +82,7 @@
     {
       "name": "runtime-protocol",
       "repo": "https://github.com/rtynbirf/runtime-protocol.git",
-      "pin": "29a499c8877e45467c30dd2e11660115f83773b1",
+      "pin": "b86a80fbdb9ed764950ca6953524bdebdb7bc04d",
       "role": "исполнимая модель динамики узла: уравнение ρ̇ (генератор/долг/каратель), фазовая машина GENESIS_EXEC (SUBCRITICAL→FORAGING→COHERENCE→OVERCLOCK→TRANSITION→POST_GENESIS), VOLATILE_META, CANCER_FILTER; stdlib-only, метаболизм make verify/demo; 17 приёмок зелёные (7 ядра + 10 контура сверки); спецификация-источник — nous@agents/execution docs/genesis (TH-RTP-01); создана 2026-11-07 агентом по мандату Хозяина (TH-RTP-02); 2026-11-07 — контур сверки «живая карта» (reconciliation.py, ADR-0002), пин догнан за телом живым ls-remote (TH-RTP-03)",
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
