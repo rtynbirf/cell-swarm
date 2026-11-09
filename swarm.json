@@ -1,7 +1,7 @@
 {
   "genome_version": "0.2.2",
   "fetched_at": "2026-11-09",
-  "fetch_method": "GitHub API /repos/<owner>/<repo>/branches/<pin_ref> (fallback: git ls-remote refs/heads/<pin_ref>, SHA эквивалентны) — живая сверка genome_drift.py на 2026-11-09",
+  "fetch_method": "git ls-remote HEAD + GitHub API (где взялось) — живые данные на 2026-11-09",
   "licenses_verified_at": "2026-11-05",
   "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
   "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
@@ -100,7 +100,7 @@
     {
       "name": "voice-atlas-llm",
       "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
-      "pin": "b9f9fc0af887611fc520228efe6733ae2b3ab9ab",
+      "pin": "547fe541e5cad3b500e9fabf49427c58cc671c94",
       "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
@@ -173,7 +173,7 @@
     {
       "name": "cell-rs",
       "repo": "https://github.com/rtynbirf/cell-rs.git",
-      "pin": "f6df1b379d4587eb7c15b0e1189f829f8380c2da",
+      "pin": "203a5b5919789761e925dc94814aad35bbe5549c",
       "role": "первая Rust-клетка: ядро контура сверки (Tolerance/reconcile/Phase, sha256 с нуля на векторах NIST, байт-цепь); семантика допуска = Python-ядру; компилятор клетки — CI",
       "system_pre": "substrate",
       "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
