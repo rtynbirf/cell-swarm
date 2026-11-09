@@ -72,7 +72,7 @@
     {
       "name": "commons",
       "repo": "https://github.com/rtynbirf/commons.git",
-      "pin": "6abbc83fe8a436aeaa26b311efed9674fb2532b0",
+      "pin": "67dc88bc83205e98edde9da01ac6e6c261222786",
       "role": "дом: организм из лучших открытых проектов; якорь моста (ADR-0006 роя)",
       "system_pre": "external-house",
       "license_pre": "Apache-2.0 (LICENSE репозитория, прочитан клоном 2026-11-05)",
@@ -82,7 +82,7 @@
     {
       "name": "runtime-protocol",
       "repo": "https://github.com/rtynbirf/runtime-protocol.git",
-      "pin": "8b0cf87169f6cdebab93b188478302e5ee266ab9",
+      "pin": "29a499c8877e45467c30dd2e11660115f83773b1",
       "role": "исполнимая модель динамики узла: уравнение ρ̇ (генератор/долг/каратель), фазовая машина GENESIS_EXEC (SUBCRITICAL→FORAGING→COHERENCE→OVERCLOCK→TRANSITION→POST_GENESIS), VOLATILE_META, CANCER_FILTER; stdlib-only, метаболизм make verify/demo; 17 приёмок зелёные (7 ядра + 10 контура сверки); спецификация-источник — nous@agents/execution docs/genesis (TH-RTP-01); создана 2026-11-07 агентом по мандату Хозяина (TH-RTP-02); 2026-11-07 — контур сверки «живая карта» (reconciliation.py, ADR-0002), пин догнан за телом живым ls-remote (TH-RTP-03)",
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
