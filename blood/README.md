@@ -12,13 +12,23 @@
 
 ```
 геном cell-swarm (workflow_dispatch: blood-genome)
-  → конверт: живые HEAD клеток, допуск eps=0 (SHA точен), ttl=900s
+  → конверт: живые HEAD клеток цепи, допуск eps=0 (SHA точен), ttl=900s
   → прививка к хвосту CELLS-LEDGER.jsonl (хеш-цепь, tamper-evident)
   → dispatch repository_dispatch(blood-pulse) → runtime-protocol
       → сверка github.sha с конвертом → эхо в CELLS-LEDGER.jsonl
       → dispatch → polymath-os
-            → сверка → эхо в CELLS-LEDGER.jsonl (конец пульса)
+            → сверка → эхо в CELLS-LEDGER.jsonl
+            → dispatch → cell-rs   (ВОЛНА ×9: первая Rust-клетка)
+                  → сверка конверта ВТОРЫМ ЯЗЫКОМ (Rust-гейт blood_gate)
+                    ДО эха: подделка не дойдёт до летописи
+                  → эхо в CELLS-LEDGER.jsonl
+                  → dispatch → voice-atlas-llm
+                        → сверка → эхо в CELLS-LEDGER.jsonl (конец пульса)
 ```
+
+Волна ×9 «рой из модели в кровь» (2026-11-09): цепь = **четыре живые клетки**;
+каждая получает ожидание своего HEAD в payload.cells и даёт точный вердикт
+VERIFIED/DRIFT (eps=0), а не слепое OBSERVED.
 
 Запуск — только по событию. Текущий факт цепи можно сверить офлайн:
 

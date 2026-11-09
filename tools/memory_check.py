@@ -4,7 +4,13 @@
 
 Каждая строка знания — файл memory/MEM-*.json:
   statement   — сама строка знания;
-  tol         — допуск: сколько живёт (ttl_days);
+  tol         — допуск на время: сколько живёт (ttl_days);
+  acl         — допуск на доступ (волна ×9 «память роя = файлы с допуском»):
+                  level — public (весь рой и мир) / cell (клетка-владелец) /
+                  swarm (только рой); owner_cell — клетка генома, владеющая
+                  доступом (обязательна при level != public); reason — почему
+                  такой допуск (обязателен всегда). Входит в хеш-цепь:
+                  подмена допуска ловится тампер-очевидностью памяти;
   source      — где проверяемо: repo@ref:path + source_sha256 (обязателен);
   verified_at — когда сверяли;
   prev/hash   — хеш-цепь памяти (GENESIS = 64 нуля).
@@ -19,6 +25,8 @@ fail-closed не ослаблен: несчитанный источник — �
   2. СВЕЖЕСТЬ: verified_at + tol.ttl_days >= сегодня — иначе DRIFT.
   3. ИСТОЧНИК (нужна сеть; --no-net пропускает с пометкой): content sha256
      источника по repo/ref/path == source_sha256 — иначе DRIFT.
+  4. ДОПУСК: acl валиден (level ∈ {public, cell, swarm}; owner_cell — клетка
+     генома при level != public; reason непуст всегда) — иначе РАНА.
 """
 import base64
 import hashlib
@@ -39,6 +47,53 @@ def canonical_json(obj) -> str:
     return json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
 
 
+ACL_LEVELS = ("public", "cell", "swarm")
+
+
+def genome_cells() -> set:
+    """Имена клеток генома (swarm.json) — только им выдаётся допуск доступа.
+
+    Геном — единственный источник правды о ком-либо в рое: допуск доступа
+    для клетки, которой нет в геноме, — это не допуск, а дыра.
+    """
+    genome_path = ROOT / "swarm.json"
+    if not genome_path.exists():
+        return set()
+    try:
+        genome = json.loads(genome_path.read_text("utf-8"))
+        return {c["name"] for c in genome.get("cells", [])}
+    except (json.JSONDecodeError, KeyError, TypeError):
+        return set()
+
+
+def check_acl(mem: dict, cells: set) -> str | None:
+    """Проверка 4 — допуск доступа. Возвращает текст раны или None (чистая функция).
+
+    Правила канона «память роя = файлы с допуском» (волна ×9):
+      a) acl обязателен в каждой записи — память без допуска не принимается;
+      b) level ∈ {public, cell, swarm};
+      c) reason непуст всегда — допуск без причины не выдаётся;
+      d) при level != public owner_cell обязателен и обязан быть клеткой генома.
+    """
+    acl = mem.get("acl")
+    mid = mem.get("id", "?")
+    if not isinstance(acl, dict):
+        return f"{mid}: acl отсутствует или не объект — память без допуска не принимается"
+    level = acl.get("level")
+    if level not in ACL_LEVELS:
+        return f"{mid}: acl.level={level!r} вне канона {ACL_LEVELS} — допуск не выдаётся"
+    reason = acl.get("reason")
+    if not isinstance(reason, str) or not reason.strip():
+        return f"{mid}: acl.reason пуст — допуск без причины не выдаётся"
+    if level != "public":
+        owner = acl.get("owner_cell")
+        if not isinstance(owner, str) or not owner.strip():
+            return f"{mid}: level={level} без owner_cell — допуск не к кому привязать"
+        if cells and owner not in cells:
+            return f"{mid}: acl.owner_cell={owner!r} нет в геноме — допуск чужаку не выдаётся"
+    return None
+
+
 def api_raw(repo, ref, path, token):
     req = urllib.request.Request(
         f"{API}/repos/{repo}/contents/{path}?ref={ref}",
@@ -57,6 +112,7 @@ def main():
     wounds = 0
     token = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
     now = datetime.now(timezone.utc)
+    known_cells = genome_cells()
     for f in files:
         mem = json.loads(f.read_text("utf-8"))
         body = {k: v for k, v in mem.items() if k != "hash"}
@@ -71,6 +127,11 @@ def main():
             wounds += 1
             continue
         prev = h
+        acl_wound = check_acl(mem, cells=known_cells)
+        if acl_wound:
+            print(f"РАНА: {acl_wound}")
+            wounds += 1
+            continue
         born = datetime.strptime(mem["verified_at"], "%Y-%m-%dT%H:%M:%S%z")
         ttl = timedelta(days=mem["tol"]["ttl_days"])
         if now > born + ttl:

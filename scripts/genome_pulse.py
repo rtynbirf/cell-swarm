@@ -87,7 +87,12 @@ def main():
         sys.exit(2)
 
     # НАБЛЮДАЕМОЕ: живые HEAD клеток цепи пульса
-    chain_names = ["runtime-protocol", "polymath-os"]
+    # Волна ×9 «рой из модели в кровь» (2026-11-09): цепь выросла до четырёх
+    # живых клеток — runtime-protocol → polymath-os → cell-rs (первая Rust-клетка:
+    # конверт сверяется вторым языком ДО эха) → voice-atlas-llm (конец пульса).
+    # Каждый HEAD попадает в payload.cells конверта — клетка сверяется точно
+    # (eps=0) и даёт честный VERIFIED, а не слепое OBSERVED.
+    chain_names = ["runtime-protocol", "polymath-os", "cell-rs", "voice-atlas-llm"]
     observed = {}
     for name in chain_names:
         # "https://github.com/owner/name.git" → "owner/name" (без хоста и .git)

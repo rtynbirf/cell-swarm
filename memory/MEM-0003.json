@@ -4,6 +4,10 @@
   "tol": {
     "ttl_days": 30
   },
+  "acl": {
+    "level": "public",
+    "reason": "канон безопасности CI — действует на все репо роя открыто, скрывать нечего"
+  },
   "source": {
     "repo": "rtynbirf/nous",
     "ref": "e64519b96f435314885e05f5d9219aff6b0a7bff",
@@ -11,6 +15,6 @@
     "source_sha256": "53d4f879664322138e80c0a4d6ca6e1a5be78c8c8c7e5767b43503cc86944bd8"
   },
   "verified_at": "2026-11-07T17:32:45+00:00",
-  "prev": "be38e5377dcee685ceee66fdeef5fbcdfbe0a6fd2f01b83c205a39ebc84feae2",
-  "hash": "d6a206079f89ef72fbcb15dd2c4eeac48332e00b39a742115b15c5fe2ff012ff"
+  "prev": "f8942a0651671b8f2942c08c112aab16741d940f55583be9cb61fa83804a3860",
+  "hash": "3929b596e44966c37da5ce343314520c4b28ba172d6d43ac124dd19be677caea"
 }
