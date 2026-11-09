@@ -32,3 +32,4 @@
 ## Optional
 
 - [commons-strengthen/](../commons-strengthen/PACK-README.md): аддитивный пакет усиления ДОМА (отдельная поставка).
+- [PULSE.md](PULSE.md): живой пульс репозитория — прогоны, пломбы, здоровье.
