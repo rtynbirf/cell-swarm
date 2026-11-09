@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="banner.png" alt="cell-swarm — Сингулярная эмерджентная архитектура роя" width="100%">
+</div>
+
 # CELL-SWARM — рой клеток Человека
 
 <p align="center"><img src=".github/social-preview.png" alt="cell-swarm" width="100%"></p>
