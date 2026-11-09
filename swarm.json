@@ -18,7 +18,7 @@
     {
       "name": "singulyar-llm",
       "repo": "https://github.com/rtynbirf/singulyar-llm.git",
-      "pin": "707c837350b16b0bb583306b0d04a2634ef688c9",
+      "pin": "5f421e02c04d1c9ca6034fd3db91c94bba310469",
       "role": "локальный инференс в браузере (Qwen); кандидат в метаболизм роя",
       "system_pre": "metabolism",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-05)",
