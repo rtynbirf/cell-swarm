@@ -5,18 +5,19 @@
 | Носитель | Что несёт | Где живёт |
 | --- | --- | --- |
 | Журнал тела (`scripts/emit.py`, SPEC-0003) | события ОДНОГО тела (plan/act/observe/…) | локальный jsonl, хеш-цепь |
-| **Конверт крови** (`blood/kernel/blood.py`) | состояние МЕЖДУ телами: желаемое ↔ наблюдаемое ↔ статус, с допуском и ttl | `blood/LEDGER.jsonl` — общая летопись роя |
+| **Конверт крови клеточной цепи** (`blood/kernel/blood.py`, ADR-0013) | состояние МЕЖДУ телами: желаемое ↔ наблюдаемое ↔ статус, с допуском и ttl | `blood/CELLS-LEDGER.jsonl` — летопись цепи (геному → клеткам) |
+| Пульс-конверты П-24 (`blood_sdk`, подписки) | объявление пульса генома подписчикам | `blood/LEDGER.jsonl` — летопись П-24 |
 
 ## Как течёт кровь (пульс)
 
 ```
 геном cell-swarm (workflow_dispatch: blood-genome)
   → конверт: живые HEAD клеток, допуск eps=0 (SHA точен), ttl=900s
-  → прививка к хвосту LEDGER.jsonl (хеш-цепь, tamper-evident)
+  → прививка к хвосту CELLS-LEDGER.jsonl (хеш-цепь, tamper-evident)
   → dispatch repository_dispatch(blood-pulse) → runtime-protocol
-      → сверка github.sha с конвертом → эхо в LEDGER.jsonl
+      → сверка github.sha с конвертом → эхо в CELLS-LEDGER.jsonl
       → dispatch → polymath-os
-            → сверка → эхо в LEDGER.jsonl (конец пульса)
+            → сверка → эхо в CELLS-LEDGER.jsonl (конец пульса)
 ```
 
 Запуск — только по событию. Текущий факт цепи можно сверить офлайн:
@@ -26,7 +27,7 @@ python3 - <<'EOF'
 import json, sys
 sys.path.insert(0, "blood/kernel")
 from blood import chain_verify
-lines = open("blood/LEDGER.jsonl").read().splitlines()
+lines = open("blood/CELLS-LEDGER.jsonl").read().splitlines()
 print(chain_verify(lines))
 EOF
 ```

@@ -26,7 +26,7 @@ from blood import canonical_json, chain_verify, make_envelope, tail_hash  # noqa
 API = "https://api.github.com"
 OWNER = "rtynbirf"
 LEDGER_REPO = os.environ.get("BLOOD_LEDGER_REPO", "rtynbirf/cell-swarm")
-LEDGER_PATH = os.environ.get("BLOOD_LEDGER_PATH", "blood/LEDGER.jsonl")
+LEDGER_PATH = os.environ.get("BLOOD_LEDGER_PATH", "blood/CELLS-LEDGER.jsonl")
 FIRST_CELL = os.environ.get("BLOOD_FIRST_CELL", "rtynbirf/runtime-protocol")
 TTL_S = 900  # удар крови должен догнать цепь быстрее, чем высохнет
 
