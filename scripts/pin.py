@@ -39,10 +39,13 @@ SEALS_NOT_STARTED = (
 )
 
 
-def ls_remote_head(url: str) -> str:
-    out = subprocess.run(["git", "ls-remote", url, "HEAD"], capture_output=True, text=True, timeout=60)
+def ls_remote_head(url: str, ref: str = "HEAD") -> str:
+    # Волна ×9 (2026-11-09): контракт клетки может требовать ветку-тело,
+    # а не default (singulyar: «пин следит за телом» = refs/heads/rumu).
+    ref = ref or "HEAD"
+    out = subprocess.run(["git", "ls-remote", url, ref], capture_output=True, text=True, timeout=60)
     if out.returncode != 0:
-        raise RuntimeError(f"ls-remote {url}: {out.stderr.strip()[:120]}")
+        raise RuntimeError(f"ls-remote {url} {ref}: {out.stderr.strip()[:120]}")
     return out.stdout.split()[0]
 
 
@@ -196,7 +199,7 @@ def main() -> int:
     if not args.licenses or True:  # пины — основная работа цели
         for cell in genome["cells"]:
             try:
-                sha = ls_remote_head(cell["repo"])
+                sha = ls_remote_head(cell["repo"], cell.get("pin_ref") or "HEAD")
             except Exception as exc:  # noqa: BLE001
                 print(f"  {cell['name']:<32} пин: НЕ ВЗЯТ ({exc})")
                 continue
