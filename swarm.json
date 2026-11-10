@@ -1,5 +1,5 @@
 {
-  "genome_version": "0.2.5",
+  "genome_version": "0.2.6",
   "fetched_at": "2026-11-10",
   "fetch_method": "GitHub API /repos/<owner>/<repo>/branches/<pin_ref> (fallback: git ls-remote refs/heads/<pin_ref>, SHA эквивалентны) — живая сверка genome_drift.py на 2026-11-10",
   "licenses_verified_at": "2026-11-05",
@@ -45,13 +45,13 @@
     {
       "name": "singulyar",
       "repo": "https://github.com/rtynbirf/singulyar.git",
-      "pin": "881625f4961a4e02e0d754e4baa88e83e357f668",
+      "pin": "c70b09ea3d715a251669edb54560c849b05ed180",
       "role": "корпус 64 песни × 200 языков офлайн; кандидат в память роя; здесь же тело РУМУ (ветка rumu — пин следит за телом; 2026-11-05 влит свой каталог — вариант (в), ADR-0011 ядра: catalog.js CC0, своя нумерация i:1..249; вечер — такт «ФЛАГМАН»: страница СИНГУЛЯР_01 v3.0 переработана — сансара/очередь/звук/запись/bento/ленивые файлы, PR#47; утро — такты «НЕ РАБОТАЕТ»+«ЧИСТОВИКИ»: кэш v212 лечит мёртвые вьюхи player/catalog ·01, тексты пересажены на чистовики ruvson-lyrics (63 песни), hashchange-вьюхи, PR#48; догон — пины стражей и живых лиц выровнены цехом правды за v212, PR#49; утро — такт «ДОГОН за ·56»: Такт-гейт поймал 6 красных от чужого С154 — офлайн-закон, симметрия нитей, Малыш, средовые гарды фондов выровнены честно (PR#50/51/52), гейт зелёный)",
       "system_pre": "memory",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
       "interface": "файлы + манифест данных",
       "pin_ref": "rumu",
-      "integrity": "sha256-510c4f8f5ace266a79385400f1bce9545cd790bd39968c27b102de2fba0663f5",
+      "integrity": "sha256-ed1cf76c2650bf1a57c96d4570d5ac49737b04b5adc9c0da15410cd3371523c3",
       "fetched_at": "2026-11-10",
       "overseer": "корпус 64 песни",
       "a2a": {
@@ -100,12 +100,12 @@
     {
       "name": "voice-atlas-llm",
       "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
-      "pin": "d42486f76d3c8e74d141c1c28f7e30bcfd8c4c7d",
+      "pin": "f575a2dcb75f0c1ef1f8f3b31a77aabf05e5a9ec",
       "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
       "interface": "модели + consent-манифест",
-      "integrity": "sha256-6bbe3b0db9bbf5ee5c50e9a05c01c6958a172181e6bd71c408cd83ce156496bc",
+      "integrity": "sha256-9444957db941d7f9f2431a6e7806c63fbac667dd131ba4d9e50a593bd3f82c31",
       "fetched_at": "2026-11-10",
       "overseer": "атлас голосов; свой",
       "a2a": {
