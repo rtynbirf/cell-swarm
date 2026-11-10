@@ -1,0 +1,55 @@
+name: cell-canonical
+
+# П-21: канон клетки — reusable workflow (workflow_call). Мировая практика DRY CI:
+# один канон безопасности наследуется всеми клетками роя (GitHub docs «Reusing
+# workflow configurations»); verify fail-closed — учитель OpenSSF Scorecard.
+# Клетка наследует метаболизм одной строкой:
+#   uses: rtynbirf/cell-swarm/.github/workflows/cell-canonical.yml@<ПОЛНЫЙ SHA>
+# (пин по SHA — учитель OpenSSF Scorecard; публичный репо — вызов допустим).
+# Канон = минимальный честный гейт, не тяжёлая логика:
+#   1) Makefile с target verify → make verify (настоящий канон — наследуй его);
+#   2) Makefile без verify → явная приёмка: дефолтная цель обязана собраться;
+#   3) ни Makefile, ни verify → красный вслух: клетка без метаболизма —
+#      исчезающий класс.
+# Слоты наследуемых проверок (заполняются волнами — канон не толстеет):
+#   [слот П-17] манифест-свежесть: сверка freshness манифеста клетки;
+#   [слот П-10] supply_pulse: сверка пинов зависимостей по полным SHA.
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  canonical:
+    name: canonical — канон клетки (verify fail-closed)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # checkout по полному SHA — как у всех воркфлоу дома
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false  # x15 zizmor artipacked
+
+      - name: verify fail-closed — make verify, иначе явный скрипт приёмки
+        run: |
+          set -euo pipefail
+          if [ -f Makefile ] && make -n verify >/dev/null 2>&1; then
+            echo "канон: Makefile объявляет target verify — запускаю make verify"
+            make verify
+          elif [ -f Makefile ]; then
+            echo "канон: target verify не объявлен — явная приёмка: дефолтная цель Makefile обязана собраться"
+            make
+          else
+            echo "::error::канон: клетка без метаболизма — ни Makefile с target verify, ни Makefile вовсе (П-21)"
+            exit 1
+          fi
+          # [слот П-17] манифест-свежесть — здесь будет сверка freshness манифеста
+          # [слот П-10] supply_pulse — здесь будет сверка пинов зависимостей
+
+      - name: fail-громко — канон клетки нарушен
+        if: failure()
+        run: |
+          echo "::error::КАНОН КЛЕТКИ НАРУШЕН: ${GITHUB_REPOSITORY}@$(printf %s "$GITHUB_SHA" | cut -c1-7) — verify fail-closed красный. Клетка не наследует метаболизм: см. rtynbirf/cell-swarm/.github/workflows/cell-canonical.yml (П-21)."
+          exit 1
