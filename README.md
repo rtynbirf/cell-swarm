@@ -2,6 +2,15 @@
   <img src="banner.png" alt="cell-swarm — Сингулярная эмерджентная архитектура роя" width="100%">
 </div>
 
+<!--ФОРЖ:МУЗА:НАЧАЛО-->
+<div align="center">
+  <img src="repo-muse.svg" width="100%" alt="Муза cell-swarm: картина кузни ПОЛИМАТ, раунд 9" />
+  <br/>
+  <img src="forge-divider.svg" width="62%" alt="разделитель кузни ПОЛИМАТ" />
+</div>
+<!--ФОРЖ:МУЗА:КОНЕЦ-->
+
+
 # CELL-SWARM — рой клеток Человека
 
 <p align="center"><img src=".github/social-preview.png" alt="cell-swarm" width="100%"></p>
@@ -57,3 +66,10 @@ make bootstrap         # поднять клетки по пинам
 
 Apache-2.0 — тот же иммунитет, что у дома (ADR-0003 дома, ADR-0005 роя).
 Донорство — только по рукопожатию и тому, кто дарит (ADR-0011 дома).
+
+<!--ФОРЖ:ПОДВАЛ-->
+---
+
+<div align="center">
+  <sub>◆ картина и штандарт — ручная ковка <a href="https://github.com/rtynbirf">КУЗНИ ПОЛИМАТ</a> · ЧЕЛОВЕК=АККАУНТ=PID1 ◆</sub>
+</div>
