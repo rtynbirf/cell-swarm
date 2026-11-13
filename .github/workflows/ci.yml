@@ -23,5 +23,11 @@ jobs:
         env:
           # волна ×6: публичные источники читаются штатным job-токеном — ротация
           # PAT не слепит память; PAT остаётся только для cross-repo dispatch.
-          GH_TOKEN: ${{ secrets.CELL_SWARM_DISPATCH_TOKEN || github.token }}
+          # волна ×23 (2026-11-13, дом singulyar, «закрытие тылов»): секрет
+          # CELL_SWARM_DISPATCH_TOKEN хранит отозванный PAT — job-токен ловил
+          # 401 на всех 4 источниках (MEM-0001..0004; раны metabolism на догонах
+          # пина ×22 d2106dc2 и ×23 4c2f6934). Источники публичны (runtime-protocol,
+          # nous, cell-swarm), sha256 на пинах сходится — память читает job-токен;
+          # PAT для cross-repo dispatch живёт в своих шагах.
+          GH_TOKEN: ${{ github.token }}
         run: make memory
