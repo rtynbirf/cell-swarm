@@ -2,6 +2,15 @@
 # (workflow_dispatch руками владельца или цепи), никогда — расписание
 # (закон 1: угадчик — яд). Пульс: конверт → летопись → runtime-protocol
 # → polymath-os → летопись. См. blood/README.md.
+#
+# А6-1 · П-74 §5 (×30): дверь крови живёт на коротких токенах по мировой
+# практике (GitHub-to-GitHub = GitHub App installation token, не долгоживущий
+# PAT; OIDC в Actions адресует внешние облака, не GitHub API). Если в репо
+# заданы CELL_SWARM_APP_ID + CELL_SWARM_APP_PRIVATE_KEY — чеканится
+# часовое-в-пределах-работы токен установки App (create-github-app-token);
+# иначе дверь честно берёт конверт B′ (CELL_SWARM_DISPATCH_TOKEN, ровно repo)
+# из руки владельца. Один факт — одно место: token пульс-шагу даёт только
+# steps.mint.outputs.token || конверт.
 name: blood-genome
 
 permissions:
@@ -15,7 +24,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: чеканка токена установки App (А6-1; скипается, если App не заведён владельцем)
+        id: mint
+        if: ${{ secrets.CELL_SWARM_APP_ID != '' }}
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          app-id: ${{ secrets.CELL_SWARM_APP_ID }}
+          private-key: ${{ secrets.CELL_SWARM_APP_PRIVATE_KEY }}
+          owner: rtynbirf
       - name: удар крови — конверт, летопись, dispatch первой клетке
         env:
-          GH_TOKEN: ${{ secrets.CELL_SWARM_DISPATCH_TOKEN }}
+          GH_TOKEN: ${{ steps.mint.outputs.token || secrets.CELL_SWARM_DISPATCH_TOKEN }}
         run: python3 scripts/genome_pulse.py
