@@ -40,6 +40,8 @@ on:
       - "wave3-memory-garden"
       - "wave3-symmetry"
       - "ПУЛЬС v2 — еженедельный самоаудит"
+      - "РЕВО ОБХОД"
+      - "Workflow security lint (zizmor)"
     types: [completed]
 permissions:
   actions: write
