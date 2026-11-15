@@ -5,12 +5,14 @@
 #
 # А6-1 · П-74 §5 (×30): дверь крови живёт на коротких токенах по мировой
 # практике (GitHub-to-GitHub = GitHub App installation token, не долгоживущий
-# PAT; OIDC в Actions адресует внешние облака, не GitHub API). Если в репо
-# заданы CELL_SWARM_APP_ID + CELL_SWARM_APP_PRIVATE_KEY — чеканится
-# часовое-в-пределах-работы токен установки App (create-github-app-token);
-# иначе дверь честно берёт конверт B′ (CELL_SWARM_DISPATCH_TOKEN, ровно repo)
-# из руки владельца. Один факт — одно место: token пульс-шагу даёт только
-# steps.mint.outputs.token || конверт.
+# PAT; OIDC в Actions адресует внешние облака, не GitHub API). Когда владелец
+# заведёт App (секреты CELL_SWARM_APP_ID + CELL_SWARM_APP_PRIVATE_KEY) и
+# переменную CELL_SWARM_APP_ON=1 — чеканится токен установки App
+# (create-github-app-token); иначе дверь честно берёт конверт B′
+# (CELL_SWARM_DISPATCH_TOKEN, ровно repo) из руки владельца. Гейт — на
+# переменной (secrets в `if` недоступны: контексты steps.if без secrets,
+# startup_failure 43747873231 — грабля ×30). Один факт — одно место: token
+# пульс-шагу даёт только steps.mint.outputs.token || конверт.
 name: blood-genome
 
 permissions:
@@ -24,9 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: чеканка токена установки App (А6-1; скипается, если App не заведён владельцем)
+      - name: чеканка токена установки App (А6-1; скипается, пока владелец не поставит CELL_SWARM_APP_ON=1)
         id: mint
-        if: ${{ secrets.CELL_SWARM_APP_ID != '' }}
+        if: ${{ vars.CELL_SWARM_APP_ON == '1' }}
         uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
         with:
           app-id: ${{ secrets.CELL_SWARM_APP_ID }}
