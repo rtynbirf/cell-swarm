@@ -1,7 +1,7 @@
 {
-  "genome_version": "0.2.6",
-  "fetched_at": "2026-11-15",
-  "fetch_method": "git ls-remote HEAD + GitHub API (где взялось) — живые данные на 2026-11-15",
+  "genome_version": "0.2.7",
+  "fetched_at": "2026-11-16",
+  "fetch_method": "git ls-remote HEAD + GitHub API (где взялось) — живые данные на 2026-11-16",
   "licenses_verified_at": "2026-11-05",
   "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
   "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
@@ -14,7 +14,7 @@
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
       "interface": "слои + bootstrap-скрипты",
-      "integrity": "sha256-db89cd7bb9391a8d72bd36852bd6cd6c04f7d79161113f8f97c2510523d6ed98",
+      "integrity": "sha256-5badcbb25ab0de15b58c7bc03b40f730b3dfd3f176506735612718f67164edb3",
       "fetched_at": "2026-11-10",
       "overseer": "ОС Человека",
       "a2a": {
@@ -32,7 +32,7 @@
       "system_pre": "metabolism",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-05)",
       "interface": "браузерный API",
-      "integrity": "sha256-eafc3d30edbe4a38ad3fccb0ddd8c26d063b7c2d9fcc1e8c679d873ab7129ec3",
+      "integrity": "sha256-54d10323552588812a9bfe5eb12c0ac48f7a911f03a03c678a230661dee21edc",
       "fetched_at": "2026-11-10",
       "overseer": "локальный инференс в",
       "a2a": {
@@ -51,7 +51,7 @@
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
       "interface": "файлы + манифест данных",
       "pin_ref": "rumu",
-      "integrity": "sha256-f1da5ac835fa65852664613e71eb5251fbe5d1bb857de9018492b820ce71f4b8",
+      "integrity": "sha256-95c9022fadecfe50e5881bc8fff24e505cda8e1330f3dd3aad51c7978bc7cfb6",
       "fetched_at": "2026-11-14",
       "overseer": "корпус 64 песни",
       "a2a": {
@@ -69,7 +69,7 @@
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
       "interface": "конфиги ноды",
-      "integrity": "sha256-4e4c585341b207194238fa9893121f0cd444e70d3b0a5f40462ec56adcba1c35",
+      "integrity": "sha256-403d71bdddd2e2d556f679ad041b78cca207e43276c81cb197bc48a65e255058",
       "fetched_at": "2026-11-10",
       "overseer": "суверенный узел-хост «настроил",
       "a2a": {
@@ -87,7 +87,7 @@
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); данные каталога: открытой лицензии у внешнего источника НЕТ (ADR-0008) — вариант (б) облегчен (ADR-0009), вариант (в) ИСПОЛНЕН 2026-11-05 (ADR-0011): catalog.js — свой каталог CC0, своя нумерация i:1..249, следы внешнего id и бейджи источника сняты; вариант (а) закрыт как не требующийся; каталог плеера (ЛАКОРНИЯ) — свой с 2026-10-20",
       "interface": "плеер поверх P2P",
-      "integrity": "sha256-5d97a6d22d2672923bba837a48b21aef3c4b0d9683a0115cf5a3be9b388d4c95",
+      "integrity": "sha256-2c6807ec2955235f685bd974486b87f3f83555471c943ff0973cd94fce1ef791",
       "fetched_at": "2026-11-10",
       "overseer": "держатель имени РУМУ",
       "a2a": {
@@ -105,7 +105,7 @@
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
       "interface": "модели + consent-манифест",
-      "integrity": "sha256-9444957db941d7f9f2431a6e7806c63fbac667dd131ba4d9e50a593bd3f82c31",
+      "integrity": "sha256-a79c7fc8a910da1c2810ddbac45c23dc84597190da156a4ee2a1ab8f7a5aabe9",
       "fetched_at": "2026-11-10",
       "overseer": "атлас голосов; свой",
       "a2a": {
@@ -123,7 +123,7 @@
       "system_pre": "genome",
       "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-05)",
       "interface": "реестр указателей",
-      "integrity": "sha256-80b1b38d7f9986b01842c2f6217ef824f3c61c687ad4b15507054b7f25c3ef2f",
+      "integrity": "sha256-307c18607e454f75b333609313b94609724f18d7f8b599964a95004035e00451",
       "fetched_at": "2026-11-10",
       "overseer": "реестр-указатель платформ; про",
       "a2a": {
@@ -142,7 +142,7 @@
       "license_pre": "Apache-2.0 (LICENSE репозитория, прочитан клоном 2026-11-05)",
       "interface": "synapse/consent.py, blood/envelope.schema.json, ADR-0017",
       "bridge": true,
-      "integrity": "sha256-ecbfdcebb73dae9e2dfa1336df935a4f8fee10fac65a82546600f5fa904871dc",
+      "integrity": "sha256-046c2ba774e8fb6f221f33a31adf17f563953995ff902d372b6670d726a49e7f",
       "fetched_at": "2026-11-10",
       "overseer": "дом",
       "a2a": {
@@ -160,7 +160,7 @@
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
       "interface": "python3 runtime_protocol.py | make verify | make demo",
-      "integrity": "sha256-e28d64f7ffc09673e363c2b01920e1f0817e2a7a97bf8447e9851bc63e928f7f",
+      "integrity": "sha256-762bc6b01ff71669f9149178e45cc0085fb6025569a33f5257617bf2c3735564",
       "fetched_at": "2026-11-10",
       "overseer": "исполнимая модель динамики",
       "a2a": {
@@ -178,7 +178,7 @@
       "system_pre": "substrate",
       "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
       "interface": "cargo test / make verify; пин живым ls-remote",
-      "integrity": "sha256-b2a9b2d83fb7fe6b1464f33f5c87351f1636f33a7fd4d16c89cecc7d819619b2",
+      "integrity": "sha256-9c1f68cb38088170fa2a27262dfa3e0f96114f23edf37d73fcb11224b9d9014a",
       "fetched_at": "2026-11-10",
       "overseer": "первая Rust-клетка",
       "a2a": {
@@ -196,13 +196,67 @@
       "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
       "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
       "pin": "63d5f17954a2d985493ea2884ada86838b5b4828",
-      "integrity": "sha256-6b99f48481ca751bd5fef88f9d5ff22cc8b3b88d10f059df6f741b3705cc6eb6",
+      "integrity": "sha256-fe480b1ef0c7cc803b2c4d13295faef83dc3df88a4ae7897b024a794580ce768",
       "fetched_at": "2026-11-10",
       "overseer": "процесс-супервизор агентов роя",
       "a2a": {
         "name": "agryp",
         "role": "процесс-супервизор агентов роя",
         "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
+        "status": "active"
+      }
+    },
+    {
+      "name": "lex-naturae",
+      "repo": "https://github.com/rtynbirf/lex-naturae.git",
+      "pin": "b3f0d97194d532b49841dc48c9539fce5e97d266",
+      "role": "законник дома: claim/evidence ledger — отделяет наблюдения от гипотез, философских принципов и институциональных правил; проверяет то, что доступно машинной проверке (CSV-ячейки, дословные цитаты NFKC, SHA-256 целостность артефактов, граф конфликтов); 70/70 тестов; v0.7 — независимый аудит Z.ai (20 атак, 19 отбиты, BOM-пробой закрыт)",
+      "system_pre": "cognition",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
+      "interface": "CLI: stdin/файл-коллекция, JSON-статусы (SUPPORTED/UNKNOWN/UNVERIFIED_SUBMITTER_ASSERTION)",
+      "integrity": "sha256-6913c07dfd13bbbec02181c1fd9f93c467984627064d5ea9020ffe7189ea5f2b",
+      "fetched_at": "2026-11-16",
+      "overseer": "доказательства роя",
+      "a2a": {
+        "name": "lex-naturae",
+        "role": "доказательства роя",
+        "interface": "CLI: stdin/файл-коллекция, JSON-статусы (SUPPORTED/UNKNOWN/UNVERIFIED_SUBMITTER_ASSERTION)",
+        "status": "active"
+      }
+    },
+    {
+      "name": "singulyar-a0-audit",
+      "repo": "https://github.com/rtynbirf/singulyar-a0-audit.git",
+      "pin": "425be4d38e11018e493d0aec84fce6aacefdf285",
+      "role": "независимый аудитор роя: A0-аудит СИНГУЛЯРА (вердикт PACKAGE VALID + BRIDGE VALID) и дизайн R4-порта; свидетель, не автор — аудит чужими руками, отчёты релизами-снапшотами",
+      "system_pre": "overseer",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
+      "interface": "аудит-снапшоты релизами (audit-snapshot-2026-11-15)",
+      "integrity": "sha256-a802c77dc1a560bfaeaaa36cff74fd99d14460d314b4aa4bdb17b4200b8d9c2a",
+      "fetched_at": "2026-11-16",
+      "overseer": "независимый аудит роя",
+      "a2a": {
+        "name": "singulyar-a0-audit",
+        "role": "независимый аудит роя",
+        "interface": "аудит-снапшоты релизами (audit-snapshot-2026-11-15)",
+        "status": "active"
+      }
+    },
+    {
+      "name": "fond-host",
+      "repo": "https://github.com/rtynbirf/fond-host.git",
+      "pin": "01d4cf57ea5a76ea4c97197d8e20ebc8828fe367",
+      "role": "CORS-хост минус-фонда дома (Н-10 · ADR-0007): Pages отдаёт ACAO:* — лестница WebAudio-плееров дома поднимается без прокси и без облака",
+      "system_pre": "substrate",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
+      "interface": "HTTP-страница + ACAO:* заголовки GitHub Pages",
+      "integrity": "sha256-e284e6efd61a50aaae497712c5d25b5d49b37057310c9257d16964de53fe3ed9",
+      "fetched_at": "2026-11-16",
+      "overseer": "CORS-хост дома",
+      "a2a": {
+        "name": "fond-host",
+        "role": "CORS-хост дома",
+        "interface": "HTTP-страница + ACAO:* заголовки GitHub Pages",
         "status": "active"
       }
     }
