@@ -1,5 +1,5 @@
 {
-  "genome_version": "0.2.8",
+  "genome_version": "0.2.9",
   "fetched_at": "2026-11-17",
   "fetch_method": "GitHub API /repos/<owner>/<repo>/branches/<pin_ref> (fallback: git ls-remote refs/heads/<pin_ref>, SHA эквивалентны) — живая сверка genome_drift.py на 2026-11-17",
   "licenses_verified_at": "2026-11-05",
@@ -9,12 +9,12 @@
     {
       "name": "polymath-os",
       "repo": "https://github.com/rtynbirf/polymath-os.git",
-      "pin": "12d91e6a4abd73bad8da7c315eaf89cdd2ba2b51",
+      "pin": "f39006ad2dd83c7fd64f0149bf038a17eeea952a",
       "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
       "interface": "слои + bootstrap-скрипты",
-      "integrity": "sha256-6b93f585e301a8c725f2553c783be332f9f2c4b8b096359da4ab0cba93b1b413",
+      "integrity": "sha256-eb763d38ea438ea5bfa9b1cb5c1efad7040a6b5bf4ff1ae5dc62a4f1df95bff6",
       "fetched_at": "2026-11-17",
       "overseer": "ОС Человека",
       "a2a": {
@@ -45,13 +45,13 @@
     {
       "name": "singulyar",
       "repo": "https://github.com/rtynbirf/singulyar.git",
-      "pin": "67dac779b415f12c613d3d8716df29a6f0c7cae1",
+      "pin": "bced76a18d2b6f2d3df0e15475867303743c7f35",
       "role": "корпус 68 песен × 197 языков офлайн (С184–С187: чистовики вшиты, РУВСОН целиком); кандидат в память роя; здесь же тело РУМУ (ветка rumu — пин следит за телом; 2026-11-05 влит свой каталог — вариант (в), ADR-0011 ядра: catalog.js CC0, своя нумерация i:1..249; вечер — такт «ФЛАГМАН»: страница СИНГУЛЯР_01 v3.0 переработана — сансара/очередь/звук/запись/bento/ленивые файлы, PR#47; утро — такты «НЕ РАБОТАЕТ»+«ЧИСТОВИКИ»: кэш v212 лечит мёртвые вьюхи player/catalog ·01, тексты пересажены на чистовики ruvson-lyrics (63 песни), hashchange-вьюхи, PR#48; догон — пины стражей и живых лиц выровнены цехом правды за v212, PR#49; утро — такт «ДОГОН за ·56»: Такт-гейт поймал 6 красных от чужого С154 — офлайн-закон, симметрия нитей, Малыш, средовые гарды фондов выровнены честно (PR#50/51/52), гейт зелёный)",
       "system_pre": "memory",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
       "interface": "файлы + манифест данных",
       "pin_ref": "rumu",
-      "integrity": "sha256-f68245a86e76018764b80244d3f71ef9aaf541caedb6ab1ab2a76c4c96cbb725",
+      "integrity": "sha256-d4e22fa33e6bc286c598e4fc0ee944659047d5c953be372a09324da59ee1b3a9",
       "fetched_at": "2026-11-17",
       "overseer": "корпус 64 песни",
       "a2a": {
