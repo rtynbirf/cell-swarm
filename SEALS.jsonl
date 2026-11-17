@@ -9,3 +9,6 @@
 {"card": "runtime-protocol.json", "prev_hash": "5ae99914d1b9b30cea07ea954f017fd2a18faf7520fe9bd289aa3b8249d4d21a", "sha256": "dc14a8bda5ced79d514de26ce4b1d53dcfef5fe95c20cb0a0bf5168d7e6a0556", "ts": "2026-11-08T23:55:11Z"}
 {"card": "cell-rs.json", "prev_hash": "964a47c35fcb5937db947939429f477b136cede2ecfed115266585e3afc4913b", "sha256": "95ac92241a61425356815ae3a39b31257a1f9ab4e9792508f9b73315a6b0bc45", "ts": "2026-11-08T23:55:11Z"}
 {"card": "agryp.json", "prev_hash": "4835a57a36ce2a499ebd1a938dd9bb164ea8fe118ae270be9d668c251baebd6f", "sha256": "ab60fde05c4370e4311b62294fc436fe5e1aeea7ffb7afef35c792e661bad708", "ts": "2026-11-08T23:55:11Z"}
+{"card": "lex-naturae.json", "prev_hash": "675d27a45d2b0817ae8366da99226f8d8485f1948421326575bb4d8d812c04eb", "sha256": "94d3d8ce5e1fe66543fe462675ed46791d6b5cd66ed378803acf6771a66b98cc", "ts": "2026-11-17T19:22:54Z"}
+{"card": "singulyar-a0-audit.json", "prev_hash": "e404d51345e920edc104a106d90ab4a103309f7c22d865971dbfeed3e93947ce", "sha256": "e9c636e8d01d1e673c7db4b1635d819bba2d5901dc80224217c0c5cf33b6acff", "ts": "2026-11-17T19:22:54Z"}
+{"card": "fond-host.json", "prev_hash": "8079d1b5835b412d619983e683fd6a0b6c0778ab0e268fb77cda556f4c2cdacf", "sha256": "aab44996c59c4fe021f0a47988364a5b304273e8bb20c8fd9be4a2fd475cdf3e", "ts": "2026-11-17T19:22:54Z"}
