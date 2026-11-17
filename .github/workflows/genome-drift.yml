@@ -28,6 +28,11 @@ permissions:
   contents: write
   issues: write
 
+# зуб 3 (A-HUSH-2, Г-12): тревога — критическая секция, страж обязан стоять в очереди
+concurrency:
+  group: genome-drift
+  cancel-in-progress: false
+
 jobs:
   drift:
     runs-on: ubuntu-latest
