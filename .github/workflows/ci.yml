@@ -15,6 +15,10 @@ on:
   push:
   pull_request:
   workflow_dispatch: # волна ×4: диспетч по требованию (проверка секрета memory без пустых пушей)
+concurrency:
+  group: metabolism
+  cancel-in-progress: false
+
 jobs:
   cell:
     runs-on: ubuntu-latest
