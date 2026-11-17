@@ -1,7 +1,7 @@
 {
-  "genome_version": "0.2.10",
+  "genome_version": "0.2.11",
   "fetched_at": "2026-11-17",
-  "fetch_method": "git ls-remote HEAD + GitHub API (где взялось) — живые данные на 2026-11-17",
+  "fetch_method": "GitHub API /repos/<owner>/<repo>/branches/<pin_ref> (fallback: git ls-remote refs/heads/<pin_ref>, SHA эквивалентны) — живая сверка genome_drift.py на 2026-11-17",
   "licenses_verified_at": "2026-11-05",
   "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
   "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
@@ -14,7 +14,7 @@
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
       "interface": "слои + bootstrap-скрипты",
-      "integrity": "sha256-5a1a4df5730edd43a17371ccea526852f18474f0c34289d4dba1aa0bc700314f",
+      "integrity": "sha256-ab0f405e7e42258f778ea031b99f4625b75aa3e6ab4bd64e36f3182a255f2dc8",
       "fetched_at": "2026-11-17",
       "overseer": "ОС Человека",
       "a2a": {
@@ -51,7 +51,7 @@
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
       "interface": "файлы + манифест данных",
       "pin_ref": "rumu",
-      "integrity": "sha256-881a28dc520001a45a7fdc2bf5ccbd487f2e1de957bd36cc632da475ee715f3e",
+      "integrity": "sha256-9057dbea452c5a48becd8ea28496fee00a063328b30faf086cab605a64e91337",
       "fetched_at": "2026-11-17",
       "overseer": "корпус 64 песни",
       "a2a": {
@@ -69,7 +69,7 @@
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
       "interface": "конфиги ноды",
-      "integrity": "sha256-611a916c66b27df961b28b09a62d6f17cf4b67e46320aa78676a423b8de119a4",
+      "integrity": "sha256-00c7adb2ca66184859ce83054274bd7a071a1ba0f7c3cae501ba542a0656b1ad",
       "fetched_at": "2026-11-17",
       "overseer": "суверенный узел-хост «настроил",
       "a2a": {
@@ -105,7 +105,7 @@
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
       "interface": "модели + consent-манифест",
-      "integrity": "sha256-524922f033ef3dec843e4be4ece5ba511cf477dc291659b9885049a991e56329",
+      "integrity": "sha256-28d5eceb7b85b284792c7ab66dbb0b5e85386b42066c8866762aa8e09cee90a0",
       "fetched_at": "2026-11-17",
       "overseer": "атлас голосов; свой",
       "a2a": {
@@ -160,7 +160,7 @@
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
       "interface": "python3 runtime_protocol.py | make verify | make demo",
-      "integrity": "sha256-0feada24a3c9e8cd2bae5d7c6862bf78c9ab6ad6dc3b38e896b063b78c8cdb54",
+      "integrity": "sha256-27aac915647d2abb2d11515fb3e4ac4731c2c05d1f1f8d3d1eea1c0d45f3878a",
       "fetched_at": "2026-11-17",
       "overseer": "исполнимая модель динамики",
       "a2a": {
@@ -178,7 +178,7 @@
       "system_pre": "substrate",
       "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
       "interface": "cargo test / make verify; пин живым ls-remote",
-      "integrity": "sha256-7af51d24880ba30618f4bea689410cee33ea234c07a8bcf14ebd5922ec649630",
+      "integrity": "sha256-f58ad313235f9b7ebd4e7b2a524c489b09a28235190134f0ed663e2f599d6795",
       "fetched_at": "2026-11-17",
       "overseer": "первая Rust-клетка",
       "a2a": {
@@ -196,7 +196,7 @@
       "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
       "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
       "pin": "72fda071a3cbf8923e63bddf5aca61bf01bd5947",
-      "integrity": "sha256-6f004111862fdb3c1cc30cb49eaa49a717098267ab32904daeb520c5edf0eeed",
+      "integrity": "sha256-00c05518b703001cb0615b411a94f9b5353c0b0f35c13563fb9cd45ee5ca9e60",
       "fetched_at": "2026-11-17",
       "overseer": "процесс-супервизор агентов роя",
       "a2a": {
