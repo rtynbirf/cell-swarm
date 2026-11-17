@@ -1,5 +1,5 @@
 {
-  "genome_version": "0.2.9",
+  "genome_version": "0.2.10",
   "fetched_at": "2026-11-17",
   "fetch_method": "GitHub API /repos/<owner>/<repo>/branches/<pin_ref> (fallback: git ls-remote refs/heads/<pin_ref>, SHA эквивалентны) — живая сверка genome_drift.py на 2026-11-17",
   "licenses_verified_at": "2026-11-05",
@@ -9,12 +9,12 @@
     {
       "name": "polymath-os",
       "repo": "https://github.com/rtynbirf/polymath-os.git",
-      "pin": "f39006ad2dd83c7fd64f0149bf038a17eeea952a",
+      "pin": "0f7e686655cba3cde759f3abce09ba50803203ec",
       "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
       "interface": "слои + bootstrap-скрипты",
-      "integrity": "sha256-eb763d38ea438ea5bfa9b1cb5c1efad7040a6b5bf4ff1ae5dc62a4f1df95bff6",
+      "integrity": "sha256-5a1a4df5730edd43a17371ccea526852f18474f0c34289d4dba1aa0bc700314f",
       "fetched_at": "2026-11-17",
       "overseer": "ОС Человека",
       "a2a": {
@@ -45,13 +45,13 @@
     {
       "name": "singulyar",
       "repo": "https://github.com/rtynbirf/singulyar.git",
-      "pin": "bced76a18d2b6f2d3df0e15475867303743c7f35",
+      "pin": "77ebb3aa3de99b2c97876dbe02c7e210e0add3f6",
       "role": "корпус 68 песен × 197 языков офлайн (С184–С187: чистовики вшиты, РУВСОН целиком); кандидат в память роя; здесь же тело РУМУ (ветка rumu — пин следит за телом; 2026-11-05 влит свой каталог — вариант (в), ADR-0011 ядра: catalog.js CC0, своя нумерация i:1..249; вечер — такт «ФЛАГМАН»: страница СИНГУЛЯР_01 v3.0 переработана — сансара/очередь/звук/запись/bento/ленивые файлы, PR#47; утро — такты «НЕ РАБОТАЕТ»+«ЧИСТОВИКИ»: кэш v212 лечит мёртвые вьюхи player/catalog ·01, тексты пересажены на чистовики ruvson-lyrics (63 песни), hashchange-вьюхи, PR#48; догон — пины стражей и живых лиц выровнены цехом правды за v212, PR#49; утро — такт «ДОГОН за ·56»: Такт-гейт поймал 6 красных от чужого С154 — офлайн-закон, симметрия нитей, Малыш, средовые гарды фондов выровнены честно (PR#50/51/52), гейт зелёный)",
       "system_pre": "memory",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
       "interface": "файлы + манифест данных",
       "pin_ref": "rumu",
-      "integrity": "sha256-d4e22fa33e6bc286c598e4fc0ee944659047d5c953be372a09324da59ee1b3a9",
+      "integrity": "sha256-881a28dc520001a45a7fdc2bf5ccbd487f2e1de957bd36cc632da475ee715f3e",
       "fetched_at": "2026-11-17",
       "overseer": "корпус 64 песни",
       "a2a": {
@@ -64,12 +64,12 @@
     {
       "name": "cell65-host",
       "repo": "https://github.com/rtynbirf/cell65-host.git",
-      "pin": "5fef3e0c237e8dec7d84266572752ca48b8b4974",
+      "pin": "b602353f58223fe7090f806c868894f2ed223c2b",
       "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
       "interface": "конфиги ноды",
-      "integrity": "sha256-0029193086947d7472f0f935e378756d3f5e175cdfcb976363b179776745e43d",
+      "integrity": "sha256-611a916c66b27df961b28b09a62d6f17cf4b67e46320aa78676a423b8de119a4",
       "fetched_at": "2026-11-17",
       "overseer": "суверенный узел-хост «настроил",
       "a2a": {
@@ -100,12 +100,12 @@
     {
       "name": "voice-atlas-llm",
       "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
-      "pin": "11714d7970243c4eadda975750d39ac2bb7c56ca",
+      "pin": "12abb9f5ea333ae618a239db8a4496f189f33e6f",
       "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
       "interface": "модели + consent-манифест",
-      "integrity": "sha256-60d8b69350bcab39eff3e7f02ec374a1ddd3e68837703e2f55ab14e7638d9360",
+      "integrity": "sha256-524922f033ef3dec843e4be4ece5ba511cf477dc291659b9885049a991e56329",
       "fetched_at": "2026-11-17",
       "overseer": "атлас голосов; свой",
       "a2a": {
@@ -155,12 +155,12 @@
     {
       "name": "runtime-protocol",
       "repo": "https://github.com/rtynbirf/runtime-protocol.git",
-      "pin": "be0c184fa3f84014c6be708ed90ff5cd4a345017",
+      "pin": "b67df9bc883b20bfedfc87db259e9e7ea8e84441",
       "role": "исполнимая модель динамики узла: уравнение ρ̇ (генератор/долг/каратель), фазовая машина GENESIS_EXEC (SUBCRITICAL→FORAGING→COHERENCE→OVERCLOCK→TRANSITION→POST_GENESIS), VOLATILE_META, CANCER_FILTER; stdlib-only, метаболизм make verify/demo; 17 приёмок зелёные (7 ядра + 10 контура сверки); спецификация-источник — nous@agents/execution docs/genesis (TH-RTP-01); создана 2026-11-07 агентом по мандату Хозяина (TH-RTP-02); 2026-11-07 — контур сверки «живая карта» (reconciliation.py, ADR-0002), пин догнан за телом живым ls-remote (TH-RTP-03)",
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
       "interface": "python3 runtime_protocol.py | make verify | make demo",
-      "integrity": "sha256-6ad575c94d21760d212c6ae232dfab3ceaaf81e97747d876325aca74493dde57",
+      "integrity": "sha256-0feada24a3c9e8cd2bae5d7c6862bf78c9ab6ad6dc3b38e896b063b78c8cdb54",
       "fetched_at": "2026-11-17",
       "overseer": "исполнимая модель динамики",
       "a2a": {
@@ -173,12 +173,12 @@
     {
       "name": "cell-rs",
       "repo": "https://github.com/rtynbirf/cell-rs.git",
-      "pin": "778b6527e0cc171120fd725671050ff24238c069",
+      "pin": "a7c0769c8715b1e82e8d344edfd0bf3c7ec71b3d",
       "role": "первая Rust-клетка: ядро контура сверки (Tolerance/reconcile/Phase, sha256 с нуля на векторах NIST, байт-цепь); семантика допуска = Python-ядру; компилятор клетки — CI",
       "system_pre": "substrate",
       "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
       "interface": "cargo test / make verify; пин живым ls-remote",
-      "integrity": "sha256-ac62ca00457ec89b72370902b05c2f0bf2c07545c4d5e1caf69641029e74c982",
+      "integrity": "sha256-7af51d24880ba30618f4bea689410cee33ea234c07a8bcf14ebd5922ec649630",
       "fetched_at": "2026-11-17",
       "overseer": "первая Rust-клетка",
       "a2a": {
@@ -195,8 +195,8 @@
       "system_pre": "overseer",
       "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
       "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
-      "pin": "2149202f5b8e04d7bd2f1a9dcc38f4ae39577d83",
-      "integrity": "sha256-1b963dfb859fb69b8d940a60ac06fbdeb7ae97703b842577decb1191c2f3b3e9",
+      "pin": "97ab948fca933ba628bfee035b794abd98a69039",
+      "integrity": "sha256-6f004111862fdb3c1cc30cb49eaa49a717098267ab32904daeb520c5edf0eeed",
       "fetched_at": "2026-11-17",
       "overseer": "процесс-супервизор агентов роя",
       "a2a": {
