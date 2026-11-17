@@ -2,7 +2,7 @@
  "hologram": 1,
  "root": "c223bd4a2f6a56783c1fbdb1b1f671fa61c3150ecf320c82796ea5763043a696",
  "n": 73,
- "storage": 68,
+ "storage": 36,
  "r": 3,
  "self": {
   "name": "cell-swarm",
@@ -306,9 +306,27 @@
  ],
  "flesh": [
   {
+   "name": "code",
+   "desc": "Код дома: скрипты и снипеты — место по канону §4",
+   "lang": "Shell",
+   "cluster": ""
+  },
+  {
    "name": "combain-v2",
    "desc": "COMBAIN v2 — self-hosted messenger",
    "lang": "JavaScript",
+   "cluster": ""
+  },
+  {
+   "name": "hologram",
+   "desc": "осколок знает целое: Merkle-осколки + Рид-Соломон (Целое из любых k из n), 64 репо вселенной, стратегия слоёв",
+   "lang": "Python",
+   "cluster": ""
+  },
+  {
+   "name": "khozyain",
+   "desc": "ХОЗЯИН ДОМА — аккаунт-уровневый автомат состояния: зелёные main, живые триггеры, ноль открытых состояний и ноль уведомлений. Слой 3 дома поверх repo-doctrine и domovoy-ritual",
+   "lang": "Python",
    "cluster": ""
   },
   {
@@ -316,6 +334,12 @@
    "desc": "ПОЛИМАТ · TASK174 — протокол проверки канона по строкам: пломбы sha256, ловушки, Б25.8 приёмка чужаком. Канон v5.1.2 [В]; «ключ внутри» [О]; «протокол работает» [Н]. Прогон 3 — связка красной нити.",
    "lang": "Python",
    "cluster": ""
+  },
+  {
+   "name": "polymath-os",
+   "desc": "Personal sovereign media-OS. 5-layer LFS-style self-bootstrapping repo. SINGULYAR Emergent Intent Runtime v0.6. 35 ADRs. make verify 33/33. 290 tests green.",
+   "lang": "Python",
+   "cluster": "OS"
   },
   {
    "name": "rent-mechanism-q43",
@@ -328,6 +352,12 @@
    "desc": "Доктрина настройки GitHub-репозиториев: человеком для человека. Чек-листы флагов, защита веток, токены, конвенции агентов, аварийные процедуры, карта аккаунта.",
    "lang": "Python",
    "cluster": ""
+  },
+  {
+   "name": "ruvson-rse2",
+   "desc": "RUVSON SINGULARITY ENGINE v2 (RSE-2): станок одной песни Шаг 0-6 на мировых трендах 2023-2026 (Mel-Band RoFormer, Seed-VC, OpenVoice+петля, kNN-VC, CREPE-судья). Голос RUVSON.",
+   "lang": "Python",
+   "cluster": "SINGULAR"
   },
   {
    "name": "uace-pml",
