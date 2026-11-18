@@ -9,7 +9,7 @@
     {
       "name": "polymath-os",
       "repo": "https://github.com/rtynbirf/polymath-os.git",
-      "pin": "a517ee1afbb87049ef7d541ef60d3b6b0245e38d",
+      "pin": "22920d23ccdaa2d7f01a3446ba8b9afc73c388be",
       "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
@@ -45,7 +45,7 @@
     {
       "name": "singulyar",
       "repo": "https://github.com/rtynbirf/singulyar.git",
-      "pin": "02bb11a48d9876d00bcf5760d885b5e0206e2ee9",
+      "pin": "e2923f4d422b212a4f30aa7a32f1c544ac73d9f5",
       "role": "корпус 68 песен × 197 языков офлайн (С184–С187: чистовики вшиты, РУВСОН целиком); кандидат в память роя; здесь же тело РУМУ (ветка rumu — пин следит за телом; 2026-11-05 влит свой каталог — вариант (в), ADR-0011 ядра: catalog.js CC0, своя нумерация i:1..249; вечер — такт «ФЛАГМАН»: страница СИНГУЛЯР_01 v3.0 переработана — сансара/очередь/звук/запись/bento/ленивые файлы, PR#47; утро — такты «НЕ РАБОТАЕТ»+«ЧИСТОВИКИ»: кэш v212 лечит мёртвые вьюхи player/catalog ·01, тексты пересажены на чистовики ruvson-lyrics (63 песни), hashchange-вьюхи, PR#48; догон — пины стражей и живых лиц выровнены цехом правды за v212, PR#49; утро — такт «ДОГОН за ·56»: Такт-гейт поймал 6 красных от чужого С154 — офлайн-закон, симметрия нитей, Малыш, средовые гарды фондов выровнены честно (PR#50/51/52), гейт зелёный)",
       "system_pre": "memory",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
@@ -64,7 +64,7 @@
     {
       "name": "cell65-host",
       "repo": "https://github.com/rtynbirf/cell65-host.git",
-      "pin": "934bd7b0d6f88d76c076eea4166977b9e25d0b53",
+      "pin": "3a312846d30a346f655910d3c9a5362d9a18f658",
       "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
@@ -100,7 +100,7 @@
     {
       "name": "voice-atlas-llm",
       "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
-      "pin": "e7e771a08b631bade53a6adc4d3e29f6f9b321a8",
+      "pin": "1e10c47e13e14860e1eb00c77ce627aba391facf",
       "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
@@ -155,7 +155,7 @@
     {
       "name": "runtime-protocol",
       "repo": "https://github.com/rtynbirf/runtime-protocol.git",
-      "pin": "dc365b59284fed62bc95b2baea2545e104f840b4",
+      "pin": "a534873c15937bf8a8d1a7cc1b1ab48c76db3085",
       "role": "исполнимая модель динамики узла: уравнение ρ̇ (генератор/долг/каратель), фазовая машина GENESIS_EXEC (SUBCRITICAL→FORAGING→COHERENCE→OVERCLOCK→TRANSITION→POST_GENESIS), VOLATILE_META, CANCER_FILTER; stdlib-only, метаболизм make verify/demo; 17 приёмок зелёные (7 ядра + 10 контура сверки); спецификация-источник — nous@agents/execution docs/genesis (TH-RTP-01); создана 2026-11-07 агентом по мандату Хозяина (TH-RTP-02); 2026-11-07 — контур сверки «живая карта» (reconciliation.py, ADR-0002), пин догнан за телом живым ls-remote (TH-RTP-03)",
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
@@ -173,7 +173,7 @@
     {
       "name": "cell-rs",
       "repo": "https://github.com/rtynbirf/cell-rs.git",
-      "pin": "1dc6858c059c5df446c2c273e2cd9ac705c31d9c",
+      "pin": "39d10e4e1ecc0340b91e498ebbadff34212c9afb",
       "role": "первая Rust-клетка: ядро контура сверки (Tolerance/reconcile/Phase, sha256 с нуля на векторах NIST, байт-цепь); семантика допуска = Python-ядру; компилятор клетки — CI",
       "system_pre": "substrate",
       "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
@@ -195,7 +195,7 @@
       "system_pre": "overseer",
       "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
       "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
-      "pin": "d73b93423b5029fb5992556c068d58ec660f4f2e",
+      "pin": "b78ebefd69d44b7d11c32b4d7606a34f34510bb7",
       "integrity": "sha256-5255d90a06c0ed25fdf05d5834ff34ae39961eb1408db1384114db7142c2b6c1",
       "fetched_at": "2026-11-17",
       "overseer": "процесс-супервизор агентов роя",
@@ -209,7 +209,7 @@
     {
       "name": "lex-naturae",
       "repo": "https://github.com/rtynbirf/lex-naturae.git",
-      "pin": "509978015ccbdf57130cf948ff7a830f2a634241",
+      "pin": "5767b4a5f210042dafa0d379a9b0a4526d518e7c",
       "role": "законник дома: claim/evidence ledger — отделяет наблюдения от гипотез, философских принципов и институциональных правил; проверяет то, что доступно машинной проверке (CSV-ячейки, дословные цитаты NFKC, SHA-256 целостность артефактов, граф конфликтов); 70/70 тестов; v0.7 — независимый аудит Z.ai (20 атак, 19 отбиты, BOM-пробой закрыт)",
       "system_pre": "cognition",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
@@ -227,7 +227,7 @@
     {
       "name": "singulyar-a0-audit",
       "repo": "https://github.com/rtynbirf/singulyar-a0-audit.git",
-      "pin": "ef1d4a40813c45b1dd482cc4b8cf59b8daec64df",
+      "pin": "db88730480e347c8814a49466b39032b14f5100e",
       "role": "независимый аудитор роя: A0-аудит СИНГУЛЯРА (вердикт PACKAGE VALID + BRIDGE VALID) и дизайн R4-порта; свидетель, не автор — аудит чужими руками, отчёты релизами-снапшотами",
       "system_pre": "overseer",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
@@ -245,7 +245,7 @@
     {
       "name": "fond-host",
       "repo": "https://github.com/rtynbirf/fond-host.git",
-      "pin": "a143e01ef6c13375d975a2e91786d4ca5adc21be",
+      "pin": "d4be0cbd471a127b7bdace0df3d25640d0229965",
       "role": "CORS-хост минус-фонда дома (Н-10 · ADR-0007): Pages отдаёт ACAO:* — лестница WebAudio-плееров дома поднимается без прокси и без облака",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
