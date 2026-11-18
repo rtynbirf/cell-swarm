@@ -64,7 +64,7 @@
     {
       "name": "cell65-host",
       "repo": "https://github.com/rtynbirf/cell65-host.git",
-      "pin": "b17cbf272a067f94b806a80aefc6df0f3ce70ed5",
+      "pin": "934bd7b0d6f88d76c076eea4166977b9e25d0b53",
       "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
@@ -173,7 +173,7 @@
     {
       "name": "cell-rs",
       "repo": "https://github.com/rtynbirf/cell-rs.git",
-      "pin": "54eccf1183d9c1f454406803c3e1a6da457b4d00",
+      "pin": "1dc6858c059c5df446c2c273e2cd9ac705c31d9c",
       "role": "первая Rust-клетка: ядро контура сверки (Tolerance/reconcile/Phase, sha256 с нуля на векторах NIST, байт-цепь); семантика допуска = Python-ядру; компилятор клетки — CI",
       "system_pre": "substrate",
       "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
@@ -195,7 +195,7 @@
       "system_pre": "overseer",
       "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
       "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
-      "pin": "e38db5b9220a51f0d8fae1f90fe8eeda956a4f23",
+      "pin": "d73b93423b5029fb5992556c068d58ec660f4f2e",
       "integrity": "sha256-5255d90a06c0ed25fdf05d5834ff34ae39961eb1408db1384114db7142c2b6c1",
       "fetched_at": "2026-11-17",
       "overseer": "процесс-супервизор агентов роя",
@@ -209,7 +209,7 @@
     {
       "name": "lex-naturae",
       "repo": "https://github.com/rtynbirf/lex-naturae.git",
-      "pin": "4b9d2a128988a04040abbc8a54989ea13f84fae0",
+      "pin": "509978015ccbdf57130cf948ff7a830f2a634241",
       "role": "законник дома: claim/evidence ledger — отделяет наблюдения от гипотез, философских принципов и институциональных правил; проверяет то, что доступно машинной проверке (CSV-ячейки, дословные цитаты NFKC, SHA-256 целостность артефактов, граф конфликтов); 70/70 тестов; v0.7 — независимый аудит Z.ai (20 атак, 19 отбиты, BOM-пробой закрыт)",
       "system_pre": "cognition",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
@@ -227,7 +227,7 @@
     {
       "name": "singulyar-a0-audit",
       "repo": "https://github.com/rtynbirf/singulyar-a0-audit.git",
-      "pin": "cb3aa916cd1383bfd5d6d43aaf0724388b27cafe",
+      "pin": "ef1d4a40813c45b1dd482cc4b8cf59b8daec64df",
       "role": "независимый аудитор роя: A0-аудит СИНГУЛЯРА (вердикт PACKAGE VALID + BRIDGE VALID) и дизайн R4-порта; свидетель, не автор — аудит чужими руками, отчёты релизами-снапшотами",
       "system_pre": "overseer",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
@@ -245,7 +245,7 @@
     {
       "name": "fond-host",
       "repo": "https://github.com/rtynbirf/fond-host.git",
-      "pin": "b5477436401847cd417f16f73bb97922cd9cd20b",
+      "pin": "a143e01ef6c13375d975a2e91786d4ca5adc21be",
       "role": "CORS-хост минус-фонда дома (Н-10 · ADR-0007): Pages отдаёт ACAO:* — лестница WebAudio-плееров дома поднимается без прокси и без облака",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
