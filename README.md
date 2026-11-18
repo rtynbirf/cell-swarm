@@ -1,12 +1,12 @@
 <div align="center">
-  <img src="banner.png" alt="cell-swarm — Сингулярная эмерджентная архитектура роя" width="100%">
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/cell-swarm@main/banner.png" alt="cell-swarm — Сингулярная эмерджентная архитектура роя" width="100%">
 </div>
 
 <!--ФОРЖ:МУЗА:НАЧАЛО-->
 <div align="center">
-  <img src="repo-muse.svg" width="100%" alt="Муза cell-swarm: мастерская ПОЛЛОК · РОЙ, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/cell-swarm@main/repo-muse.svg" width="100%" alt="Муза cell-swarm: мастерская ПОЛЛОК · РОЙ, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
   <br/>
-  <img src="forge-divider.svg" width="62%" alt="делитель мастерской ПОЛЛОК · РОЙ" />
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/cell-swarm@main/forge-divider.svg" width="62%" alt="делитель мастерской ПОЛЛОК · РОЙ" />
 </div>
 <!--ФОРЖ:МУЗА:КОНЕЦ-->
 
@@ -24,7 +24,7 @@
 
 # CELL-SWARM — рой клеток Человека
 
-<p align="center"><img src=".github/social-preview.png" alt="cell-swarm" width="100%"></p>
+<p align="center"><img src="https://cdn.jsdelivr.net/gh/rtynbirf/cell-swarm@main/.github/social-preview.png" alt="cell-swarm" width="100%"></p>
 
 
 
