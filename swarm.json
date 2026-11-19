@@ -1,7 +1,7 @@
 {
-  "genome_version": "0.2.13",
+  "genome_version": "0.2.14",
   "fetched_at": "2026-11-19",
-  "fetch_method": "git ls-remote HEAD + GitHub API (где взялось) — живые данные на 2026-11-19",
+  "fetch_method": "GitHub API HEAD (по контракту pin_ref: singulyar→rumu) + integrity пересчитана sha256(utf8(pin)) — живые данные на 2026-11-19",
   "licenses_verified_at": "2026-11-05",
   "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
   "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
@@ -9,13 +9,13 @@
     {
       "name": "polymath-os",
       "repo": "https://github.com/rtynbirf/polymath-os.git",
-      "pin": "ade9dcc57ec6dd8391909f93e8f43e5201e2da98",
+      "pin": "0e22935bb110a941226ac1d516aeb37d7d5fd46e",
       "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
       "interface": "слои + bootstrap-скрипты",
-      "integrity": "sha256-ab0f405e7e42258f778ea031b99f4625b75aa3e6ab4bd64e36f3182a255f2dc8",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-abe90501a0ff0108ce11d3888592275d1ae58c62538fa668f183af9b8e597ae4",
+      "fetched_at": "2026-11-19",
       "overseer": "ОС Человека",
       "a2a": {
         "name": "polymath-os",
@@ -32,8 +32,8 @@
       "system_pre": "metabolism",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-05)",
       "interface": "браузерный API",
-      "integrity": "sha256-a1a6280cec312d6839b43615b39dc5e6e3e589c4c9d88d46e416c3396c6b2ae9",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-25e257dd663bcdf2f8502ddca68741ea23cd6466ce1aedadff75477117c766e8",
+      "fetched_at": "2026-11-19",
       "overseer": "локальный инференс в",
       "a2a": {
         "name": "singulyar-llm",
@@ -45,14 +45,14 @@
     {
       "name": "singulyar",
       "repo": "https://github.com/rtynbirf/singulyar.git",
-      "pin": "12e929a595e9bd2f8efb827490ed5d923347cc83",
+      "pin": "eaf389d619d292ba816d330f9a378a54ea6fffd3",
       "role": "корпус 68 песен × 197 языков офлайн (С184–С187: чистовики вшиты, РУВСОН целиком); кандидат в память роя; здесь же тело РУМУ (ветка rumu — пин следит за телом; 2026-11-05 влит свой каталог — вариант (в), ADR-0011 ядра: catalog.js CC0, своя нумерация i:1..249; вечер — такт «ФЛАГМАН»: страница СИНГУЛЯР_01 v3.0 переработана — сансара/очередь/звук/запись/bento/ленивые файлы, PR#47; утро — такты «НЕ РАБОТАЕТ»+«ЧИСТОВИКИ»: кэш v212 лечит мёртвые вьюхи player/catalog ·01, тексты пересажены на чистовики ruvson-lyrics (63 песни), hashchange-вьюхи, PR#48; догон — пины стражей и живых лиц выровнены цехом правды за v212, PR#49; утро — такт «ДОГОН за ·56»: Такт-гейт поймал 6 красных от чужого С154 — офлайн-закон, симметрия нитей, Малыш, средовые гарды фондов выровнены честно (PR#50/51/52), гейт зелёный)",
       "system_pre": "memory",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
       "interface": "файлы + манифест данных",
       "pin_ref": "rumu",
-      "integrity": "sha256-da4a7fd0e708d51f8a91122cfeaeb6588c23e6d8e39bff4a6cf52d5bb6b9f5b9",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-1722c3b0ae6c70199ef01ed0f5f31f75b4e81adabc43e9ad05f26331e260536f",
+      "fetched_at": "2026-11-19",
       "overseer": "корпус 64 песни",
       "a2a": {
         "name": "singulyar",
@@ -64,13 +64,13 @@
     {
       "name": "cell65-host",
       "repo": "https://github.com/rtynbirf/cell65-host.git",
-      "pin": "9df3166896dd7338451c4dc2746d8198a41177d3",
+      "pin": "d07a079bebd60afe46af21172303ab1c9fe9e534",
       "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
       "interface": "конфиги ноды",
-      "integrity": "sha256-37f90efb4b9e7b41f9c8e0e51cac6e44e72ae3a6afd2f4fc76178b9e588b54b0",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-234c63a032fb00cd38b78e7674385a67b29d5b33242d884c58fdf6881b332a9b",
+      "fetched_at": "2026-11-19",
       "overseer": "суверенный узел-хост «настроил",
       "a2a": {
         "name": "cell65-host",
@@ -87,8 +87,8 @@
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); данные каталога: открытой лицензии у внешнего источника НЕТ (ADR-0008) — вариант (б) облегчен (ADR-0009), вариант (в) ИСПОЛНЕН 2026-11-05 (ADR-0011): catalog.js — свой каталог CC0, своя нумерация i:1..249, следы внешнего id и бейджи источника сняты; вариант (а) закрыт как не требующийся; каталог плеера (ЛАКОРНИЯ) — свой с 2026-10-20",
       "interface": "плеер поверх P2P",
-      "integrity": "sha256-93e27a3ba4dfa41f532190b128bea14307146c0ec33a5d70823baeece4a7cd4c",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-942d53acc209b102170086cfb4eacf92df03b6ad51237a9cdf15a477023a983a",
+      "fetched_at": "2026-11-19",
       "overseer": "держатель имени РУМУ",
       "a2a": {
         "name": "rumu",
@@ -100,13 +100,13 @@
     {
       "name": "voice-atlas-llm",
       "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
-      "pin": "80a3f17b3cef3f76fbc3ce73f02639934bfbe614",
+      "pin": "662827446255297d9ff384173bda4eb0b3d73126",
       "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
       "interface": "модели + consent-манифест",
-      "integrity": "sha256-cc2dc2596f955176d08388b5ca3e5dfcf39852b524a34001a2199e2295b82aac",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-85837f45b15a6343cffeef74716918cea0411aa932047b98e131d38a6f98d7d9",
+      "fetched_at": "2026-11-19",
       "overseer": "атлас голосов; свой",
       "a2a": {
         "name": "voice-atlas-llm",
@@ -123,8 +123,8 @@
       "system_pre": "genome",
       "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-05)",
       "interface": "реестр указателей",
-      "integrity": "sha256-ce819d998225f66c0c8c5fffb6e1267a9aab1263b977aed169fd56aa033501aa",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-df6593339125f41fb5d636c93dd7ba97f369b29532d76a036487aea8cccd1d64",
+      "fetched_at": "2026-11-19",
       "overseer": "реестр-указатель платформ; про",
       "a2a": {
         "name": "global-video-platforms-registry",
@@ -142,8 +142,8 @@
       "license_pre": "Apache-2.0 (LICENSE репозитория, прочитан клоном 2026-11-05)",
       "interface": "synapse/consent.py, blood/envelope.schema.json, ADR-0017",
       "bridge": true,
-      "integrity": "sha256-e5d61c62cf2d7bebf9b8077dc339dafbfa39359da32f04e8cf5fc24ef3e2ab80",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-8f0b95b810100882322581c3cbf69259d7ef7af3d2f700f317fd2f2d6344822b",
+      "fetched_at": "2026-11-19",
       "overseer": "дом",
       "a2a": {
         "name": "commons",
@@ -155,13 +155,13 @@
     {
       "name": "runtime-protocol",
       "repo": "https://github.com/rtynbirf/runtime-protocol.git",
-      "pin": "a429fe25deae1c18c6d470c690cbb4ecfdc434fb",
+      "pin": "36141f6a08c73c13444e4ce30377ed769aa1977e",
       "role": "исполнимая модель динамики узла: уравнение ρ̇ (генератор/долг/каратель), фазовая машина GENESIS_EXEC (SUBCRITICAL→FORAGING→COHERENCE→OVERCLOCK→TRANSITION→POST_GENESIS), VOLATILE_META, CANCER_FILTER; stdlib-only, метаболизм make verify/demo; 17 приёмок зелёные (7 ядра + 10 контура сверки); спецификация-источник — nous@agents/execution docs/genesis (TH-RTP-01); создана 2026-11-07 агентом по мандату Хозяина (TH-RTP-02); 2026-11-07 — контур сверки «живая карта» (reconciliation.py, ADR-0002), пин догнан за телом живым ls-remote (TH-RTP-03)",
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
       "interface": "python3 runtime_protocol.py | make verify | make demo",
-      "integrity": "sha256-ee2a64f94c9cfc2f0a447bdaa7cab58d6184b88d2d2d87ff88fccf351f90b06e",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-2d7c24301a3ec20493cfe6e57e0c64a0aa88ae465aa5fd1f24c3e14ad5705618",
+      "fetched_at": "2026-11-19",
       "overseer": "исполнимая модель динамики",
       "a2a": {
         "name": "runtime-protocol",
@@ -173,13 +173,13 @@
     {
       "name": "cell-rs",
       "repo": "https://github.com/rtynbirf/cell-rs.git",
-      "pin": "4a56afe1ecdbaf49f01b7a1e824945f8e1d6c28b",
+      "pin": "c1e91d80e9f10a83a79f0b80ce28d0b1ceb02ccf",
       "role": "первая Rust-клетка: ядро контура сверки (Tolerance/reconcile/Phase, sha256 с нуля на векторах NIST, байт-цепь); семантика допуска = Python-ядру; компилятор клетки — CI",
       "system_pre": "substrate",
       "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
       "interface": "cargo test / make verify; пин живым ls-remote",
-      "integrity": "sha256-2feec6923f4372b4c3d4cd6a1a30f29776c5e10c8adba762805774b375c903d0",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-bc119b1de3ef52741c34551faa442cca6d415264449d8f5b3567278e04bbc52f",
+      "fetched_at": "2026-11-19",
       "overseer": "первая Rust-клетка",
       "a2a": {
         "name": "cell-rs",
@@ -195,9 +195,9 @@
       "system_pre": "overseer",
       "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
       "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
-      "pin": "4c7e99524438442e1a6632e0de887d8369561d5b",
-      "integrity": "sha256-5255d90a06c0ed25fdf05d5834ff34ae39961eb1408db1384114db7142c2b6c1",
-      "fetched_at": "2026-11-17",
+      "pin": "4c6331d6c2f781aa44a4162ca5138d12616912d2",
+      "integrity": "sha256-3e836a8ee50eec55a52e28acff7c51f593abf8ef5d65fcfd9eaa74ca9523a0fc",
+      "fetched_at": "2026-11-19",
       "overseer": "процесс-супервизор агентов роя",
       "a2a": {
         "name": "agryp",
@@ -209,13 +209,13 @@
     {
       "name": "lex-naturae",
       "repo": "https://github.com/rtynbirf/lex-naturae.git",
-      "pin": "6b755bbd5f7057461a338effe1990f146d919ed4",
+      "pin": "f5c51ca7f1137669f4debf2140a301cfe17615df",
       "role": "законник дома: claim/evidence ledger — отделяет наблюдения от гипотез, философских принципов и институциональных правил; проверяет то, что доступно машинной проверке (CSV-ячейки, дословные цитаты NFKC, SHA-256 целостность артефактов, граф конфликтов); 70/70 тестов; v0.7 — независимый аудит Z.ai (20 атак, 19 отбиты, BOM-пробой закрыт)",
       "system_pre": "cognition",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
       "interface": "CLI: stdin/файл-коллекция, JSON-статусы (SUPPORTED/UNKNOWN/UNVERIFIED_SUBMITTER_ASSERTION)",
-      "integrity": "sha256-62fa00b9d83e6f3dc43973435ee34865fab7b7c98885d801b8fda3777b2084e0",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-a01c43ae67f8181f9c8bd24dfc9eb4ebc731a7ddb22aecbaec9d32e346883a42",
+      "fetched_at": "2026-11-19",
       "overseer": "доказательства роя",
       "a2a": {
         "name": "lex-naturae",
@@ -227,13 +227,13 @@
     {
       "name": "singulyar-a0-audit",
       "repo": "https://github.com/rtynbirf/singulyar-a0-audit.git",
-      "pin": "cd94afe835430585d5921db3f53bc3cd60fde72a",
+      "pin": "fd2f2b4b5fe0a9f45686306ab853fcf3f56fe836",
       "role": "независимый аудитор роя: A0-аудит СИНГУЛЯРА (вердикт PACKAGE VALID + BRIDGE VALID) и дизайн R4-порта; свидетель, не автор — аудит чужими руками, отчёты релизами-снапшотами",
       "system_pre": "overseer",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
       "interface": "аудит-снапшоты релизами (audit-snapshot-2026-11-15)",
-      "integrity": "sha256-1ae8da5b60b3415b9b633845d6a50bc71c3fa5a4881080330fae861f8579e5ce",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-e6c9e8cd0592d4e104fea3fe696e9df9a970ce96ea712f258d9b19039da9b47f",
+      "fetched_at": "2026-11-19",
       "overseer": "независимый аудит роя",
       "a2a": {
         "name": "singulyar-a0-audit",
@@ -245,18 +245,126 @@
     {
       "name": "fond-host",
       "repo": "https://github.com/rtynbirf/fond-host.git",
-      "pin": "57a20ad7ee07960e91be3627d4918b4445c4e159",
+      "pin": "f823742c1a04efce4c1a9318f298849d22cc2c80",
       "role": "CORS-хост минус-фонда дома (Н-10 · ADR-0007): Pages отдаёт ACAO:* — лестница WebAudio-плееров дома поднимается без прокси и без облака",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
       "interface": "HTTP-страница + ACAO:* заголовки GitHub Pages",
-      "integrity": "sha256-c558cd57709f8d2f989f8e7758672993276dd17c26e0459883b5d4274ad58e71",
-      "fetched_at": "2026-11-17",
+      "integrity": "sha256-b23261d00416dd63bf2305275ea0d589fd78baa151443b17c08c17f63a391a18",
+      "fetched_at": "2026-11-19",
       "overseer": "CORS-хост дома",
       "a2a": {
         "name": "fond-host",
         "role": "CORS-хост дома",
         "interface": "HTTP-страница + ACAO:* заголовки GitHub Pages",
+        "status": "active"
+      }
+    },
+    {
+      "name": "code",
+      "repo": "https://github.com/rtynbirf/code.git",
+      "pin": "628547392a543b774651d8a2d70c5ed685e64f4f",
+      "role": "Код дома: скрипты и снипеты — место по канону §4 Код дома: скрипты и снипеты — место по канону §4 (исполнимые скрипты волн и клеток, единое место вместо россыпи).",
+      "system_pre": "substrate",
+      "license_pre": "NOASSERTION (живой API: лицензии нет, дата 2026-11-19)",
+      "interface": "скрипты + снипеты",
+      "integrity": "sha256-8ac7bfd7eec8db521534dc142ae2be51a39db6acc0d50c7f228dde128cab8818",
+      "fetched_at": "2026-11-19",
+      "overseer": "код дома: место по канону §4",
+      "a2a": {
+        "name": "code",
+        "role": "код дома: место по канону §4",
+        "interface": "скрипты + снипеты",
+        "status": "active"
+      }
+    },
+    {
+      "name": "invariant-manifest",
+      "repo": "https://github.com/rtynbirf/invariant-manifest.git",
+      "pin": "463085c1b1e1e78d04ed7631a04751b90e171748",
+      "role": "МАНИФЕСТ ИНВАРИАНТА · FORK 3 · v0.2.3 · CONDITIONAL PASS · seed 7170 · stdlib-only · порождение должно мочь быть опровергнутым МАНИФЕСТ ИНВАРИАНТА · FORK 3 · CONDITIONAL PASS · seed 7170 · stdlib-only: механический судья инвариантов — hash-chain, mutation-testing, вердикт измеряется, не декларируется.",
+      "system_pre": "overseer",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-19)",
+      "interface": "манифест + механический судья",
+      "integrity": "sha256-1c01a20abc453ac13998f1d71311cff28b5d2a9c67a6291c0ddee32e02ffc31d",
+      "fetched_at": "2026-11-19",
+      "overseer": "механический судья инвариантов",
+      "a2a": {
+        "name": "invariant-manifest",
+        "role": "механический судья инвариантов",
+        "interface": "манифест + механический судья",
+        "status": "active"
+      }
+    },
+    {
+      "name": "karta",
+      "repo": "https://github.com/rtynbirf/karta.git",
+      "pin": "7331bcb3e8c93a5f524813639ae24bd8c7d181c6",
+      "role": "КАРТА ВСЕЛЕННОЙ rtynbirf: генерируется из живых данных API, ни одного выдуманного числа. СВЕРКА = CRITIC: расхождение карты с территорией ловится, а не прячется. Ритуалы: СВЕРКА / ВЫЖИВАНИЕ / НОЧЬ-БЕЗ-СЕТИ. КАРТА ВСЕЛЕННОЙ rtynbirf: генерируется из живых данных API, ни одного выдуманного числа; свод-реестр дома по канону ssot.",
+      "system_pre": "genome",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-19)",
+      "interface": "карта-генератор из живого API",
+      "integrity": "sha256-e5f6d2392952f69044437a8bb1606c1e9aee458cfe8de36f23488104d82cb33d",
+      "fetched_at": "2026-11-19",
+      "overseer": "карта вселенной роя (ssot)",
+      "a2a": {
+        "name": "karta",
+        "role": "карта вселенной роя (ssot)",
+        "interface": "карта-генератор из живого API",
+        "status": "active"
+      }
+    },
+    {
+      "name": "kb",
+      "repo": "https://github.com/rtynbirf/kb.git",
+      "pin": "3316a2a04094bd67841db48dec52d081973739fe",
+      "role": "Знания дома: канон-тексты, гайды, досье — место по канону §4 Знания дома: канон-тексты, гайды, досье — место по канону §4 (база знаний роя).",
+      "system_pre": "memory",
+      "license_pre": "NOASSERTION (живой API: лицензии нет, дата 2026-11-19)",
+      "interface": "канон-тексты + гайды",
+      "integrity": "sha256-7bff3172df8988e393e5325d77d9f674c35472ab495b6f21483edeb9f2a83c25",
+      "fetched_at": "2026-11-19",
+      "overseer": "знания дома: канон-тексты и досье",
+      "a2a": {
+        "name": "kb",
+        "role": "знания дома: канон-тексты и досье",
+        "interface": "канон-тексты + гайды",
+        "status": "active"
+      }
+    },
+    {
+      "name": "lfs-core",
+      "repo": "https://github.com/rtynbirf/lfs-core.git",
+      "pin": "c41bf9072a8397fdad82ef443b62628b32a5bba5",
+      "role": "Испытательный стенд автономного агента: цель/обязательство/пересмотр измеряются, а не декларируются. Канон v0.7 (main) + летопись v0.3→v0.7 (теги). Испытательный стенд автономного агента: цель/обязательство/пересмотр измеряются, а не декларируются.",
+      "system_pre": "overseer",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-19)",
+      "interface": "стенд: цель/обязательство/пересмотр",
+      "integrity": "sha256-627ad1d130222a7b905676bd5a8cc95e6b8268e71129f721c4591bc7340b561b",
+      "fetched_at": "2026-11-19",
+      "overseer": "испытательный стенд автономности агента",
+      "a2a": {
+        "name": "lfs-core",
+        "role": "испытательный стенд автономности агента",
+        "interface": "стенд: цель/обязательство/пересмотр",
+        "status": "active"
+      }
+    },
+    {
+      "name": "repo-seed",
+      "repo": "https://github.com/rtynbirf/repo-seed.git",
+      "pin": "be35ba98a72ebec285e863bca8282a4133a82329",
+      "role": "Зерно дома: шаблон новорождённого — мембрана+CI+закон рождения (принцип №7 канона 27). Use this template → оснащённый орган. Зерно дома: шаблон новорождённого — мембрана+CI+закон рождения (принцип №7 канона 27); рецепт размножения роя.",
+      "system_pre": "substrate",
+      "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-19)",
+      "interface": "шаблон-зерно: мембрана+CI+закон рождения",
+      "integrity": "sha256-117233778036c96a54f5b6f07e6b0c40db450a175b3c46988b805558ff43cdfd",
+      "fetched_at": "2026-11-19",
+      "overseer": "зерно дома: закон рождения клеток",
+      "a2a": {
+        "name": "repo-seed",
+        "role": "зерно дома: закон рождения клеток",
+        "interface": "шаблон-зерно: мембрана+CI+закон рождения",
         "status": "active"
       }
     }
