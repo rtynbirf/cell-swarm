@@ -1,7 +1,7 @@
 {
   "genome_version": "0.2.13",
-  "fetched_at": "2026-11-18",
-  "fetch_method": "git ls-remote HEAD + GitHub API (где взялось) — живые данные на 2026-11-18",
+  "fetched_at": "2026-11-19",
+  "fetch_method": "git ls-remote HEAD + GitHub API (где взялось) — живые данные на 2026-11-19",
   "licenses_verified_at": "2026-11-05",
   "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
   "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
@@ -9,7 +9,7 @@
     {
       "name": "polymath-os",
       "repo": "https://github.com/rtynbirf/polymath-os.git",
-      "pin": "03c512467374cc75c70b8ad8b022afee5917ad0c",
+      "pin": "ade9dcc57ec6dd8391909f93e8f43e5201e2da98",
       "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
@@ -27,7 +27,7 @@
     {
       "name": "singulyar-llm",
       "repo": "https://github.com/rtynbirf/singulyar-llm.git",
-      "pin": "c30fd223bae3892c9e141470b69f53b02400163e",
+      "pin": "1fb365d6f6d7d35c8c401d243d9d260eed7572d4",
       "role": "локальный инференс в браузере (Qwen); кандидат в метаболизм роя",
       "system_pre": "metabolism",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-05)",
@@ -45,7 +45,7 @@
     {
       "name": "singulyar",
       "repo": "https://github.com/rtynbirf/singulyar.git",
-      "pin": "7ea1305c94da974fec9b33ebefbf835732ab2140",
+      "pin": "12e929a595e9bd2f8efb827490ed5d923347cc83",
       "role": "корпус 68 песен × 197 языков офлайн (С184–С187: чистовики вшиты, РУВСОН целиком); кандидат в память роя; здесь же тело РУМУ (ветка rumu — пин следит за телом; 2026-11-05 влит свой каталог — вариант (в), ADR-0011 ядра: catalog.js CC0, своя нумерация i:1..249; вечер — такт «ФЛАГМАН»: страница СИНГУЛЯР_01 v3.0 переработана — сансара/очередь/звук/запись/bento/ленивые файлы, PR#47; утро — такты «НЕ РАБОТАЕТ»+«ЧИСТОВИКИ»: кэш v212 лечит мёртвые вьюхи player/catalog ·01, тексты пересажены на чистовики ruvson-lyrics (63 песни), hashchange-вьюхи, PR#48; догон — пины стражей и живых лиц выровнены цехом правды за v212, PR#49; утро — такт «ДОГОН за ·56»: Такт-гейт поймал 6 красных от чужого С154 — офлайн-закон, симметрия нитей, Малыш, средовые гарды фондов выровнены честно (PR#50/51/52), гейт зелёный)",
       "system_pre": "memory",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
@@ -64,7 +64,7 @@
     {
       "name": "cell65-host",
       "repo": "https://github.com/rtynbirf/cell65-host.git",
-      "pin": "1d5bedaa63fdb9b396213ec1daaba295db910b70",
+      "pin": "9df3166896dd7338451c4dc2746d8198a41177d3",
       "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
@@ -82,7 +82,7 @@
     {
       "name": "rumu",
       "repo": "https://github.com/rtynbirf/rumu.git",
-      "pin": "77cd004d684b73cf40f21b0e7e85224c16e98fd7",
+      "pin": "106a040c3d4be677ec0b5e5652ef5f70ec4c9187",
       "role": "держатель имени РУМУ — клетка-указатель: тело живёт веткой rumu в singulyar (пин следит за телом, живой ls-remote; 2026-11-05 тело ушло на 98cb9a66 — PR#48: кэш v212 + чистовики ruvson-lyrics; затем 876761c6 — PR#49; затем 626c7ad — PR#50/51/52: ДОГОН за ·56, гейт зелёный); мембрана AGENTS+MANIFEST+llms.txt влита в main (PR#1; срез пина тела догнан PR#2, 2026-11-05); репо разблокирован 2026-11-05 (воля PID 1); перенос тела в самостоятельный репо ЗАКРЫТ решением «не переносить» (ADR-0012)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); данные каталога: открытой лицензии у внешнего источника НЕТ (ADR-0008) — вариант (б) облегчен (ADR-0009), вариант (в) ИСПОЛНЕН 2026-11-05 (ADR-0011): catalog.js — свой каталог CC0, своя нумерация i:1..249, следы внешнего id и бейджи источника сняты; вариант (а) закрыт как не требующийся; каталог плеера (ЛАКОРНИЯ) — свой с 2026-10-20",
@@ -100,7 +100,7 @@
     {
       "name": "voice-atlas-llm",
       "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
-      "pin": "8580427b105d563df6c26ecb6c76609328346b4a",
+      "pin": "80a3f17b3cef3f76fbc3ce73f02639934bfbe614",
       "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
@@ -118,7 +118,7 @@
     {
       "name": "global-video-platforms-registry",
       "repo": "https://github.com/rtynbirf/global-video-platforms-registry.git",
-      "pin": "acab340b904e288c821d7ea4e766c68612b75054",
+      "pin": "309b6231c459a900be3c658f729d8c3909fa4b50",
       "role": "реестр-указатель платформ; прототип Закона 3 — хаб хранит магниты, не контент",
       "system_pre": "genome",
       "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-05)",
@@ -136,7 +136,7 @@
     {
       "name": "commons",
       "repo": "https://github.com/rtynbirf/commons.git",
-      "pin": "d736d04cf070aa4a787d88a2bed7843f5337ef08",
+      "pin": "42d32f2a91258ffd0ef38bfc2c7e36bfe31fdca6",
       "role": "дом: организм из лучших открытых проектов; якорь моста (ADR-0006 роя)",
       "system_pre": "external-house",
       "license_pre": "Apache-2.0 (LICENSE репозитория, прочитан клоном 2026-11-05)",
@@ -155,7 +155,7 @@
     {
       "name": "runtime-protocol",
       "repo": "https://github.com/rtynbirf/runtime-protocol.git",
-      "pin": "2b7eb97e190da25ba686599b4e75038cf20203cd",
+      "pin": "a429fe25deae1c18c6d470c690cbb4ecfdc434fb",
       "role": "исполнимая модель динамики узла: уравнение ρ̇ (генератор/долг/каратель), фазовая машина GENESIS_EXEC (SUBCRITICAL→FORAGING→COHERENCE→OVERCLOCK→TRANSITION→POST_GENESIS), VOLATILE_META, CANCER_FILTER; stdlib-only, метаболизм make verify/demo; 17 приёмок зелёные (7 ядра + 10 контура сверки); спецификация-источник — nous@agents/execution docs/genesis (TH-RTP-01); создана 2026-11-07 агентом по мандату Хозяина (TH-RTP-02); 2026-11-07 — контур сверки «живая карта» (reconciliation.py, ADR-0002), пин догнан за телом живым ls-remote (TH-RTP-03)",
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
@@ -173,7 +173,7 @@
     {
       "name": "cell-rs",
       "repo": "https://github.com/rtynbirf/cell-rs.git",
-      "pin": "85f39ec4f25e95966ca57b2317abcbb92144bc6b",
+      "pin": "4a56afe1ecdbaf49f01b7a1e824945f8e1d6c28b",
       "role": "первая Rust-клетка: ядро контура сверки (Tolerance/reconcile/Phase, sha256 с нуля на векторах NIST, байт-цепь); семантика допуска = Python-ядру; компилятор клетки — CI",
       "system_pre": "substrate",
       "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
@@ -195,7 +195,7 @@
       "system_pre": "overseer",
       "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
       "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
-      "pin": "274e72831788297efda8ef7fb0e80e317f903ea5",
+      "pin": "4c7e99524438442e1a6632e0de887d8369561d5b",
       "integrity": "sha256-5255d90a06c0ed25fdf05d5834ff34ae39961eb1408db1384114db7142c2b6c1",
       "fetched_at": "2026-11-17",
       "overseer": "процесс-супервизор агентов роя",
@@ -209,7 +209,7 @@
     {
       "name": "lex-naturae",
       "repo": "https://github.com/rtynbirf/lex-naturae.git",
-      "pin": "bb3a4ce9a91e82cfc58ff347b26225a13af597c1",
+      "pin": "6b755bbd5f7057461a338effe1990f146d919ed4",
       "role": "законник дома: claim/evidence ledger — отделяет наблюдения от гипотез, философских принципов и институциональных правил; проверяет то, что доступно машинной проверке (CSV-ячейки, дословные цитаты NFKC, SHA-256 целостность артефактов, граф конфликтов); 70/70 тестов; v0.7 — независимый аудит Z.ai (20 атак, 19 отбиты, BOM-пробой закрыт)",
       "system_pre": "cognition",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
@@ -227,7 +227,7 @@
     {
       "name": "singulyar-a0-audit",
       "repo": "https://github.com/rtynbirf/singulyar-a0-audit.git",
-      "pin": "3b9f69b39b9d43a6a7d909a35167a862ae4c9770",
+      "pin": "cd94afe835430585d5921db3f53bc3cd60fde72a",
       "role": "независимый аудитор роя: A0-аудит СИНГУЛЯРА (вердикт PACKAGE VALID + BRIDGE VALID) и дизайн R4-порта; свидетель, не автор — аудит чужими руками, отчёты релизами-снапшотами",
       "system_pre": "overseer",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
@@ -245,7 +245,7 @@
     {
       "name": "fond-host",
       "repo": "https://github.com/rtynbirf/fond-host.git",
-      "pin": "387e92d058c2714089bff156d7ab6c17a435b18c",
+      "pin": "57a20ad7ee07960e91be3627d4918b4445c4e159",
       "role": "CORS-хост минус-фонда дома (Н-10 · ADR-0007): Pages отдаёт ACAO:* — лестница WebAudio-плееров дома поднимается без прокси и без облака",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
