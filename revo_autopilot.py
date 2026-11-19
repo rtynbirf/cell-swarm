@@ -10,7 +10,7 @@
 import hashlib, json, os, re, subprocess
 
 try:
-    CFG = json.loads(r'''{"name": "cell-swarm", "num": 24, "school": "ПОЛЛОК · РОЙ", "desc": "РОЙ (Cell Swarm) — сингулярная эмерджентная архитектура: клетка, окно, указатели, храповик, семя", "topics": ["emergent-architecture", "fault-tolerance", "multi-agent-systems", "python", "self-healing", "swarm"], "releases": 30, "palette": {"bg": "#10243E", "bg2": "#1B3B5F", "ink": "#F3ECD9", "gold": "#D4AF37", "gold2": "#E8C868", "dim": "#8FA3BF", "accent": "#D5281B"}}''')
+    CFG = json.loads(r'''{"name": "cell-swarm", "num": 7, "school": "НОВОСТРОЙ РОЯ", "desc": "РОЙ (Cell Swarm) — сингулярная эмерджентная архитектура: клетка, окно, указатели, храповик, семя", "topics": ["emergent-architecture", "fault-tolerance", "multi-agent-systems", "pid1"], "releases": 0, "palette": {"bg": "#38100A", "bg2": "#4E1A10", "ink": "#F4E9D6", "gold": "#D4AF37", "gold2": "#E8C868", "dim": "#C39272", "accent": "#2C5F9E"}}''')
 except Exception:
     CFG = {"name": "REVO", "num": 0, "school": "", "desc": "", "topics": [], "releases": 0,
            "palette": dict(bg="#EFE6CF", bg2="#F6EFDC", ink="#241C10", gold="#9A7B23",

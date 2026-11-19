@@ -1,4 +1,10 @@
 <div align="center">
+
+<a href="https://github.com/rtynbirf/cell-swarm"><img src="banner.png" width="100%" alt="cell-swarm — штандарт мастерской в каноне ORNAMENTAL MYTHO-REALISM"></a>
+
+</div>
+
+<div align="center">
   <img src="https://cdn.jsdelivr.net/gh/rtynbirf/cell-swarm@main/banner.png" alt="cell-swarm — Сингулярная эмерджентная архитектура роя" width="100%">
 </div>
 
@@ -17,7 +23,7 @@
 
 | ФАЙЛОВ | ПАПОК | КОММИТОВ | ОБНОВЛЕНО | РЕЛИЗОВ |
 |---:|---:|---:|---|---:|
-| 146 | 26 | 426 | 2026-11-19 | 30 |
+| 146 | 25 | 427 | 2026-11-19 | 0 |
 <!--ФОРЖ:ПАСПОРТ:КОНЕЦ-->
 
 
