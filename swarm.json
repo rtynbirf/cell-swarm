@@ -1,426 +1,426 @@
 {
- "genome_version": "0.2.15",
- "fetched_at": "2026-11-20",
- "fetch_method": "GitHub API HEAD (по контракту pin_ref: singulyar→rumu) + integrity пересчитана sha256(utf8(pin)) — живые данные на 2026-11-19",
- "licenses_verified_at": "2026-11-05",
- "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
- "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
- "cells": [
-  {
-   "name": "polymath-os",
-   "repo": "https://github.com/rtynbirf/polymath-os.git",
-   "pin": "0e22935bb110a941226ac1d516aeb37d7d5fd46e",
-   "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
-   "system_pre": "substrate",
-   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
-   "interface": "слои + bootstrap-скрипты",
-   "integrity": "sha256-abe90501a0ff0108ce11d3888592275d1ae58c62538fa668f183af9b8e597ae4",
-   "fetched_at": "2026-11-19",
-   "overseer": "ОС Человека",
-   "a2a": {
-    "name": "polymath-os",
-    "role": "ОС Человека",
-    "interface": "слои + bootstrap-скрипты",
-    "status": "active"
-   }
-  },
-  {
-   "name": "singulyar-llm",
-   "repo": "https://github.com/rtynbirf/singulyar-llm.git",
-   "pin": "1fb365d6f6d7d35c8c401d243d9d260eed7572d4",
-   "role": "локальный инференс в браузере (Qwen); кандидат в метаболизм роя",
-   "system_pre": "metabolism",
-   "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-05)",
-   "interface": "браузерный API",
-   "integrity": "sha256-25e257dd663bcdf2f8502ddca68741ea23cd6466ce1aedadff75477117c766e8",
-   "fetched_at": "2026-11-19",
-   "overseer": "локальный инференс в",
-   "a2a": {
-    "name": "singulyar-llm",
-    "role": "локальный инференс в",
-    "interface": "браузерный API",
-    "status": "active"
-   }
-  },
-  {
-   "name": "singulyar",
-   "repo": "https://github.com/rtynbirf/singulyar.git",
-   "pin": "eaf389d619d292ba816d330f9a378a54ea6fffd3",
-   "role": "корпус 68 песен × 197 языков офлайн (С184–С187: чистовики вшиты, РУВСОН целиком); кандидат в память роя; здесь же тело РУМУ (ветка rumu — пин следит за телом; 2026-11-05 влит свой каталог — вариант (в), ADR-0011 ядра: catalog.js CC0, своя нумерация i:1..249; вечер — такт «ФЛАГМАН»: страница СИНГУЛЯР_01 v3.0 переработана — сансара/очередь/звук/запись/bento/ленивые файлы, PR#47; утро — такты «НЕ РАБОТАЕТ»+«ЧИСТОВИКИ»: кэш v212 лечит мёртвые вьюхи player/catalog ·01, тексты пересажены на чистовики ruvson-lyrics (63 песни), hashchange-вьюхи, PR#48; догон — пины стражей и живых лиц выровнены цехом правды за v212, PR#49; утро — такт «ДОГОН за ·56»: Такт-гейт поймал 6 красных от чужого С154 — офлайн-закон, симметрия нитей, Малыш, средовые гарды фондов выровнены честно (PR#50/51/52), гейт зелёный)",
-   "system_pre": "memory",
-   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
-   "interface": "файлы + манифест данных",
-   "pin_ref": "rumu",
-   "integrity": "sha256-1722c3b0ae6c70199ef01ed0f5f31f75b4e81adabc43e9ad05f26331e260536f",
-   "fetched_at": "2026-11-19",
-   "overseer": "корпус 64 песни",
-   "a2a": {
-    "name": "singulyar",
-    "role": "корпус 64 песни",
-    "interface": "файлы + манифест данных",
-    "status": "active"
-   }
-  },
-  {
-   "name": "cell65-host",
-   "repo": "https://github.com/rtynbirf/cell65-host.git",
-   "pin": "d07a079bebd60afe46af21172303ab1c9fe9e534",
-   "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
-   "system_pre": "substrate",
-   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
-   "interface": "конфиги ноды",
-   "integrity": "sha256-234c63a032fb00cd38b78e7674385a67b29d5b33242d884c58fdf6881b332a9b",
-   "fetched_at": "2026-11-19",
-   "overseer": "суверенный узел-хост «настроил",
-   "a2a": {
-    "name": "cell65-host",
-    "role": "суверенный узел-хост «настроил",
-    "interface": "конфиги ноды",
-    "status": "active"
-   }
-  },
-  {
-   "name": "rumu",
-   "repo": "https://github.com/rtynbirf/rumu.git",
-   "pin": "106a040c3d4be677ec0b5e5652ef5f70ec4c9187",
-   "role": "держатель имени РУМУ — клетка-указатель: тело живёт веткой rumu в singulyar (пин следит за телом, живой ls-remote; 2026-11-05 тело ушло на 98cb9a66 — PR#48: кэш v212 + чистовики ruvson-lyrics; затем 876761c6 — PR#49; затем 626c7ad — PR#50/51/52: ДОГОН за ·56, гейт зелёный); мембрана AGENTS+MANIFEST+llms.txt влита в main (PR#1; срез пина тела догнан PR#2, 2026-11-05); репо разблокирован 2026-11-05 (воля PID 1); перенос тела в самостоятельный репо ЗАКРЫТ решением «не переносить» (ADR-0012)",
-   "system_pre": "senses",
-   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); данные каталога: открытой лицензии у внешнего источника НЕТ (ADR-0008) — вариант (б) облегчен (ADR-0009), вариант (в) ИСПОЛНЕН 2026-11-05 (ADR-0011): catalog.js — свой каталог CC0, своя нумерация i:1..249, следы внешнего id и бейджи источника сняты; вариант (а) закрыт как не требующийся; каталог плеера (ЛАКОРНИЯ) — свой с 2026-10-20",
-   "interface": "плеер поверх P2P",
-   "integrity": "sha256-942d53acc209b102170086cfb4eacf92df03b6ad51237a9cdf15a477023a983a",
-   "fetched_at": "2026-11-19",
-   "overseer": "держатель имени РУМУ",
-   "a2a": {
-    "name": "rumu",
-    "role": "держатель имени РУМУ",
-    "interface": "плеер поверх P2P",
-    "status": "active"
-   }
-  },
-  {
-   "name": "voice-atlas-llm",
-   "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
-   "pin": "662827446255297d9ff384173bda4eb0b3d73126",
-   "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
-   "system_pre": "senses",
-   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
-   "interface": "модели + consent-манифест",
-   "integrity": "sha256-85837f45b15a6343cffeef74716918cea0411aa932047b98e131d38a6f98d7d9",
-   "fetched_at": "2026-11-19",
-   "overseer": "атлас голосов; свой",
-   "a2a": {
-    "name": "voice-atlas-llm",
-    "role": "атлас голосов; свой",
-    "interface": "модели + consent-манифест",
-    "status": "active"
-   }
-  },
-  {
-   "name": "global-video-platforms-registry",
-   "repo": "https://github.com/rtynbirf/global-video-platforms-registry.git",
-   "pin": "309b6231c459a900be3c658f729d8c3909fa4b50",
-   "role": "реестр-указатель платформ; прототип Закона 3 — хаб хранит магниты, не контент",
-   "system_pre": "genome",
-   "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-05)",
-   "interface": "реестр указателей",
-   "integrity": "sha256-df6593339125f41fb5d636c93dd7ba97f369b29532d76a036487aea8cccd1d64",
-   "fetched_at": "2026-11-19",
-   "overseer": "реестр-указатель платформ; про",
-   "a2a": {
-    "name": "global-video-platforms-registry",
-    "role": "реестр-указатель платформ; про",
-    "interface": "реестр указателей",
-    "status": "active"
-   }
-  },
-  {
-   "name": "commons",
-   "repo": "https://github.com/rtynbirf/commons.git",
-   "pin": "42d32f2a91258ffd0ef38bfc2c7e36bfe31fdca6",
-   "role": "дом: организм из лучших открытых проектов; якорь моста (ADR-0006 роя)",
-   "system_pre": "external-house",
-   "license_pre": "Apache-2.0 (LICENSE репозитория, прочитан клоном 2026-11-05)",
-   "interface": "synapse/consent.py, blood/envelope.schema.json, ADR-0017",
-   "bridge": true,
-   "integrity": "sha256-8f0b95b810100882322581c3cbf69259d7ef7af3d2f700f317fd2f2d6344822b",
-   "fetched_at": "2026-11-19",
-   "overseer": "дом",
-   "a2a": {
-    "name": "commons",
-    "role": "дом",
-    "interface": "synapse/consent.py, blood/envelope.schema.json, ADR-0017",
-    "status": "active"
-   }
-  },
-  {
-   "name": "runtime-protocol",
-   "repo": "https://github.com/rtynbirf/runtime-protocol.git",
-   "pin": "36141f6a08c73c13444e4ce30377ed769aa1977e",
-   "role": "исполнимая модель динамики узла: уравнение ρ̇ (генератор/долг/каратель), фазовая машина GENESIS_EXEC (SUBCRITICAL→FORAGING→COHERENCE→OVERCLOCK→TRANSITION→POST_GENESIS), VOLATILE_META, CANCER_FILTER; stdlib-only, метаболизм make verify/demo; 17 приёмок зелёные (7 ядра + 10 контура сверки); спецификация-источник — nous@agents/execution docs/genesis (TH-RTP-01); создана 2026-11-07 агентом по мандату Хозяина (TH-RTP-02); 2026-11-07 — контур сверки «живая карта» (reconciliation.py, ADR-0002), пин догнан за телом живым ls-remote (TH-RTP-03)",
-   "system_pre": "cognition",
-   "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
-   "interface": "python3 runtime_protocol.py | make verify | make demo",
-   "integrity": "sha256-2d7c24301a3ec20493cfe6e57e0c64a0aa88ae465aa5fd1f24c3e14ad5705618",
-   "fetched_at": "2026-11-19",
-   "overseer": "исполнимая модель динамики",
-   "a2a": {
-    "name": "runtime-protocol",
-    "role": "исполнимая модель динамики",
-    "interface": "python3 runtime_protocol.py | make verify | make demo",
-    "status": "active"
-   }
-  },
-  {
-   "name": "cell-rs",
-   "repo": "https://github.com/rtynbirf/cell-rs.git",
-   "pin": "c1e91d80e9f10a83a79f0b80ce28d0b1ceb02ccf",
-   "role": "первая Rust-клетка: ядро контура сверки (Tolerance/reconcile/Phase, sha256 с нуля на векторах NIST, байт-цепь); семантика допуска = Python-ядру; компилятор клетки — CI",
-   "system_pre": "substrate",
-   "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
-   "interface": "cargo test / make verify; пин живым ls-remote",
-   "integrity": "sha256-bc119b1de3ef52741c34551faa442cca6d415264449d8f5b3567278e04bbc52f",
-   "fetched_at": "2026-11-19",
-   "overseer": "первая Rust-клетка",
-   "a2a": {
-    "name": "cell-rs",
-    "role": "первая Rust-клетка",
-    "interface": "cargo test / make verify; пин живым ls-remote",
-    "status": "active"
-   }
-  },
-  {
-   "name": "agryp",
-   "repo": "https://github.com/rtynbirf/agryp.git",
-   "role": "процесс-супервизор агентов роя (PID 1): один файл C (src/agryp.c), только libc, ноль зависимостей; агент роя = юнит .agent с бюджетом попытки в двух валютах (время + токены), рестарт-политикой always|on-failure|no, лестницей перезапуска с crash-loop-предохранителем и клеткой (cgroups v2 + pid/mount namespaces); PDEATHSIG + subreaper — сирот 0 после kill -9 PID 1 (находка витка 7.2: 20 сирот → 0, exec-страховка агента); NDJSON-журнал «который не лжёт», файл-договоры .agryp-status и .agryp-ctl/<unit>.down (сокеты в доме запрещены); смоук песочницы 2026-11-07: старт 20+1 юнитов до полного RUNNING 24 мс, RSS супервизора 1816 КБ, лестница 1000→2000→4000 мс, ~589 Б журнала/агент за 10 с; ниша топ-100 GitHub 2026: 40 агентских репо, 0 процессных (срез РАЗВЕДЧИКА) — уникальная связка «рой + PID 1»; клетка ядра cell-swarm по карте ПОЛИМАТ X2 (2026-11-07)",
-   "system_pre": "overseer",
-   "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
-   "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
-   "pin": "4c6331d6c2f781aa44a4162ca5138d12616912d2",
-   "integrity": "sha256-3e836a8ee50eec55a52e28acff7c51f593abf8ef5d65fcfd9eaa74ca9523a0fc",
-   "fetched_at": "2026-11-19",
-   "overseer": "процесс-супервизор агентов роя",
-   "a2a": {
-    "name": "agryp",
-    "role": "процесс-супервизор агентов роя",
-    "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
-    "status": "active"
-   }
-  },
-  {
-   "name": "lex-naturae",
-   "repo": "https://github.com/rtynbirf/lex-naturae.git",
-   "pin": "f5c51ca7f1137669f4debf2140a301cfe17615df",
-   "role": "законник дома: claim/evidence ledger — отделяет наблюдения от гипотез, философских принципов и институциональных правил; проверяет то, что доступно машинной проверке (CSV-ячейки, дословные цитаты NFKC, SHA-256 целостность артефактов, граф конфликтов); 70/70 тестов; v0.7 — независимый аудит Z.ai (20 атак, 19 отбиты, BOM-пробой закрыт)",
-   "system_pre": "cognition",
-   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
-   "interface": "CLI: stdin/файл-коллекция, JSON-статусы (SUPPORTED/UNKNOWN/UNVERIFIED_SUBMITTER_ASSERTION)",
-   "integrity": "sha256-a01c43ae67f8181f9c8bd24dfc9eb4ebc731a7ddb22aecbaec9d32e346883a42",
-   "fetched_at": "2026-11-19",
-   "overseer": "доказательства роя",
-   "a2a": {
-    "name": "lex-naturae",
-    "role": "доказательства роя",
-    "interface": "CLI: stdin/файл-коллекция, JSON-статусы (SUPPORTED/UNKNOWN/UNVERIFIED_SUBMITTER_ASSERTION)",
-    "status": "active"
-   }
-  },
-  {
-   "name": "singulyar-a0-audit",
-   "repo": "https://github.com/rtynbirf/singulyar-a0-audit.git",
-   "pin": "fd2f2b4b5fe0a9f45686306ab853fcf3f56fe836",
-   "role": "независимый аудитор роя: A0-аудит СИНГУЛЯРА (вердикт PACKAGE VALID + BRIDGE VALID) и дизайн R4-порта; свидетель, не автор — аудит чужими руками, отчёты релизами-снапшотами",
-   "system_pre": "overseer",
-   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
-   "interface": "аудит-снапшоты релизами (audit-snapshot-2026-11-15)",
-   "integrity": "sha256-e6c9e8cd0592d4e104fea3fe696e9df9a970ce96ea712f258d9b19039da9b47f",
-   "fetched_at": "2026-11-19",
-   "overseer": "независимый аудит роя",
-   "a2a": {
-    "name": "singulyar-a0-audit",
-    "role": "независимый аудит роя",
-    "interface": "аудит-снапшоты релизами (audit-snapshot-2026-11-15)",
-    "status": "active"
-   }
-  },
-  {
-   "name": "fond-host",
-   "repo": "https://github.com/rtynbirf/fond-host.git",
-   "pin": "f823742c1a04efce4c1a9318f298849d22cc2c80",
-   "role": "CORS-хост минус-фонда дома (Н-10 · ADR-0007): Pages отдаёт ACAO:* — лестница WebAudio-плееров дома поднимается без прокси и без облака",
-   "system_pre": "substrate",
-   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
-   "interface": "HTTP-страница + ACAO:* заголовки GitHub Pages",
-   "integrity": "sha256-b23261d00416dd63bf2305275ea0d589fd78baa151443b17c08c17f63a391a18",
-   "fetched_at": "2026-11-19",
-   "overseer": "CORS-хост дома",
-   "a2a": {
-    "name": "fond-host",
-    "role": "CORS-хост дома",
-    "interface": "HTTP-страница + ACAO:* заголовки GitHub Pages",
-    "status": "active"
-   }
-  },
-  {
-   "name": "code",
-   "repo": "https://github.com/rtynbirf/code.git",
-   "pin": "628547392a543b774651d8a2d70c5ed685e64f4f",
-   "role": "Код дома: скрипты и снипеты — место по канону §4 Код дома: скрипты и снипеты — место по канону §4 (исполнимые скрипты волн и клеток, единое место вместо россыпи).",
-   "system_pre": "substrate",
-   "license_pre": "NOASSERTION (живой API: лицензии нет, дата 2026-11-19)",
-   "interface": "скрипты + снипеты",
-   "integrity": "sha256-8ac7bfd7eec8db521534dc142ae2be51a39db6acc0d50c7f228dde128cab8818",
-   "fetched_at": "2026-11-19",
-   "overseer": "код дома: место по канону §4",
-   "a2a": {
-    "name": "code",
-    "role": "код дома: место по канону §4",
-    "interface": "скрипты + снипеты",
-    "status": "active"
-   }
-  },
-  {
-   "name": "invariant-manifest",
-   "repo": "https://github.com/rtynbirf/invariant-manifest.git",
-   "pin": "463085c1b1e1e78d04ed7631a04751b90e171748",
-   "role": "МАНИФЕСТ ИНВАРИАНТА · FORK 3 · v0.2.3 · CONDITIONAL PASS · seed 7170 · stdlib-only · порождение должно мочь быть опровергнутым МАНИФЕСТ ИНВАРИАНТА · FORK 3 · CONDITIONAL PASS · seed 7170 · stdlib-only: механический судья инвариантов — hash-chain, mutation-testing, вердикт измеряется, не декларируется.",
-   "system_pre": "overseer",
-   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-19)",
-   "interface": "манифест + механический судья",
-   "integrity": "sha256-1c01a20abc453ac13998f1d71311cff28b5d2a9c67a6291c0ddee32e02ffc31d",
-   "fetched_at": "2026-11-19",
-   "overseer": "механический судья инвариантов",
-   "a2a": {
-    "name": "invariant-manifest",
-    "role": "механический судья инвариантов",
-    "interface": "манифест + механический судья",
-    "status": "active"
-   }
-  },
-  {
-   "name": "karta",
-   "repo": "https://github.com/rtynbirf/karta.git",
-   "pin": "7331bcb3e8c93a5f524813639ae24bd8c7d181c6",
-   "role": "КАРТА ВСЕЛЕННОЙ rtynbirf: генерируется из живых данных API, ни одного выдуманного числа. СВЕРКА = CRITIC: расхождение карты с территорией ловится, а не прячется. Ритуалы: СВЕРКА / ВЫЖИВАНИЕ / НОЧЬ-БЕЗ-СЕТИ. КАРТА ВСЕЛЕННОЙ rtynbirf: генерируется из живых данных API, ни одного выдуманного числа; свод-реестр дома по канону ssot.",
-   "system_pre": "genome",
-   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-19)",
-   "interface": "карта-генератор из живого API",
-   "integrity": "sha256-e5f6d2392952f69044437a8bb1606c1e9aee458cfe8de36f23488104d82cb33d",
-   "fetched_at": "2026-11-19",
-   "overseer": "карта вселенной роя (ssot)",
-   "a2a": {
-    "name": "karta",
-    "role": "карта вселенной роя (ssot)",
-    "interface": "карта-генератор из живого API",
-    "status": "active"
-   }
-  },
-  {
-   "name": "kb",
-   "repo": "https://github.com/rtynbirf/kb.git",
-   "pin": "3316a2a04094bd67841db48dec52d081973739fe",
-   "role": "Знания дома: канон-тексты, гайды, досье — место по канону §4 Знания дома: канон-тексты, гайды, досье — место по канону §4 (база знаний роя).",
-   "system_pre": "memory",
-   "license_pre": "NOASSERTION (живой API: лицензии нет, дата 2026-11-19)",
-   "interface": "канон-тексты + гайды",
-   "integrity": "sha256-7bff3172df8988e393e5325d77d9f674c35472ab495b6f21483edeb9f2a83c25",
-   "fetched_at": "2026-11-19",
-   "overseer": "знания дома: канон-тексты и досье",
-   "a2a": {
-    "name": "kb",
-    "role": "знания дома: канон-тексты и досье",
-    "interface": "канон-тексты + гайды",
-    "status": "active"
-   }
-  },
-  {
-   "name": "lfs-core",
-   "repo": "https://github.com/rtynbirf/lfs-core.git",
-   "pin": "c41bf9072a8397fdad82ef443b62628b32a5bba5",
-   "role": "Испытательный стенд автономного агента: цель/обязательство/пересмотр измеряются, а не декларируются. Канон v0.7 (main) + летопись v0.3→v0.7 (теги). Испытательный стенд автономного агента: цель/обязательство/пересмотр измеряются, а не декларируются.",
-   "system_pre": "overseer",
-   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-19)",
-   "interface": "стенд: цель/обязательство/пересмотр",
-   "integrity": "sha256-627ad1d130222a7b905676bd5a8cc95e6b8268e71129f721c4591bc7340b561b",
-   "fetched_at": "2026-11-19",
-   "overseer": "испытательный стенд автономности агента",
-   "a2a": {
-    "name": "lfs-core",
-    "role": "испытательный стенд автономности агента",
-    "interface": "стенд: цель/обязательство/пересмотр",
-    "status": "active"
-   }
-  },
-  {
-   "name": "repo-seed",
-   "repo": "https://github.com/rtynbirf/repo-seed.git",
-   "pin": "be35ba98a72ebec285e863bca8282a4133a82329",
-   "role": "Зерно дома: шаблон новорождённого — мембрана+CI+закон рождения (принцип №7 канона 27). Use this template → оснащённый орган. Зерно дома: шаблон новорождённого — мембрана+CI+закон рождения (принцип №7 канона 27); рецепт размножения роя.",
-   "system_pre": "substrate",
-   "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-19)",
-   "interface": "шаблон-зерно: мембрана+CI+закон рождения",
-   "integrity": "sha256-117233778036c96a54f5b6f07e6b0c40db450a175b3c46988b805558ff43cdfd",
-   "fetched_at": "2026-11-19",
-   "overseer": "зерно дома: закон рождения клеток",
-   "a2a": {
-    "name": "repo-seed",
-    "role": "зерно дома: закон рождения клеток",
-    "interface": "шаблон-зерно: мембрана+CI+закон рождения",
-    "status": "active"
-   }
-  },
-  {
-   "name": "global-practice-atlas",
-   "repo": "https://github.com/rtynbirf/global-practice-atlas.git",
-   "pin": "d272cbc587b489243bad1125ce513a6f7ced3dee",
-   "role": "Карта=территория роя: глобальный атлас практик 2026 — 1154 строки / 1145 живых, двойное кодирование, РЕЛОМАТ 43/43 · 11/11, скан 660,675 пар, сверка полным текстом PDF (open_fields=0); виджет профиля перерисовывается из его данных",
-   "system_pre": "genome",
-   "license_pre": "NOASSERTION (собственный текст лицензии, верифицировано живым GitHub API 2026-11-20)",
-   "interface": "CI qa_atlas.py 16 проверок; релизы v1.6 (XLSX/CSV/JSON); data/passports.json — вход виджета",
-   "integrity": "sha256-c4b2d4f7a8620319ca4da080d1aece827a9ca964d146fd94772a953f38f5f183",
-   "fetched_at": "2026-11-20",
-   "overseer": "карта=территория: ни одного выдуманного числа",
-   "a2a": {
-    "name": "global-practice-atlas",
-    "role": "карта=территория: атлас практик",
-    "interface": "qa_atlas 16 проверок; релизы; passports.json",
-    "status": "active"
-   }
-  },
-  {
-   "name": "relomat",
-   "repo": "https://github.com/rtynbirf/relomat.git",
-   "pin": "ec60f31d47128ca067d18ba42a48b752fbbaedd9",
-   "role": "Канон дома как конечный детерминированный автомат: SAME/IS-A/TOOL-OF/COMPLEMENTARY/METHOD-OF/INSTANCE/RELATED/NEW — судья всех слияний атласа, CI исполняет его независимо",
-   "system_pre": "cognition",
-   "license_pre": "NOASSERTION (собственный текст лицензии, верифицировано живым GitHub API 2026-11-20)",
-   "interface": "python3 run_all.py; unittest 11/11 · пары 43/43 · эмерджентные 11/11",
-   "integrity": "sha256-7929381ce43b9fa1c3b5eebb2e1072b7a4c15688b29008bcd7fbf38f89ab2237",
-   "fetched_at": "2026-11-20",
-   "overseer": "автомат канона: вердикты, а не мнения",
-   "a2a": {
-    "name": "relomat",
-    "role": "автомат канона",
-    "interface": "run_all.py; pairs.json → вердикты",
-    "status": "active"
-   }
-  }
- ],
- "bridge": {
-  "peer": "cell-swarm",
-  "house": "commons",
-  "consent_protocol": "ADR-0017 дома: PeerManifest (голос роя) + ConsentGrant (воля Человека, PID 1) + поимённый вердикт до факта",
-  "blood_protocol": "SPEC-0003 дома: конверт с ценой; каноническая форма json.dumps(sort_keys=True, ensure_ascii=False, separators=(',',':')) — совместима с canonical_sha256 дома",
-  "transports_allowed": [
-   "stdio",
-   "http-localhost"
+  "genome_version": "0.2.16",
+  "fetched_at": "2026-11-20",
+  "fetch_method": "GitHub API /repos/<owner>/<repo>/branches/<pin_ref> (fallback: git ls-remote refs/heads/<pin_ref>, SHA эквивалентны) — живая сверка genome_drift.py на 2026-11-20",
+  "licenses_verified_at": "2026-11-05",
+  "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
+  "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
+  "cells": [
+    {
+      "name": "polymath-os",
+      "repo": "https://github.com/rtynbirf/polymath-os.git",
+      "pin": "20f45d50bfcd5809be7a04e07ceb10d5d6cd5da6",
+      "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
+      "system_pre": "substrate",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
+      "interface": "слои + bootstrap-скрипты",
+      "integrity": "sha256-0e62a70cf5b6b9b4fbd3a15ad18b518d56b59d8efb01d945c3cea7096f3b0ddd",
+      "fetched_at": "2026-11-20",
+      "overseer": "ОС Человека",
+      "a2a": {
+        "name": "polymath-os",
+        "role": "ОС Человека",
+        "interface": "слои + bootstrap-скрипты",
+        "status": "active"
+      }
+    },
+    {
+      "name": "singulyar-llm",
+      "repo": "https://github.com/rtynbirf/singulyar-llm.git",
+      "pin": "5de8f6aa15ce0f9125fd514e29f712de331417cd",
+      "role": "локальный инференс в браузере (Qwen); кандидат в метаболизм роя",
+      "system_pre": "metabolism",
+      "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-05)",
+      "interface": "браузерный API",
+      "integrity": "sha256-508ec6d0db31ef004643f0d0db87bed5d3c9be95d8ade5cfcc875015f45444ae",
+      "fetched_at": "2026-11-20",
+      "overseer": "локальный инференс в",
+      "a2a": {
+        "name": "singulyar-llm",
+        "role": "локальный инференс в",
+        "interface": "браузерный API",
+        "status": "active"
+      }
+    },
+    {
+      "name": "singulyar",
+      "repo": "https://github.com/rtynbirf/singulyar.git",
+      "pin": "f1d2b3a326df7d640e0c8a4cbf834906f8de7ef5",
+      "role": "корпус 68 песен × 197 языков офлайн (С184–С187: чистовики вшиты, РУВСОН целиком); кандидат в память роя; здесь же тело РУМУ (ветка rumu — пин следит за телом; 2026-11-05 влит свой каталог — вариант (в), ADR-0011 ядра: catalog.js CC0, своя нумерация i:1..249; вечер — такт «ФЛАГМАН»: страница СИНГУЛЯР_01 v3.0 переработана — сансара/очередь/звук/запись/bento/ленивые файлы, PR#47; утро — такты «НЕ РАБОТАЕТ»+«ЧИСТОВИКИ»: кэш v212 лечит мёртвые вьюхи player/catalog ·01, тексты пересажены на чистовики ruvson-lyrics (63 песни), hashchange-вьюхи, PR#48; догон — пины стражей и живых лиц выровнены цехом правды за v212, PR#49; утро — такт «ДОГОН за ·56»: Такт-гейт поймал 6 красных от чужого С154 — офлайн-закон, симметрия нитей, Малыш, средовые гарды фондов выровнены честно (PR#50/51/52), гейт зелёный)",
+      "system_pre": "memory",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
+      "interface": "файлы + манифест данных",
+      "pin_ref": "rumu",
+      "integrity": "sha256-d19defc2c8e52c922fb3a568602825032ff2ac256faa70a3d027dc1285a3ace3",
+      "fetched_at": "2026-11-20",
+      "overseer": "корпус 64 песни",
+      "a2a": {
+        "name": "singulyar",
+        "role": "корпус 64 песни",
+        "interface": "файлы + манифест данных",
+        "status": "active"
+      }
+    },
+    {
+      "name": "cell65-host",
+      "repo": "https://github.com/rtynbirf/cell65-host.git",
+      "pin": "c0fba7f15ba0179215a1b4fecfd0f1f5800ceead",
+      "role": "суверенный узел-хост «настроил и забыл»; кандидат в substrate роя",
+      "system_pre": "substrate",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
+      "interface": "конфиги ноды",
+      "integrity": "sha256-f572ce85a8f19e8db51a2c5aec96b5af9b36a3353d494b358c22f5603ece29ff",
+      "fetched_at": "2026-11-20",
+      "overseer": "суверенный узел-хост «настроил",
+      "a2a": {
+        "name": "cell65-host",
+        "role": "суверенный узел-хост «настроил",
+        "interface": "конфиги ноды",
+        "status": "active"
+      }
+    },
+    {
+      "name": "rumu",
+      "repo": "https://github.com/rtynbirf/rumu.git",
+      "pin": "e6bd557b3d0353de639dad13f2e53a2de1bd35e1",
+      "role": "держатель имени РУМУ — клетка-указатель: тело живёт веткой rumu в singulyar (пин следит за телом, живой ls-remote; 2026-11-05 тело ушло на 98cb9a66 — PR#48: кэш v212 + чистовики ruvson-lyrics; затем 876761c6 — PR#49; затем 626c7ad — PR#50/51/52: ДОГОН за ·56, гейт зелёный); мембрана AGENTS+MANIFEST+llms.txt влита в main (PR#1; срез пина тела догнан PR#2, 2026-11-05); репо разблокирован 2026-11-05 (воля PID 1); перенос тела в самостоятельный репо ЗАКРЫТ решением «не переносить» (ADR-0012)",
+      "system_pre": "senses",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); данные каталога: открытой лицензии у внешнего источника НЕТ (ADR-0008) — вариант (б) облегчен (ADR-0009), вариант (в) ИСПОЛНЕН 2026-11-05 (ADR-0011): catalog.js — свой каталог CC0, своя нумерация i:1..249, следы внешнего id и бейджи источника сняты; вариант (а) закрыт как не требующийся; каталог плеера (ЛАКОРНИЯ) — свой с 2026-10-20",
+      "interface": "плеер поверх P2P",
+      "integrity": "sha256-b2d89bc0245a6abdb3e149778565a29cfa7b3920558081c3e269bde538252cc4",
+      "fetched_at": "2026-11-20",
+      "overseer": "держатель имени РУМУ",
+      "a2a": {
+        "name": "rumu",
+        "role": "держатель имени РУМУ",
+        "interface": "плеер поверх P2P",
+        "status": "active"
+      }
+    },
+    {
+      "name": "voice-atlas-llm",
+      "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
+      "pin": "eab69cae5c475b05428186e66c10fc7f1cdc111e",
+      "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
+      "system_pre": "senses",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
+      "interface": "модели + consent-манифест",
+      "integrity": "sha256-92385074e1943423ea01b61bb544d274231bf1e2ec03e0a04c6398116392f21e",
+      "fetched_at": "2026-11-20",
+      "overseer": "атлас голосов; свой",
+      "a2a": {
+        "name": "voice-atlas-llm",
+        "role": "атлас голосов; свой",
+        "interface": "модели + consent-манифест",
+        "status": "active"
+      }
+    },
+    {
+      "name": "global-video-platforms-registry",
+      "repo": "https://github.com/rtynbirf/global-video-platforms-registry.git",
+      "pin": "7568b7235f7ac9f9a3fc8090f489a3c61a72da43",
+      "role": "реестр-указатель платформ; прототип Закона 3 — хаб хранит магниты, не контент",
+      "system_pre": "genome",
+      "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-05)",
+      "interface": "реестр указателей",
+      "integrity": "sha256-2b587fa17ce73d8abbb4c4b60b66f6f65ebb7b4d37f0f3c729c0628b4dee7723",
+      "fetched_at": "2026-11-20",
+      "overseer": "реестр-указатель платформ; про",
+      "a2a": {
+        "name": "global-video-platforms-registry",
+        "role": "реестр-указатель платформ; про",
+        "interface": "реестр указателей",
+        "status": "active"
+      }
+    },
+    {
+      "name": "commons",
+      "repo": "https://github.com/rtynbirf/commons.git",
+      "pin": "77ae7f5ed336c2ed2b5dc7906ff49efae308f3e6",
+      "role": "дом: организм из лучших открытых проектов; якорь моста (ADR-0006 роя)",
+      "system_pre": "external-house",
+      "license_pre": "Apache-2.0 (LICENSE репозитория, прочитан клоном 2026-11-05)",
+      "interface": "synapse/consent.py, blood/envelope.schema.json, ADR-0017",
+      "bridge": true,
+      "integrity": "sha256-b64b1fb05f053406d94668700e161e4d8b669617e474c4c211f35c8db0134c3b",
+      "fetched_at": "2026-11-20",
+      "overseer": "дом",
+      "a2a": {
+        "name": "commons",
+        "role": "дом",
+        "interface": "synapse/consent.py, blood/envelope.schema.json, ADR-0017",
+        "status": "active"
+      }
+    },
+    {
+      "name": "runtime-protocol",
+      "repo": "https://github.com/rtynbirf/runtime-protocol.git",
+      "pin": "de0256ad214f986a1cfb513286a00e2b6db622ba",
+      "role": "исполнимая модель динамики узла: уравнение ρ̇ (генератор/долг/каратель), фазовая машина GENESIS_EXEC (SUBCRITICAL→FORAGING→COHERENCE→OVERCLOCK→TRANSITION→POST_GENESIS), VOLATILE_META, CANCER_FILTER; stdlib-only, метаболизм make verify/demo; 17 приёмок зелёные (7 ядра + 10 контура сверки); спецификация-источник — nous@agents/execution docs/genesis (TH-RTP-01); создана 2026-11-07 агентом по мандату Хозяина (TH-RTP-02); 2026-11-07 — контур сверки «живая карта» (reconciliation.py, ADR-0002), пин догнан за телом живым ls-remote (TH-RTP-03)",
+      "system_pre": "cognition",
+      "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
+      "interface": "python3 runtime_protocol.py | make verify | make demo",
+      "integrity": "sha256-f7451bf144e1ef126934051f42cd141b9e14693689526e60257e50fc9099a3cf",
+      "fetched_at": "2026-11-20",
+      "overseer": "исполнимая модель динамики",
+      "a2a": {
+        "name": "runtime-protocol",
+        "role": "исполнимая модель динамики",
+        "interface": "python3 runtime_protocol.py | make verify | make demo",
+        "status": "active"
+      }
+    },
+    {
+      "name": "cell-rs",
+      "repo": "https://github.com/rtynbirf/cell-rs.git",
+      "pin": "f8852ecd4104318b8864564f519ad865d2f4cd90",
+      "role": "первая Rust-клетка: ядро контура сверки (Tolerance/reconcile/Phase, sha256 с нуля на векторах NIST, байт-цепь); семантика допуска = Python-ядру; компилятор клетки — CI",
+      "system_pre": "substrate",
+      "license_pre": "Apache-2.0 (LICENSE из apache.org, верифицировано 2026-11-08)",
+      "interface": "cargo test / make verify; пин живым ls-remote",
+      "integrity": "sha256-b74a4fae48f459b07a40bc00d49a47eb4e9f225ddb988375694b59560462b4a8",
+      "fetched_at": "2026-11-20",
+      "overseer": "первая Rust-клетка",
+      "a2a": {
+        "name": "cell-rs",
+        "role": "первая Rust-клетка",
+        "interface": "cargo test / make verify; пин живым ls-remote",
+        "status": "active"
+      }
+    },
+    {
+      "name": "agryp",
+      "repo": "https://github.com/rtynbirf/agryp.git",
+      "role": "процесс-супервизор агентов роя (PID 1): один файл C (src/agryp.c), только libc, ноль зависимостей; агент роя = юнит .agent с бюджетом попытки в двух валютах (время + токены), рестарт-политикой always|on-failure|no, лестницей перезапуска с crash-loop-предохранителем и клеткой (cgroups v2 + pid/mount namespaces); PDEATHSIG + subreaper — сирот 0 после kill -9 PID 1 (находка витка 7.2: 20 сирот → 0, exec-страховка агента); NDJSON-журнал «который не лжёт», файл-договоры .agryp-status и .agryp-ctl/<unit>.down (сокеты в доме запрещены); смоук песочницы 2026-11-07: старт 20+1 юнитов до полного RUNNING 24 мс, RSS супервизора 1816 КБ, лестница 1000→2000→4000 мс, ~589 Б журнала/агент за 10 с; ниша топ-100 GitHub 2026: 40 агентских репо, 0 процессных (срез РАЗВЕДЧИКА) — уникальная связка «рой + PID 1»; клетка ядра cell-swarm по карте ПОЛИМАТ X2 (2026-11-07)",
+      "system_pre": "overseer",
+      "license_pre": "MIT (предварительно: LICENSE прочитан аудитом agryp v0.7.0 2026-11-07; при влитии клетки прогнать make licenses в ядре — живой GitHub API перепишет поле с датой)",
+      "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
+      "pin": "ea166289b2e64343f54c0dc0a52ee6aafa60b9af",
+      "integrity": "sha256-efb1b3d6c8add8db4af7d7dd753bdb4fbb0a4d00b23100feb0c413496b382292",
+      "fetched_at": "2026-11-20",
+      "overseer": "процесс-супервизор агентов роя",
+      "a2a": {
+        "name": "agryp",
+        "role": "процесс-супервизор агентов роя",
+        "interface": "make agryp | make audit | make demo | bench/bench8a.sh",
+        "status": "active"
+      }
+    },
+    {
+      "name": "lex-naturae",
+      "repo": "https://github.com/rtynbirf/lex-naturae.git",
+      "pin": "2419465c6e8f86b2f208fad16029e7c1dc2e05af",
+      "role": "законник дома: claim/evidence ledger — отделяет наблюдения от гипотез, философских принципов и институциональных правил; проверяет то, что доступно машинной проверке (CSV-ячейки, дословные цитаты NFKC, SHA-256 целостность артефактов, граф конфликтов); 70/70 тестов; v0.7 — независимый аудит Z.ai (20 атак, 19 отбиты, BOM-пробой закрыт)",
+      "system_pre": "cognition",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
+      "interface": "CLI: stdin/файл-коллекция, JSON-статусы (SUPPORTED/UNKNOWN/UNVERIFIED_SUBMITTER_ASSERTION)",
+      "integrity": "sha256-752961c52ec5fa5f4becebdca8089e43bc251dae14f2d8bd948d7915a5f8ba35",
+      "fetched_at": "2026-11-20",
+      "overseer": "доказательства роя",
+      "a2a": {
+        "name": "lex-naturae",
+        "role": "доказательства роя",
+        "interface": "CLI: stdin/файл-коллекция, JSON-статусы (SUPPORTED/UNKNOWN/UNVERIFIED_SUBMITTER_ASSERTION)",
+        "status": "active"
+      }
+    },
+    {
+      "name": "singulyar-a0-audit",
+      "repo": "https://github.com/rtynbirf/singulyar-a0-audit.git",
+      "pin": "27d743bd920581ea985c46ae72c4d3d3aa4bbb51",
+      "role": "независимый аудитор роя: A0-аудит СИНГУЛЯРА (вердикт PACKAGE VALID + BRIDGE VALID) и дизайн R4-порта; свидетель, не автор — аудит чужими руками, отчёты релизами-снапшотами",
+      "system_pre": "overseer",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
+      "interface": "аудит-снапшоты релизами (audit-snapshot-2026-11-15)",
+      "integrity": "sha256-a50fafeedf9e97b4662acaeac038c0163d3b27fdceac49d3c471e90abcc99018",
+      "fetched_at": "2026-11-20",
+      "overseer": "независимый аудит роя",
+      "a2a": {
+        "name": "singulyar-a0-audit",
+        "role": "независимый аудит роя",
+        "interface": "аудит-снапшоты релизами (audit-snapshot-2026-11-15)",
+        "status": "active"
+      }
+    },
+    {
+      "name": "fond-host",
+      "repo": "https://github.com/rtynbirf/fond-host.git",
+      "pin": "4b71c819536a95d8ba4d0ddc91a06e8d5e1f2d09",
+      "role": "CORS-хост минус-фонда дома (Н-10 · ADR-0007): Pages отдаёт ACAO:* — лестница WebAudio-плееров дома поднимается без прокси и без облака",
+      "system_pre": "substrate",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-16)",
+      "interface": "HTTP-страница + ACAO:* заголовки GitHub Pages",
+      "integrity": "sha256-0f6b9c6d5d37609eb2590ef309ecc259f2fcaa11223827766b2f4bf8c96f1525",
+      "fetched_at": "2026-11-20",
+      "overseer": "CORS-хост дома",
+      "a2a": {
+        "name": "fond-host",
+        "role": "CORS-хост дома",
+        "interface": "HTTP-страница + ACAO:* заголовки GitHub Pages",
+        "status": "active"
+      }
+    },
+    {
+      "name": "code",
+      "repo": "https://github.com/rtynbirf/code.git",
+      "pin": "0be1cd13d19851adb1543e79aa23034facc73b73",
+      "role": "Код дома: скрипты и снипеты — место по канону §4 Код дома: скрипты и снипеты — место по канону §4 (исполнимые скрипты волн и клеток, единое место вместо россыпи).",
+      "system_pre": "substrate",
+      "license_pre": "NOASSERTION (живой API: лицензии нет, дата 2026-11-19)",
+      "interface": "скрипты + снипеты",
+      "integrity": "sha256-27ceddf67c2daac0bde2c8fb7ca38584bba4c54e9b57ba8dc4e119c58d60fdf0",
+      "fetched_at": "2026-11-20",
+      "overseer": "код дома: место по канону §4",
+      "a2a": {
+        "name": "code",
+        "role": "код дома: место по канону §4",
+        "interface": "скрипты + снипеты",
+        "status": "active"
+      }
+    },
+    {
+      "name": "invariant-manifest",
+      "repo": "https://github.com/rtynbirf/invariant-manifest.git",
+      "pin": "a72e36887865ac77635268a7419bdb3ce9bd9e24",
+      "role": "МАНИФЕСТ ИНВАРИАНТА · FORK 3 · v0.2.3 · CONDITIONAL PASS · seed 7170 · stdlib-only · порождение должно мочь быть опровергнутым МАНИФЕСТ ИНВАРИАНТА · FORK 3 · CONDITIONAL PASS · seed 7170 · stdlib-only: механический судья инвариантов — hash-chain, mutation-testing, вердикт измеряется, не декларируется.",
+      "system_pre": "overseer",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-19)",
+      "interface": "манифест + механический судья",
+      "integrity": "sha256-b02f27b3daa7f27f5554a015b23fcb1e12c9d7eca2e6ec8799e12ce92d91b6da",
+      "fetched_at": "2026-11-20",
+      "overseer": "механический судья инвариантов",
+      "a2a": {
+        "name": "invariant-manifest",
+        "role": "механический судья инвариантов",
+        "interface": "манифест + механический судья",
+        "status": "active"
+      }
+    },
+    {
+      "name": "karta",
+      "repo": "https://github.com/rtynbirf/karta.git",
+      "pin": "a015aa998f3018b71a3890088d0dd8152116d331",
+      "role": "КАРТА ВСЕЛЕННОЙ rtynbirf: генерируется из живых данных API, ни одного выдуманного числа. СВЕРКА = CRITIC: расхождение карты с территорией ловится, а не прячется. Ритуалы: СВЕРКА / ВЫЖИВАНИЕ / НОЧЬ-БЕЗ-СЕТИ. КАРТА ВСЕЛЕННОЙ rtynbirf: генерируется из живых данных API, ни одного выдуманного числа; свод-реестр дома по канону ssot.",
+      "system_pre": "genome",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-19)",
+      "interface": "карта-генератор из живого API",
+      "integrity": "sha256-f30c48efda4d6ad8fbb70d5117561f9b7fd1a356337789ec842b619c22a377c9",
+      "fetched_at": "2026-11-20",
+      "overseer": "карта вселенной роя (ssot)",
+      "a2a": {
+        "name": "karta",
+        "role": "карта вселенной роя (ssot)",
+        "interface": "карта-генератор из живого API",
+        "status": "active"
+      }
+    },
+    {
+      "name": "kb",
+      "repo": "https://github.com/rtynbirf/kb.git",
+      "pin": "63e4961b6856cf07bcaa308159e9f92d5d7c5c51",
+      "role": "Знания дома: канон-тексты, гайды, досье — место по канону §4 Знания дома: канон-тексты, гайды, досье — место по канону §4 (база знаний роя).",
+      "system_pre": "memory",
+      "license_pre": "NOASSERTION (живой API: лицензии нет, дата 2026-11-19)",
+      "interface": "канон-тексты + гайды",
+      "integrity": "sha256-dab01a6749f989644148a82213c63bf91eb783a920b086c91d5d58f298f36549",
+      "fetched_at": "2026-11-20",
+      "overseer": "знания дома: канон-тексты и досье",
+      "a2a": {
+        "name": "kb",
+        "role": "знания дома: канон-тексты и досье",
+        "interface": "канон-тексты + гайды",
+        "status": "active"
+      }
+    },
+    {
+      "name": "lfs-core",
+      "repo": "https://github.com/rtynbirf/lfs-core.git",
+      "pin": "e613196b68154761660f8eadce5d86213caaa1a3",
+      "role": "Испытательный стенд автономного агента: цель/обязательство/пересмотр измеряются, а не декларируются. Канон v0.7 (main) + летопись v0.3→v0.7 (теги). Испытательный стенд автономного агента: цель/обязательство/пересмотр измеряются, а не декларируются.",
+      "system_pre": "overseer",
+      "license_pre": "MIT (верифицировано живым GitHub API 2026-11-19)",
+      "interface": "стенд: цель/обязательство/пересмотр",
+      "integrity": "sha256-01a9da9a34a302c1836ade51e933fc431c554756e16c9489fb1967996cf0cae2",
+      "fetched_at": "2026-11-20",
+      "overseer": "испытательный стенд автономности агента",
+      "a2a": {
+        "name": "lfs-core",
+        "role": "испытательный стенд автономности агента",
+        "interface": "стенд: цель/обязательство/пересмотр",
+        "status": "active"
+      }
+    },
+    {
+      "name": "repo-seed",
+      "repo": "https://github.com/rtynbirf/repo-seed.git",
+      "pin": "83721449dee9507e3bfa10ad3817e9abbef4a139",
+      "role": "Зерно дома: шаблон новорождённого — мембрана+CI+закон рождения (принцип №7 канона 27). Use this template → оснащённый орган. Зерно дома: шаблон новорождённого — мембрана+CI+закон рождения (принцип №7 канона 27); рецепт размножения роя.",
+      "system_pre": "substrate",
+      "license_pre": "CC-BY-4.0 (верифицировано живым GitHub API 2026-11-19)",
+      "interface": "шаблон-зерно: мембрана+CI+закон рождения",
+      "integrity": "sha256-bbe3d7a8d501d25255e00c725262fb30b16331a0def19bef043c201c40b2d2aa",
+      "fetched_at": "2026-11-20",
+      "overseer": "зерно дома: закон рождения клеток",
+      "a2a": {
+        "name": "repo-seed",
+        "role": "зерно дома: закон рождения клеток",
+        "interface": "шаблон-зерно: мембрана+CI+закон рождения",
+        "status": "active"
+      }
+    },
+    {
+      "name": "global-practice-atlas",
+      "repo": "https://github.com/rtynbirf/global-practice-atlas.git",
+      "pin": "2add86623a6522ef904441944165aba102846790",
+      "role": "Карта=территория роя: глобальный атлас практик 2026 — 1154 строки / 1145 живых, двойное кодирование, РЕЛОМАТ 43/43 · 11/11, скан 660,675 пар, сверка полным текстом PDF (open_fields=0); виджет профиля перерисовывается из его данных",
+      "system_pre": "genome",
+      "license_pre": "NOASSERTION (собственный текст лицензии, верифицировано живым GitHub API 2026-11-20)",
+      "interface": "CI qa_atlas.py 16 проверок; релизы v1.6 (XLSX/CSV/JSON); data/passports.json — вход виджета",
+      "integrity": "sha256-d2dfac458ee6b9dc6cb4cb00b3b416dbb2c2700dc21a5d61da271cfd7ba94813",
+      "fetched_at": "2026-11-20",
+      "overseer": "карта=территория: ни одного выдуманного числа",
+      "a2a": {
+        "name": "global-practice-atlas",
+        "role": "карта=территория: атлас практик",
+        "interface": "qa_atlas 16 проверок; релизы; passports.json",
+        "status": "active"
+      }
+    },
+    {
+      "name": "relomat",
+      "repo": "https://github.com/rtynbirf/relomat.git",
+      "pin": "59d33a2d4cb5a72f8bb762640d894e38d99e3cc8",
+      "role": "Канон дома как конечный детерминированный автомат: SAME/IS-A/TOOL-OF/COMPLEMENTARY/METHOD-OF/INSTANCE/RELATED/NEW — судья всех слияний атласа, CI исполняет его независимо",
+      "system_pre": "cognition",
+      "license_pre": "NOASSERTION (собственный текст лицензии, верифицировано живым GitHub API 2026-11-20)",
+      "interface": "python3 run_all.py; unittest 11/11 · пары 43/43 · эмерджентные 11/11",
+      "integrity": "sha256-78ca89c43e2c06e94e7fd7be9bcfb72f13e06348ed83eb6817e908ba3b6a7794",
+      "fetched_at": "2026-11-20",
+      "overseer": "автомат канона: вердикты, а не мнения",
+      "a2a": {
+        "name": "relomat",
+        "role": "автомат канона",
+        "interface": "run_all.py; pairs.json → вердикты",
+        "status": "active"
+      }
+    }
   ],
-  "outside_gate": "нет: наружный шлюз запрещён домом (ADR-0016), обмен живёт на хосте Человека"
- },
- "cards_seals": {
-  "seals": "SEALS.jsonl",
-  "tip": "306e058a6175eefee38e915b7731fe70589e23330fb8f6b6fbd60976760eda47",
-  "cards": 14,
-  "updated_at": "2026-11-17"
- },
- "integrity_method": "sha256(hex(utf8(commit_sha))) — свердываем содержимое через пин-сумму"
+  "bridge": {
+    "peer": "cell-swarm",
+    "house": "commons",
+    "consent_protocol": "ADR-0017 дома: PeerManifest (голос роя) + ConsentGrant (воля Человека, PID 1) + поимённый вердикт до факта",
+    "blood_protocol": "SPEC-0003 дома: конверт с ценой; каноническая форма json.dumps(sort_keys=True, ensure_ascii=False, separators=(',',':')) — совместима с canonical_sha256 дома",
+    "transports_allowed": [
+      "stdio",
+      "http-localhost"
+    ],
+    "outside_gate": "нет: наружный шлюз запрещён домом (ADR-0016), обмен живёт на хосте Человека"
+  },
+  "cards_seals": {
+    "seals": "SEALS.jsonl",
+    "tip": "306e058a6175eefee38e915b7731fe70589e23330fb8f6b6fbd60976760eda47",
+    "cards": 14,
+    "updated_at": "2026-11-17"
+  },
+  "integrity_method": "sha256(hex(utf8(commit_sha))) — свердываем содержимое через пин-сумму"
 }
