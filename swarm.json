@@ -1,5 +1,5 @@
 {
-  "genome_version": "0.2.16",
+  "genome_version": "0.2.17",
   "fetched_at": "2026-11-20",
   "fetch_method": "GitHub API /repos/<owner>/<repo>/branches/<pin_ref> (fallback: git ls-remote refs/heads/<pin_ref>, SHA эквивалентны) — живая сверка genome_drift.py на 2026-11-20",
   "licenses_verified_at": "2026-11-05",
@@ -9,12 +9,12 @@
     {
       "name": "polymath-os",
       "repo": "https://github.com/rtynbirf/polymath-os.git",
-      "pin": "20f45d50bfcd5809be7a04e07ceb10d5d6cd5da6",
+      "pin": "cac15f6ebccaf8db49d5cd3aaa4a53e719f8073e",
       "role": "ОС Человека: 5 слоёв + Decree Log (PID 1, append-only, hash-chained, Ed25519), SINGULYAR EIR; substrate роя; дыра мембраны llms.txt закрыта веткой membrane-2026-11-05",
       "system_pre": "substrate",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05)",
       "interface": "слои + bootstrap-скрипты",
-      "integrity": "sha256-0e62a70cf5b6b9b4fbd3a15ad18b518d56b59d8efb01d945c3cea7096f3b0ddd",
+      "integrity": "sha256-13ea535ad1816cb1de7bcb35704c3582c8a77d4063ac30a24e1889bd66216637",
       "fetched_at": "2026-11-20",
       "overseer": "ОС Человека",
       "a2a": {
@@ -100,12 +100,12 @@
     {
       "name": "voice-atlas-llm",
       "repo": "https://github.com/rtynbirf/voice-atlas-llm.git",
-      "pin": "eab69cae5c475b05428186e66c10fc7f1cdc111e",
+      "pin": "b7cf566a1afc0445d4a05b846758fc2d97694f95",
       "role": "атлас голосов; свой голос — при себе, чужой — только по согласию (A21 дома)",
       "system_pre": "senses",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); consent-мембрана обязательна",
       "interface": "модели + consent-манифест",
-      "integrity": "sha256-92385074e1943423ea01b61bb544d274231bf1e2ec03e0a04c6398116392f21e",
+      "integrity": "sha256-885ee2455ac4ac1057d0dff88490b7c70c92bfab3422cfac90f9d76fd906f21d",
       "fetched_at": "2026-11-20",
       "overseer": "атлас голосов; свой",
       "a2a": {
@@ -155,12 +155,12 @@
     {
       "name": "runtime-protocol",
       "repo": "https://github.com/rtynbirf/runtime-protocol.git",
-      "pin": "de0256ad214f986a1cfb513286a00e2b6db622ba",
+      "pin": "a227550b79ac5a7bf983c9f16e398a8776c533d6",
       "role": "исполнимая модель динамики узла: уравнение ρ̇ (генератор/долг/каратель), фазовая машина GENESIS_EXEC (SUBCRITICAL→FORAGING→COHERENCE→OVERCLOCK→TRANSITION→POST_GENESIS), VOLATILE_META, CANCER_FILTER; stdlib-only, метаболизм make verify/demo; 17 приёмок зелёные (7 ядра + 10 контура сверки); спецификация-источник — nous@agents/execution docs/genesis (TH-RTP-01); создана 2026-11-07 агентом по мандату Хозяина (TH-RTP-02); 2026-11-07 — контур сверки «живая карта» (reconciliation.py, ADR-0002), пин догнан за телом живым ls-remote (TH-RTP-03)",
       "system_pre": "cognition",
       "license_pre": "Apache-2.0 (верифицировано живым GitHub API 2026-11-07)",
       "interface": "python3 runtime_protocol.py | make verify | make demo",
-      "integrity": "sha256-f7451bf144e1ef126934051f42cd141b9e14693689526e60257e50fc9099a3cf",
+      "integrity": "sha256-97c0d5cb4508c839674927defb91d0b91abcc72b0fb698dba26d5c73845d652d",
       "fetched_at": "2026-11-20",
       "overseer": "исполнимая модель динамики",
       "a2a": {
@@ -281,12 +281,12 @@
     {
       "name": "invariant-manifest",
       "repo": "https://github.com/rtynbirf/invariant-manifest.git",
-      "pin": "a72e36887865ac77635268a7419bdb3ce9bd9e24",
+      "pin": "18ad225558210a3b58be87e166dd9e196699f7e4",
       "role": "МАНИФЕСТ ИНВАРИАНТА · FORK 3 · v0.2.3 · CONDITIONAL PASS · seed 7170 · stdlib-only · порождение должно мочь быть опровергнутым МАНИФЕСТ ИНВАРИАНТА · FORK 3 · CONDITIONAL PASS · seed 7170 · stdlib-only: механический судья инвариантов — hash-chain, mutation-testing, вердикт измеряется, не декларируется.",
       "system_pre": "overseer",
       "license_pre": "MIT (верифицировано живым GitHub API 2026-11-19)",
       "interface": "манифест + механический судья",
-      "integrity": "sha256-b02f27b3daa7f27f5554a015b23fcb1e12c9d7eca2e6ec8799e12ce92d91b6da",
+      "integrity": "sha256-f4920f599a9f42f77cf497bdb858a9faf0e0c85716bc1d9ff0218f69779e744f",
       "fetched_at": "2026-11-20",
       "overseer": "механический судья инвариантов",
       "a2a": {
@@ -389,12 +389,12 @@
     {
       "name": "relomat",
       "repo": "https://github.com/rtynbirf/relomat.git",
-      "pin": "59d33a2d4cb5a72f8bb762640d894e38d99e3cc8",
+      "pin": "43854abedf3ec103bb2e21f0a09396cb1ee10ba9",
       "role": "Канон дома как конечный детерминированный автомат: SAME/IS-A/TOOL-OF/COMPLEMENTARY/METHOD-OF/INSTANCE/RELATED/NEW — судья всех слияний атласа, CI исполняет его независимо",
       "system_pre": "cognition",
       "license_pre": "NOASSERTION (собственный текст лицензии, верифицировано живым GitHub API 2026-11-20)",
       "interface": "python3 run_all.py; unittest 11/11 · пары 43/43 · эмерджентные 11/11",
-      "integrity": "sha256-78ca89c43e2c06e94e7fd7be9bcfb72f13e06348ed83eb6817e908ba3b6a7794",
+      "integrity": "sha256-55e47e969eea5cc8c4c8a416969c0bd4e522755a88ed83432749c2ad166e5dc7",
       "fetched_at": "2026-11-20",
       "overseer": "автомат канона: вердикты, а не мнения",
       "a2a": {
