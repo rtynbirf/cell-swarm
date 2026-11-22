@@ -422,5 +422,9 @@
     "cards": 14,
     "updated_at": "2026-11-17"
   },
-  "integrity_method": "sha256(hex(utf8(commit_sha))) — свердываем содержимое через пин-сумму"
+  "integrity_method": "sha256(hex(utf8(commit_sha))) — свердываем содержимое через пин-сумму",
+  "canon": {
+    "representation": "REPRESENTATION ≠ DIRECT ACCESS — представление не есть прямой доступ: страницы, ссылки и зеркала показывают дом, но дверь открывает только владелец.",
+    "поставил": "волна «человек действует» · 2026-11-22 · singulyar/rumu"
+  }
 }
