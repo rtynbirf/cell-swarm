@@ -1,9 +1,9 @@
 {
- "genome_version": "0.2.17",
- "fetched_at": "2026-11-20",
- "fetch_method": "GitHub API /repos/<owner>/<repo>/branches/<pin_ref> (fallback: git ls-remote refs/heads/<pin_ref>, SHA эквивалентны) — живая сверка genome_drift.py на 2026-11-20",
- "licenses_verified_at": "2026-11-05",
- "licenses_method": "GitHub API repos/<owner>/<name> → license.spdx_id, живые вызовы; ранее записанное «license=null» было следствием анонимного лимита API, не фактом",
+ "genome_version": "0.2.18",
+ "fetched_at": "2026-11-25",
+ "fetch_method": "GitHub API /repos/<owner>/<repo>/branches/<pin_ref> (fallback: git ls-remote refs/heads/<pin_ref>, SHA эквивалентны) — живая сверка genome_drift.py на 2026-11-25",
+ "licenses_verified_at": "2026-11-25",
+ "licenses_method": "GitHub API /repos/<o>/<r>/license 2026-11-25; factum/noosetka — MIT добавлен рукой Прораба 2026-11-25 (тела инертны к пушу); inv-automat — тело не тронуто (revo-obhod/dom-avtomat стреляют на push — жанр экипажа), NOASSERTION честно",
  "note": "Связь указателями (ADR-0002): геном хранит SHA, не контент. Обновление клетки = один SHA в геноме (make pins).",
  "cells": [
   {
@@ -51,7 +51,7 @@
    "license_pre": "MIT (верифицировано живым GitHub API 2026-11-05); статус мелодий определяет законность",
    "interface": "файлы + манифест данных",
    "pin_ref": "rumu",
-   "integrity": "sha256-d19defc2c8e52c922fb3a568602825032ff2ac256faa70a3d027dc1285a3ace3",
+   "integrity": "sha256-a07db1f890c1a2927b33d16b9b0c836d1040c261d5d524f588af3ec5dd6c780e",
    "fetched_at": "2026-11-20",
    "overseer": "корпус 64 песни",
    "a2a": {
@@ -401,6 +401,78 @@
     "name": "relomat",
     "role": "автомат канона",
     "interface": "run_all.py; pairs.json → вердикты",
+    "status": "active"
+   }
+  },
+  {
+   "name": "factum",
+   "repo": "https://github.com/rtynbirf/factum.git",
+   "pin": "0a7dc389eb979bddecb0b2a37244665924843244",
+   "role": "СЕРДЦЕ УЛЬЯ: ФСМ-автомат делает факты (fact = bytes); соты JOURNAL.md append-only с sha256-цепочкой (prev = sha256 предыдущей строки, якорь GENESIS); ЭКГ pulse.py (LIVE/STALE/дефибрилляция, свидетель PULSE_LOG.md); удары каждые 6 ч; миры SKI/BCI/CHEM",
+   "system_pre": "metabolism",
+   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-25)",
+   "interface": "python3 factum.py --heartbeat · --verify (хеш-цепочка сот)",
+   "integrity": "sha256-360fb889f6b962df5884a828ad9c90b3e39429308ba269f44f96d49e3a6a5147",
+   "fetched_at": "2026-11-25",
+   "overseer": "СЕРДЦЕ — удар по расписанию, свидетель ЭКГ не дремлет",
+   "a2a": {
+    "name": "factum",
+    "role": "СЕРДЦЕ — удар по расписанию, свидетель ЭКГ не дремлет",
+    "interface": "python3 factum.py --heartbeat · --verify (хеш-цепочка сот)",
+    "status": "active"
+   }
+  },
+  {
+   "name": "noosetka",
+   "repo": "https://github.com/rtynbirf/noosetka.git",
+   "pin": "045cc996f0116e0c98e671f3442f29539e657dad",
+   "role": "ПУЛЬТ МИРОВ — бейдж-виджет дома: состояние миров вымеряется, не декларируется (GHOST → WIRE → LIVE → READY); REVE: layout → render",
+   "system_pre": "senses",
+   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-25)",
+   "interface": "бейдж читает committed JSON и не может соврать",
+   "integrity": "sha256-1111ec93a609675f325955149f3685bf9dd448b2df77ce39a61d90bad7ee824d",
+   "fetched_at": "2026-11-25",
+   "overseer": "ноосетка: свидетель миров",
+   "a2a": {
+    "name": "noosetka",
+    "role": "ноосетка: свидетель миров",
+    "interface": "бейдж читает committed JSON и не может соврать",
+    "status": "active"
+   }
+  },
+  {
+   "name": "inv-automat",
+   "repo": "https://github.com/rtynbirf/inv-automat.git",
+   "pin": "c75717d5a2dfbef264668d6100e88c0e532530e8",
+   "role": "КОНЕЧНЫЙ АВТОМАТ ИНВЕНТАРИЗАЦИИ: живой GitHub API → claims-сверка → append-only ledger → Pages-отчёт; свидетель — не автомат",
+   "system_pre": "overseer",
+   "license_pre": "NOASSERTION (лицензия телом не поставлена, живой GitHub API 2026-11-25; заноза экипажу клетки)",
+   "interface": "Pages-отчёт; ledger append-only; свидетель inv-witness",
+   "integrity": "sha256-df30a3c6d13fbdf84d30d9e14901f550a0765dd775380aba687a198f4cc7c171",
+   "fetched_at": "2026-11-25",
+   "overseer": "инвентарь: сверка клеймов с территорией",
+   "a2a": {
+    "name": "inv-automat",
+    "role": "инвентарь: сверка клеймов с территорией",
+    "interface": "Pages-отчёт; ledger append-only; свидетель inv-witness",
+    "status": "active"
+   }
+  },
+  {
+   "name": "meta-layer-kit",
+   "repo": "https://github.com/rtynbirf/meta-layer-kit.git",
+   "pin": "ad524ec8a0efc86a05b22da3966c9565e7078169",
+   "role": "мета-layer-kit: единый ZIP набора мета-управления дома (snapshot, governance, drift-детектор, gitops)",
+   "system_pre": "genome",
+   "license_pre": "MIT (верифицировано живым GitHub API 2026-11-25)",
+   "interface": "мета-snapshot дома одним набором",
+   "integrity": "sha256-0d6deb0180ee2812127dd3c679f521f3f664d9d1fcf510809bc08664960d7f14",
+   "fetched_at": "2026-11-25",
+   "overseer": "мета-слой: управление домом",
+   "a2a": {
+    "name": "meta-layer-kit",
+    "role": "мета-слой: управление домом",
+    "interface": "мета-snapshot дома одним набором",
     "status": "active"
    }
   }
