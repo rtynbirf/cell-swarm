@@ -29,7 +29,7 @@ jobs:
       - name: чеканка токена установки App (А6-1; скипается, пока владелец не поставит CELL_SWARM_APP_ON=1)
         id: mint
         if: ${{ vars.CELL_SWARM_APP_ON == '1' }}
-        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        uses: actions/create-github-app-token@f418cff399f7aef4c2f0ad47e25ca7a6abbdd6fc # v3.4.0
         with:
           app-id: ${{ secrets.CELL_SWARM_APP_ID }}
           private-key: ${{ secrets.CELL_SWARM_APP_PRIVATE_KEY }}
