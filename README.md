@@ -4,10 +4,6 @@
 
 </div>
 
-<div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/cell-swarm@main/banner.png" alt="cell-swarm — Сингулярная эмерджентная архитектура роя" width="100%">
-</div>
-
 <!--ФОРЖ:МУЗА:НАЧАЛО-->
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/rtynbirf/cell-swarm@main/repo-muse.svg" width="100%" alt="Муза cell-swarm: мастерская ПОЛЛОК · РОЙ, кузня ПОЛИМАТ, раунд 12 · REVE=РЕВО" />
@@ -18,13 +14,29 @@
 
 <!--ФОРЖ:ПАСПОРТ:НАЧАЛО-->
 <div align="center">
-  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы cell-swarm в каноне ORNAMENTAL MYTHO-REALISM: орнаментальная решётка, медальон-миф, строение файлов, лексикон — по фактическому контенту" />
+  <img src="revo-page.svg" width="100%" alt="РЕВО-паспорт страницы cell-swarm №24 в каноне ORNAMENTAL MYTHO-REALISM: орнаментальная решётка, медальон-миф, строение файлов, лексикон — по фактическому контенту" />
 </div>
 
 | ФАЙЛОВ | ПАПОК | КОММИТОВ | ОБНОВЛЕНО | РЕЛИЗОВ |
 |---:|---:|---:|---|---:|
-| 156 | 27 | 518 | 2026-11-28 | 30 |
+| 156 | 26 | 1 | 2026-11-28 | 100 |
 <!--ФОРЖ:ПАСПОРТ:КОНЕЦ-->
+
+# cell-swarm
+
+<div align="center">
+
+<a href="https://github.com/rtynbirf/cell-swarm"><img src="banner.png" width="100%" alt="cell-swarm — штандарт мастерской в каноне ORNAMENTAL MYTHO-REALISM"></a>
+
+</div>
+
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/rtynbirf/cell-swarm@main/banner.png" alt="cell-swarm — Сингулярная эмерджентная архитектура роя" width="100%">
+</div>
+
+
+
+
 
 
 
